@@ -4,9 +4,9 @@
   "description": "a function to turn iconnector descrition of markdown and iconnector api of html to string of javascript.",
   "main": "build.js",
   "scripts": {
+	"preinstall":"npm config set npat false",
   	"build-doc":"node build.js",
-    "build": "npm install && npm run build-doc",
-    "test":"echo \"Error: no test specified\" && exit 1" 
+    "build": "npm run build-doc"
   },
   "repository": {
     "type": "git",
