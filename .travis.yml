@@ -1,3 +1,10 @@
 language: node_js
 node_js:
   - "5"
+deploy:
+  provider: releases
+  api_key: "3c2d8ebe35b23441063a"
+  file: "dist.zip"
+  skip_cleanup: true
+  on:
+    tags: true

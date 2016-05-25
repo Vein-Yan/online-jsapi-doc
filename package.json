@@ -4,8 +4,8 @@
   "description": "a function to turn iconnector descrition of markdown and iconnector api of html to string of javascript.",
   "main": "build.js",
   "scripts": {
-	"preinstall":"npm config set npat false",
-  	"build-doc":"node build.js",
+    "preinstall": "npm config set npat false",
+    "build-doc": "node build.js",
     "build": "npm run build-doc"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^0.20.0",
-    "gitbook-markdown": "^1.2.3"
+    "gitbook-markdown": "^1.2.3",
+    "zip-zip-top": "^0.2.0"
   }
 }

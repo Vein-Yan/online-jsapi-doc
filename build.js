@@ -3,6 +3,9 @@ var fs = require('fs');
 //cheerio，可在服务端使用jquery方法的库
 var cheerio = require('cheerio');
 
+//压缩文件夹
+var ZipZipTop = require("zip-zip-top");
+
 //var markdown_html = require('gitbook-markdown');
 
 //要处理的文件
@@ -61,7 +64,7 @@ function trim(str){
 function changeQuote(str){
 	return str.replace(/'/g,'\\"');
 }
-
+var counter = 0;
 for(var i = 0,len = files.length;i<len;i++){
 	var file = files[i];
 	var name = file.name, type = file.type, path = file.path;
@@ -84,11 +87,30 @@ for(var i = 0,len = files.length;i<len;i++){
 				    break;
 			}
 		    var n_path = dist_path + '/' + type + '/';
+		    if(!fs.existsSync(dist_path)){
+		    	fs.mkdirSync(dist_path);
+		    }
 		    if(!fs.existsSync(n_path)){
 		    	fs.mkdirSync(n_path);
 		    }
 		    fs.writeFile(n_path + name + '.js', new_data, function(err){
 		    	if(err) throw err;
+		    	counter++;
+		    	if(counter===len){
+		    		//完成后对文件进行压缩
+		    		var zip4 = new ZipZipTop();
+					zip4.zipFolder(dist_path, function(err){
+						if(err) {
+							console.log(err);
+						}
+						zip4.writeToFile("dist.zip", function(err){
+							if(err) {
+								return console.log(err);
+							}
+							console.log("Done");
+						});
+					});
+		    	}
 		    });
 		};
 	}(name,type));
