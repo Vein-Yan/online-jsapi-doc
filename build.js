@@ -69,7 +69,7 @@ for(var i = 0,len = files.length;i<len;i++){
 	fs.readFile(path,'utf8',function(name,type){
 		return function(err,data){
 			if(err) throw err;
-			var n = name.replace('-','_');
+			var n = name.replace(/-/gi,'_');
 			var new_data = '';
 			switch(type){
 				case 'html':
