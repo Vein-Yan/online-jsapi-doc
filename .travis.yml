@@ -3,8 +3,10 @@ node_js:
   - "5"
 deploy:
   provider: releases
-  api_key: "10d73a5697a111d0244e"
-  file: "./dist.zip"
+  api_key:
+    secure: 10d73a5697a111d0244e
+  api_key: 
+  file: dist.zip
   skip_cleanup: true
   on:
     tags: true
