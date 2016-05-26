@@ -25,8 +25,6 @@ var files = [
 //目标目录
 var dist_path = './dist/';
 
-var zip4 = new ZipZipTop();
-
 function handleData(name,data){
 	var lines = data.split('\n');
 	var result = 'var ' + name + '= [';
@@ -79,7 +77,7 @@ function trim(str){
 function changeQuote(str){
 	return str.replace(/'/g,'\\"');
 }
-var counter_md = 7,counter_api = 4;
+var counter = files.length;
 for(var i = 0,len = files.length;i<len;i++){
 	var file = files[i];
 	var name = file.name, type = file.type, path = file.path;
@@ -109,42 +107,23 @@ for(var i = 0,len = files.length;i<len;i++){
 		    }
             fs.writeFile(n_path + name + '.js', new_data, function(err) {
                 if (err) throw err;
-                /*if (type === 'desc') {
-                    counter_md--;
-                    if (counter_md === 0) {
-                        //完成后对文件进行压缩
-                        zip4.zipFolder(dist_path + "desc", function(err) {
+                counter--;
+                if (counter === 0) {
+                    //完成后对文件进行压缩
+                    var zip4 = new ZipZipTop();
+                    zip4.zipFolder(dist_path, function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                        zip4.writeToFile(dist_path + "dist.zip", function(err) {
                             if (err) {
-                                console.log(err);
+                                return console.log(err);
                             }
-                            zip4.writeToFile(dist_path + "desc" + ".zip", function(err) {
-                                if (err) {
-                                    return console.log(err);
-                                }
-                                console.log("Done");
-                            });
+                            console.log("Done");
                         });
-                        return;
-                    }
+                    });
+                    return;
                 }
-                if (type === 'api') {
-                    counter_api--;
-                    if (counter_api === 0) {
-                        //完成后对文件进行压缩
-                        zip4.zipFolder(dist_path + "api", function(err) {
-                            if (err) {
-                                console.log(err);
-                            }
-                            zip4.writeToFile(dist_path + "api" + ".zip", function(err) {
-                                if (err) {
-                                    return console.log(err);
-                                }
-                                console.log("Done");
-                            });
-                        });
-                        return;
-                    }
-                }*/
             });
 		};
 	}(name,type));
