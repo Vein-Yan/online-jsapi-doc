@@ -1,10 +1,12 @@
 language: node_js
 node_js:
-  - "5"
+- '5'
 deploy:
   provider: releases
-  api_key: '102f95a96b886a6ac13b583b76c1d03164d1d498'
-  file: 'dist.zip'
+  api_key:
+    secure: UI5moUzJBlsCvXsvIjiSe/weMTFizPBG6Zrm8sGQYnkYYhLWahKPu+XV60VMJITdOupZ/oYvRb+S0csrKwIi6OiJ34yPWmPTcACftOyp4xUGfPPO2/TZoEtskdIQHxEjLpj+ZFQRk6YNNMhO60p68utqNgWkrKeCqbSaZOg0QLZ90pFxPctCdGje5KVL+2mJy7q+LrfsyioPi2dQNYS7Sq1latX6hZuHFvNS8yxdih1wMaEmycGTh2Hg0/2tnC5lPfByUj3kkT7eaubfiuk8yzEysKvgziBxEfjl7cx/zJsYLAsjxqeB4o3+j0lqx9QD414WmkaLG5X0NJcNPEXmlFtrcrHN3ZCGMKCZELtK0IZJx/T6GTyxTiLXLqCyc9PHD7MFunEeWN+UgovIm5mM/CT2lpuNMZyYJt0cI74SHAapkjOhDf/VKgtfR4Q64t+3+2uMZj9Y+7gNo3wxYdd6LHmNnvosJ8HkIiTnzbCPDhYni++KXMZ7wU4AQA+oUbWLUfBb3xLvDqCT11ohG/YbKRSfejUhY5BgF9+/G0FxxkRD2rZeE++Mtkj6ONqpWK20wwI+nFrW8Pmt0ajJEM7YzH2B1n8dcB0UoorYcWPcHCem2Dcd9182eCUwehe3C4/00YUl7mjsCADEWCAh1JPM3ZJnxD5gGCG2h3o85X3kT1s=
+  file: dist.zip
   skip_cleanup: true
   on:
+    repo: trojan-ann/online-jsapi-doc
     tags: true
