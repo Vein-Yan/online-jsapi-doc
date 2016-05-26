@@ -26,22 +26,21 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 
 如果需要在线GIS服务器，您还可以在SuperMap Online租用GIS云主机，并发布您自己的GIS服务。
 
-#### 3. SuperMap的JavaScript API与iConnectorGoogle.js
+#### 3. SuperMap的JavaScript API
+
+iClient for JavaScript与iConnectorAMap.js
 
 ```JavaScript
 	<script src="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js"></script>
-	<script src="http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorGoogle.js"></script>
+	<script src="http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js"></script>
 ```
 
-### 示范程序
+### 示例1：在Google地图上叠加SuperMap分段专题图
 
-#### 示例1：在Google地图上，叠加SuperMap的分段专题图
-
-##### Step1 创建地图窗口并加载Google地图
+#### Step1 初始化Google地图
 
 使用Google地图API创建地图窗口“map-canvas”，并设置加载地图的中心点和比例尺级别，
 创建地图如：map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
 
 ```JavaScript
 	var myLatlng = new google.maps.LatLng(0, 0);
@@ -55,7 +54,9 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 			mapOptions);
 ```
 
-##### Step2 使用SuperMap.Include.js，基于SuperMap REST服务中的"China_Province_R"图层，制作分段专题图
+#### Step2 制作SuperMap分段专题图
+
+使用SuperMap.Include.js，基于SuperMap REST服务中的"China_Province_R"图层，制作分段专题图。
 
 ```JavaScript
 	var themeService = new SuperMap.REST.ThemeService(url, {eventListeners:{"processCompleted": themeCompleted, "processFailed": themeFailed}}),
@@ -103,7 +104,9 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 	themeService.processAsync(themeParameters);
 ```
 
-##### Step3 使用iConnectorGoogle.js把Step2创建的SuperMap专题图叠加到Step1创建的Google地图上
+#### Step3 把SuperMap专题图转换后叠加到Google地图上
+
+使用iConnectorGoogle.js把Step2创建的SuperMap专题图叠加到Step1创建的Google地图上。
 		
 ```JavaScript
 	if(themeEventArgs.result.resourceInfo.id) {
@@ -114,9 +117,103 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 
 ##### 在线演示与源码编辑
 
-在线演示：
-http://runjs.cn/detail/nk6mvwfi
+您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
-源码编辑：
-http://runjs.cn/code/nk6mvwfi
+* [在线演示](http://runjs.cn/detail/nk6mvwfi)
+* [源码编辑](http://runjs.cn/code/nk6mvwfi)
+
+### 示例2：在Google地图上绘制来自SuperMap的Geometry
+
+#### Step1 初始化POI点
+
+创建一个poi点，并通过iConnectorGoogle.js转为Google地图能识别的点myLatlng。
+
+```JavaScript
+	var poi = {x:116.397,y:39.913};
+	var myLatlng = SuperMap.Web.iConnector.Google.transferPoint([poi],new SuperMap.Projection("EPSG:4326"))[0];
+```
+
+#### Step2 以转换后的POI为中心点初始化Google地图
+
+```JavaScript
+	var mapOptions = {
+		zoom: 7,
+		center: myLatlng,
+		mapTypeId: google.maps.MapTypeId.TERRAIN
+	}
+	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+```
+
+#### Step3 在地图上标注换后的POI
+
+```JavaScript
+	var marker = new google.maps.Marker({
+		position: myLatlng,
+		map: map
+	});
+```
+
+#### Step4 绘制并加载SuperMap线
+
+* 通过SuperMap iClient for JavaScript API创建一条线line1
+
+```JavaScript
+	var points1 = [
+		new SuperMap.Geometry.Point(115,40.5),
+		new SuperMap.Geometry.Point(116.5,41.5),
+		new SuperMap.Geometry.Point(118,40.5)
+	];
+	var line1 = new SuperMap.Geometry.LineString(points1);
+```
+
+* 通过iConnectorGoogle.js将line1转为Leaflet格式的线gLine
+
+```JavaScript
+	var gLine = SuperMap.Web.iConnector.Google.transferLine([line1])[0];
+```
+
+* 通过Google地图JS API把gLine绘制在地图上并设置显示颜色
+
+```JavaScript
+	var options = {strokeColor: '#FF0000'};
+	gLine.setOptions(options);
+	gLine.setMap(map);
+```
+
+#### Step5 绘制并加载SuperMap面
+
+* 通过SuperMap iClient for JavaScript API创建一个由线围成的面polygon
+
+```JavaScript
+	var points2 = [
+		new SuperMap.Geometry.Point(116.5,41.5),
+		new SuperMap.Geometry.Point(115.5,38.5),
+		new SuperMap.Geometry.Point(118,40.5),
+		new SuperMap.Geometry.Point(115,40.5),
+		new SuperMap.Geometry.Point(118,38.5),
+		new SuperMap.Geometry.Point(116.5,41.5)
+	];
+	var line2 = new SuperMap.Geometry.LinearRing(points2);
+	var polygon = new SuperMap.Geometry.Polygon([line2]);
+```
+
+* 通过iConnectorGoogle.js将polygon转为Google格式的面gPolygon
+
+```JavaScript
+	var gPolygon = SuperMap.Web.iConnector.Google.transferPolygon([polygon])[0];
+```
+
+* 通过Google地图JS API把gPolygon绘制在地图上并设置显示颜色
+
+```JavaScript
+	var options = {strokeColor: '#FF0000'};
+	gPolygon.setOptions(options);
+	gPolygon.setMap(map);
+```
+#### 在线演示与源码编辑
+
+您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
+
+* [在线演示](http://runjs.cn/detail/vwwjkoks)
+* [源码编辑](http://runjs.cn/code/vwwjkoks)
 
