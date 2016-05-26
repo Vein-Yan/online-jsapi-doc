@@ -55,7 +55,7 @@
         data-chapter-title="对接高德地图"
         data-filepath="amap.md"
         data-basepath="."
-        data-revision="Thu May 26 2016 19:44:30 GMT+0800 (中国标准时间)"
+        data-revision="Thu May 26 2016 21:05:33 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -231,44 +231,39 @@
 <li><a href="#3-supermap%E7%9A%84javascript-api">3. SuperMap&#x7684;JavaScript API</a></li>
 </ul>
 </li>
-<li><a href="#%E7%A4%BA%E8%8C%83%E7%A8%8B%E5%BA%8F">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</a><ul>
-<li><a href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%EF%BC%8C%E5%8F%A0%E5%8A%A0supermap%E7%9A%84%E7%82%B9%E5%AF%86%E5%BA%A6%E4%B8%93%E9%A2%98%E5%9B%BE">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x7684;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</a><ul>
-<li><a href="#step1-%E5%88%9B%E5%BB%BA%E5%9C%B0%E5%9B%BE%E7%AA%97%E5%8F%A3%E5%B9%B6%E5%8A%A0%E8%BD%BD%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">Step1 &#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x5E76;&#x52A0;&#x8F7D;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a></li>
-<li><a href="#step2-%E4%BD%BF%E7%94%A8supermapincludejs%EF%BC%8C%E5%9F%BA%E4%BA%8Esupermap-rest%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84chinaprovincer%E5%9B%BE%E5%B1%82%EF%BC%8C%E5%88%B6%E4%BD%9C%E7%82%B9%E5%AF%86%E5%BA%A6%E4%B8%93%E9%A2%98%E5%9B%BE">Step2 &#x4F7F;&#x7528;SuperMap.Include.js&#xFF0C;&#x57FA;&#x4E8E;SuperMap REST&#x670D;&#x52A1;&#x4E2D;&#x7684;&quot;China_Province_R&quot;&#x56FE;&#x5C42;&#xFF0C;&#x5236;&#x4F5C;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</a></li>
-<li><a href="#step3-%E4%BD%BF%E7%94%A8iconnectoramapjs%E6%8A%8Astep2%E5%88%9B%E5%BB%BA%E7%9A%84supermap%E4%B8%93%E9%A2%98%E5%9B%BE%E5%8F%A0%E5%8A%A0%E5%88%B0step1%E5%88%9B%E5%BB%BA%E7%9A%84%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 &#x4F7F;&#x7528;iConnectorAMap.js&#x628A;Step2&#x521B;&#x5EFA;&#x7684;SuperMap&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5230;Step1&#x521B;&#x5EFA;&#x7684;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%82%B9%E5%AF%86%E5%BA%A6%E4%B8%93%E9%A2%98%E5%9B%BE">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</a><ul>
+<li><a href="#step1-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a></li>
+<li><a href="#step2-%E5%88%B6%E4%BD%9Csupermap%E7%82%B9%E5%AF%86%E5%BA%A6%E4%B8%93%E9%A2%98%E5%9B%BE">Step2 &#x5236;&#x4F5C;SuperMap&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</a></li>
+<li><a href="#step3-%E6%8A%8Asupermap%E4%B8%93%E9%A2%98%E5%9B%BE%E8%BD%AC%E6%8D%A2%E5%90%8E%E5%8F%A0%E5%8A%A0%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 &#x628A;SuperMap&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x6362;&#x540E;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</a></li>
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
 <li><a href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E5%88%86%E6%AE%B5%E4%B8%93%E9%A2%98%E5%9B%BE">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</a><ul>
 <li><a href="#step1-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a></li>
-<li><a href="#step2-%E5%88%9B%E5%BB%BAsupermap%E5%88%86%E6%AE%B5%E4%B8%93%E9%A2%98%E5%9B%BE">Step2 &#x521B;&#x5EFA;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</a></li>
-<li><a href="#step3-%E9%80%9A%E8%BF%87iconnectoramapjs%E6%8A%8A%E4%B8%93%E9%A2%98%E5%9B%BE%E8%BD%AC%E4%B8%BA%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E6%94%AF%E6%8C%81%E7%9A%84%E6%A0%BC%E5%BC%8F">Step3 &#x901A;&#x8FC7;iConnectorAMap.js&#x628A;&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;</a></li>
-<li><a href="#step4-%E6%8A%8A%E8%BD%AC%E6%8D%A2%E5%90%8E%E7%9A%84%E4%B8%93%E9%A2%98%E5%9B%BE%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step4 &#x628A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x4E13;&#x9898;&#x56FE;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</a></li>
+<li><a href="#step2-%E5%88%B6%E4%BD%9Csupermap%E5%88%86%E6%AE%B5%E4%B8%93%E9%A2%98%E5%9B%BE">Step2 &#x5236;&#x4F5C;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</a></li>
+<li><a href="#step3-%E6%8A%8Asupermap%E4%B8%93%E9%A2%98%E5%9B%BE%E8%BD%AC%E6%8D%A2%E5%90%8E%E5%8F%A0%E5%8A%A0%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 &#x628A;SuperMap&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x6362;&#x540E;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</a></li>
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
 <li><a href="#%E7%A4%BA%E4%BE%8B3%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%82%B9">&#x793A;&#x4F8B;3&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x70B9;</a><ul>
 <li><a href="#step1-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a></li>
-<li><a href="#step2-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AAsupermap%E7%82%B9%EF%BC%8C%E5%B9%B6%E7%BA%A0%E5%81%8F%E4%B8%BA%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87">Step2 &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;SuperMap&#x70B9;&#xFF0C;&#x5E76;&#x7EA0;&#x504F;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5750;&#x6807;</a></li>
+<li><a href="#step2-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AA%E7%82%B9%EF%BC%8C%E5%B9%B6%E7%BA%A0%E5%81%8F%E4%B8%BA%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87">Step2 &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x70B9;&#xFF0C;&#x5E76;&#x7EA0;&#x504F;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5750;&#x6807;</a></li>
 <li><a href="#step3-%E5%B0%86%E7%BA%A0%E5%81%8F%E5%90%8E%E7%9A%84%E7%82%B9%E4%BD%9C%E4%B8%BAmarker%E5%8A%A0%E8%BD%BD%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 &#x5C06;&#x7EA0;&#x504F;&#x540E;&#x7684;&#x70B9;&#x4F5C;&#x4E3A;Marker&#x52A0;&#x8F7D;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</a></li>
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
-<li><a href="#%E7%A4%BA%E4%BE%8B4%EF%BC%9A%E6%8A%8Asupermap-sql%E6%9F%A5%E8%AF%A2%E7%9A%84%E9%9D%A2%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">&#x793A;&#x4F8B;4&#xFF1A;&#x628A;SuperMap SQL&#x67E5;&#x8BE2;&#x7684;&#x9762;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B4%EF%BC%9A%E6%8A%8Asupermap%E9%9D%A2%E5%87%A0%E4%BD%95%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">&#x793A;&#x4F8B;4&#xFF1A;&#x628A;SuperMap&#x9762;&#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a><ul>
 <li><a href="#step1-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a></li>
-<li><a href="#step2-supermap-sql%E6%9F%A5%E8%AF%A2">Step2 SuperMap SQL&#x67E5;&#x8BE2;</a></li>
-<li><a href="#step3-%E9%80%9A%E8%BF%87iconnectorbaidujs%E7%BA%A0%E5%81%8F">Step3 &#x901A;&#x8FC7;iConnectorBaidu.js&#x7EA0;&#x504F;</a></li>
-<li><a href="#step4-%E6%8A%8A%E7%BA%A0%E5%81%8F%E5%90%8E%E7%9A%84supermap%E9%9D%A2%E5%8A%A0%E8%BD%BD%E5%88%B0%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step4 &#x628A;&#x7EA0;&#x504F;&#x540E;&#x7684;SuperMap&#x9762;&#x52A0;&#x8F7D;&#x5230;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</a></li>
+<li><a href="#step2-supermap-sql%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E9%9D%A2%E5%AF%B9%E8%B1%A1">Step2 SuperMap SQL&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x9762;&#x5BF9;&#x8C61;</a></li>
+<li><a href="#step3-%E9%80%9A%E8%BF%87iconnectorbaidujs%E7%BA%A0%E5%81%8F%E5%B9%B6%E5%8F%A0%E5%8A%A0%E5%88%B0%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 &#x901A;&#x8FC7;iConnectorBaidu.js&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</a></li>
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
 <li><a href="#%E7%A4%BA%E4%BE%8B5%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%BC%93%E5%86%B2%E5%8C%BA">&#x793A;&#x4F8B;5&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7F13;&#x51B2;&#x533A;</a><ul>
-<li><a href="#step1-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%EF%BC%8C%E7%BB%98%E5%88%B6%E7%94%A8%E4%BA%8E%E7%BC%93%E5%86%B2%E5%8C%BA%E5%88%86%E6%9E%90%E7%9A%84%E7%BA%BF">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#xFF0C;&#x7ED8;&#x5236;&#x7528;&#x4E8E;&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x7684;&#x7EBF;</a></li>
-<li><a href="#step2-supermap%E7%BC%93%E5%86%B2%E5%8C%BA%E5%88%86%E6%9E%90">Step2 SuperMap&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;</a></li>
+<li><a href="#step1-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%B9%B6%E7%BB%98%E5%88%B6%E7%94%A8%E4%BA%8E%E5%88%86%E6%9E%90%E7%9A%84%E7%BA%BF">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5E76;&#x7ED8;&#x5236;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x7684;&#x7EBF;</a></li>
+<li><a href="#step2-%E8%BF%9B%E8%A1%8Csupermap%E7%BC%93%E5%86%B2%E5%8C%BA%E5%88%86%E6%9E%90%E8%BF%94%E5%9B%9E%E7%BC%93%E5%86%B2%E5%8C%BA%E9%9D%A2">Step2 &#x8FDB;&#x884C;SuperMap&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x8FD4;&#x56DE;&#x7F13;&#x51B2;&#x533A;&#x9762;</a></li>
 <li><a href="#step3-%E7%BC%93%E5%86%B2%E5%8C%BA%E9%9D%A2%E5%AF%B9%E8%B1%A1%E7%BA%A0%E5%81%8F%E5%B9%B6%E5%8F%A0%E5%8A%A0%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">Step3 &#x7F13;&#x51B2;&#x533A;&#x9762;&#x5BF9;&#x8C61;&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</a></li>
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -290,9 +285,8 @@
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<h3 id="&#x793A;&#x8303;&#x7A0B;&#x5E8F;">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</h3>
-<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;supermap&#x7684;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x7684;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</h4>
-<h5 id="step1-&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x5E76;&#x52A0;&#x8F7D;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x5E76;&#x52A0;&#x8F7D;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h5>
+<h3 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</h3>
+<h4 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h4>
 <p>&#x4F7F;&#x7528;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x201C;map&#x201D;&#xFF0C;&#x8BBE;&#x7F6E;&#x52A0;&#x8F7D;&#x5730;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x548C;&#x6BD4;&#x4F8B;&#x5C3A;&#x3001;&#x7F29;&#x653E;&#x7EA7;&#x522B;&#x3001;&#x5750;&#x6807;&#x7CFB;&#x7B49;&#x3002;</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> opt = {
         center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">115</span>, <span class="hljs-number">35</span>),<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x70B9;</span>
@@ -302,7 +296,8 @@
     };
     mapObj = <span class="hljs-keyword">new</span> AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,opt);
 </code></pre>
-<h5 id="step2-&#x4F7F;&#x7528;supermapincludejs&#xFF0C;&#x57FA;&#x4E8E;supermap-rest&#x670D;&#x52A1;&#x4E2D;&#x7684;chinaprovincer&#x56FE;&#x5C42;&#xFF0C;&#x5236;&#x4F5C;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;">Step2 &#x4F7F;&#x7528;SuperMap.Include.js&#xFF0C;&#x57FA;&#x4E8E;SuperMap REST&#x670D;&#x52A1;&#x4E2D;&#x7684;&quot;China_Province_R&quot;&#x56FE;&#x5C42;&#xFF0C;&#x5236;&#x4F5C;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</h5>
+<h4 id="step2-&#x5236;&#x4F5C;supermap&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;">Step2 &#x5236;&#x4F5C;SuperMap&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;</h4>
+<p>&#x4F7F;&#x7528;SuperMap.Include.js&#xFF0C;&#x57FA;&#x4E8E;SuperMap REST&#x670D;&#x52A1;&#x4E2D;&#x7684;&quot;China_Province_R&quot;&#x56FE;&#x5C42;&#xFF0C;&#x5236;&#x4F5C;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;&#x3002;</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-comment">//&#x521B;&#x5EFA;&#x5236;&#x4F5C;&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;&#x670D;&#x52A1;&#x7C7B;</span>
     <span class="hljs-keyword">var</span> themeService = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeService(url, {eventListeners:{<span class="hljs-string">&quot;processCompleted&quot;</span>: themeCompleted, <span class="hljs-string">&quot;processFailed&quot;</span>: themeFailed}}),
             dotStyle = <span class="hljs-keyword">new</span> SuperMap.REST.ServerStyle({
@@ -322,25 +317,27 @@
     <span class="hljs-comment">//&#x5411;iserver&#x53D1;&#x9001;&#x8BF7;&#x6C42;</span>
     themeService.processAsync(themeParameters);
 </code></pre>
-<h5 id="step3-&#x4F7F;&#x7528;iconnectoramapjs&#x628A;step2&#x521B;&#x5EFA;&#x7684;supermap&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5230;step1&#x521B;&#x5EFA;&#x7684;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;">Step3 &#x4F7F;&#x7528;iConnectorAMap.js&#x628A;Step2&#x521B;&#x5EFA;&#x7684;SuperMap&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5230;Step1&#x521B;&#x5EFA;&#x7684;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</h5>
+<h4 id="step3-&#x628A;supermap&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x6362;&#x540E;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;">Step3 &#x628A;SuperMap&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x6362;&#x540E;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</h4>
+<p>&#x4F7F;&#x7528;iConnectorAMap.js&#x628A;Step2&#x521B;&#x5EFA;&#x7684;SuperMap&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5230;Step1&#x521B;&#x5EFA;&#x7684;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x3002;</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">if</span>(themeEventArgs.result.resourceInfo.id) {
         <span class="hljs-keyword">var</span> canvasTiles =  SuperMap.Web.iConnector.AMap.getLayer(url,{layersID:themeEventArgs.result.resourceInfo.id});
         mapObj.addLayer(canvasTiles);
     }
 </code></pre>
-<h5 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h5>
-<p>&#x5728;&#x7EBF;&#x6F14;&#x793A;&#xFF1A;
-<a href="http://runjs.cn/detail/pmkuutbr" target="_blank">http://runjs.cn/detail/pmkuutbr</a></p>
-<p>&#x6E90;&#x7801;&#x7F16;&#x8F91;&#xFF1A;
-<a href="http://runjs.cn/code/pmkuutbr" target="_blank">http://runjs.cn/code/pmkuutbr</a></p>
-<h4 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</h4>
-<h5 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h5>
+<h4 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x7EBF;&#x8BBF;&#x95EE;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3001;&#x4F53;&#x9A8C;&#x6F14;&#x793A;&#x6548;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x7EBF;&#x7F16;&#x8F91;&#x6E90;&#x7801;&#x5E76;&#x5B9E;&#x65F6;&#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
+<ul>
+<li><a href="http://runjs.cn/detail/pmkuutbr" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
+<li><a href="http://runjs.cn/code/pmkuutbr" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
+</ul>
+<h3 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</h3>
+<h4 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h4>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map =<span class="hljs-keyword">new</span>  AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,{
         center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">112</span>, <span class="hljs-number">39.90923</span>),<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x70B9;</span>
         level: <span class="hljs-number">4</span>,<span class="hljs-comment">//&#x521D;&#x59CB;&#x5730;&#x56FE;&#x9ED8;&#x8BA4;&#x663E;&#x793A;&#x7EA7;&#x522B;</span>
     })
 </code></pre>
-<h5 id="step2-&#x521B;&#x5EFA;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;">Step2 &#x521B;&#x5EFA;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</h5>
+<h4 id="step2-&#x5236;&#x4F5C;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;">Step2 &#x5236;&#x4F5C;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</h4>
 <p>&#x901A;&#x8FC7;iClient for JavaScript API&#x4F7F;&#x7528;SuperMap REST &#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x57FA;&#x4E8E;China&#x5730;&#x56FE;&#x4E2D;&#x7684;China_Province_R&#x56FE;&#x5C42;&#xFF0C;&#x6839;&#x636E;SMAREA&#x5B57;&#x6BB5;&#x521B;&#x5EFA;&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;&#x3002;</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> layer,
     url = <span class="hljs-string">&quot;http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&quot;</span>;
@@ -371,35 +368,34 @@
 
     themeService.processAsync(themeParameters);
 </code></pre>
-<h5 id="step3-&#x901A;&#x8FC7;iconnectoramapjs&#x628A;&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;">Step3 &#x901A;&#x8FC7;iConnectorAMap.js&#x628A;&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;</h5>
+<h4 id="step3-&#x628A;supermap&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x6362;&#x540E;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;">Step3 &#x628A;SuperMap&#x4E13;&#x9898;&#x56FE;&#x8F6C;&#x6362;&#x540E;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</h4>
 <pre><code class="lang-JavaScript">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">themeCompleted</span>(<span class="hljs-params">themeEventArgs</span>) </span>{
         <span class="hljs-keyword">if</span>(themeEventArgs.result.resourceInfo.id) {
             <span class="hljs-keyword">var</span> id =  themeEventArgs.result.resourceInfo.id;
             <span class="hljs-keyword">var</span> tileLayer = SuperMap.Web.iConnector.AMap.getLayer(url,{layersID:id});    
         }
+        tileLayer.setMap(map);
     }
 </code></pre>
-<h5 id="step4-&#x628A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x4E13;&#x9898;&#x56FE;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;">Step4 &#x628A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x4E13;&#x9898;&#x56FE;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</h5>
-<pre><code class="lang-JavaScript">    tileLayer.setMap(map);
-</code></pre>
-<h5 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h5>
+<h4 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x7EBF;&#x8BBF;&#x95EE;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3001;&#x4F53;&#x9A8C;&#x6F14;&#x793A;&#x6548;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x7EBF;&#x7F16;&#x8F91;&#x6E90;&#x7801;&#x5E76;&#x5B9E;&#x65F6;&#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
 <ul>
 <li><a href="http://runjs.cn/detail/xihjgnun" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/xihjgnun" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h4 id="&#x793A;&#x4F8B;3&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x70B9;">&#x793A;&#x4F8B;3&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x70B9;</h4>
-<h5 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h5>
+<h3 id="&#x793A;&#x4F8B;3&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x70B9;">&#x793A;&#x4F8B;3&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x70B9;</h3>
+<h4 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h4>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> opt = {
         center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">116.39674135</span>,<span class="hljs-number">39.91713004</span>),<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x70B9;</span>
         level: <span class="hljs-number">4</span><span class="hljs-comment">//&#x521D;&#x59CB;&#x5730;&#x56FE;&#x7F29;&#x653E;&#x7EA7;&#x522B;</span>
     }
     mapObj = <span class="hljs-keyword">new</span> AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,opt);
 </code></pre>
-<h5 id="step2-&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;supermap&#x70B9;&#xFF0C;&#x5E76;&#x7EA0;&#x504F;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5750;&#x6807;">Step2 &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;SuperMap&#x70B9;&#xFF0C;&#x5E76;&#x7EA0;&#x504F;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5750;&#x6807;</h5>
+<h4 id="step2-&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x70B9;&#xFF0C;&#x5E76;&#x7EA0;&#x504F;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5750;&#x6807;">Step2 &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x70B9;&#xFF0C;&#x5E76;&#x7EA0;&#x504F;&#x4E3A;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5750;&#x6807;</h4>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> poi = {x:<span class="hljs-number">116.39674135</span>,y:<span class="hljs-number">39.91713004</span>};
     <span class="hljs-keyword">var</span> myLatlng = SuperMap.Web.iConnector.AMap.transferPoint([poi],<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>))[<span class="hljs-number">0</span>];
 </code></pre>
-<h5 id="step3-&#x5C06;&#x7EA0;&#x504F;&#x540E;&#x7684;&#x70B9;&#x4F5C;&#x4E3A;marker&#x52A0;&#x8F7D;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;">Step3 &#x5C06;&#x7EA0;&#x504F;&#x540E;&#x7684;&#x70B9;&#x4F5C;&#x4E3A;Marker&#x52A0;&#x8F7D;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</h5>
+<h4 id="step3-&#x5C06;&#x7EA0;&#x504F;&#x540E;&#x7684;&#x70B9;&#x4F5C;&#x4E3A;marker&#x52A0;&#x8F7D;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;">Step3 &#x5C06;&#x7EA0;&#x504F;&#x540E;&#x7684;&#x70B9;&#x4F5C;&#x4E3A;Marker&#x52A0;&#x8F7D;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;</h4>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> marker =<span class="hljs-keyword">new</span> AMap.Marker({
         id:<span class="hljs-string">&quot;marker&quot;</span>,
         position:myLatlng,
@@ -408,13 +404,14 @@
     });
     marker.setMap(mapObj);
 </code></pre>
-<h5 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h5>
+<h4 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x7EBF;&#x8BBF;&#x95EE;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3001;&#x4F53;&#x9A8C;&#x6F14;&#x793A;&#x6548;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x7EBF;&#x7F16;&#x8F91;&#x6E90;&#x7801;&#x5E76;&#x5B9E;&#x65F6;&#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
 <ul>
 <li><a href="http://runjs.cn/detail/eyeio9kq" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/eyeio9kq" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h4 id="&#x793A;&#x4F8B;4&#xFF1A;&#x628A;supermap-sql&#x67E5;&#x8BE2;&#x7684;&#x9762;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">&#x793A;&#x4F8B;4&#xFF1A;&#x628A;SuperMap SQL&#x67E5;&#x8BE2;&#x7684;&#x9762;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h4>
-<h5 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h5>
+<h3 id="&#x793A;&#x4F8B;4&#xFF1A;&#x628A;supermap&#x9762;&#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">&#x793A;&#x4F8B;4&#xFF1A;&#x628A;SuperMap&#x9762;&#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h3>
+<h4 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h4>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> mapObj;
     <span class="hljs-keyword">var</span> opt = {
         center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">116.39674135</span>,<span class="hljs-number">39.91713004</span>),<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x70B9;</span>
@@ -422,7 +419,7 @@
     }
     mapObj = <span class="hljs-keyword">new</span> AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,opt);
 </code></pre>
-<h5 id="step2-supermap-sql&#x67E5;&#x8BE2;">Step2 SuperMap SQL&#x67E5;&#x8BE2;</h5>
+<h4 id="step2-supermap-sql&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x9762;&#x5BF9;&#x8C61;">Step2 SuperMap SQL&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x9762;&#x5BF9;&#x8C61;</h4>
 <p>&#x901A;&#x8FC7;iClient for JavaScript API&#x8C03;&#x7528;SuperMap REST &#x5730;&#x56FE;&#x670D;&#x52A1;&#x8FDB;&#x884C;SQL&#x67E5;&#x8BE2;&#xFF0C;&#x672C;&#x4F8B;&#x5C06;&#x5728;Countries@World.1&#x56FE;&#x5C42;&#x4E2D;&#x67E5;&#x8BE2;&#x4EBA;&#x53E3;&#x548C;&#x9762;&#x79EF;&#x5747;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF08;&quot;Pop_1994&gt;1000000000 and SmArea&gt;900&quot;&#xFF09;&#x7684;&#x8981;&#x7D20;&#x3002; &#x5B8C;&#x6210;&#x67E5;&#x8BE2;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#x3002;</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> url=<span class="hljs-string">&quot;http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World&quot;</span>;
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">queryBySQL</span>(<span class="hljs-params"></span>) </span>{
@@ -455,7 +452,7 @@
         }
     }
 </code></pre>
-<h5 id="step3-&#x901A;&#x8FC7;iconnectorbaidujs&#x7EA0;&#x504F;">Step3 &#x901A;&#x8FC7;iConnectorBaidu.js&#x7EA0;&#x504F;</h5>
+<h4 id="step3-&#x901A;&#x8FC7;iconnectorbaidujs&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;">Step3 &#x901A;&#x8FC7;iConnectorBaidu.js&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</h4>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">if</span>(geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPolygon&apos;</span> ||
          geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiLineString&apos;</span> ||
          geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPoint&apos;</span>){
@@ -467,16 +464,14 @@
 
     <span class="hljs-keyword">var</span> regions = SuperMap.Web.iConnector.AMap.transferPolygon([geometry],<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>));
 </code></pre>
-<h5 id="step4-&#x628A;&#x7EA0;&#x504F;&#x540E;&#x7684;supermap&#x9762;&#x52A0;&#x8F7D;&#x5230;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;">Step4 &#x628A;&#x7EA0;&#x504F;&#x540E;&#x7684;SuperMap&#x9762;&#x52A0;&#x8F7D;&#x5230;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</h5>
-<pre><code class="lang-JavaScript">    regions[<span class="hljs-number">0</span>].setMap(mapObj);
-</code></pre>
-<h5 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h5>
+<h4 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x7EBF;&#x8BBF;&#x95EE;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3001;&#x4F53;&#x9A8C;&#x6F14;&#x793A;&#x6548;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x7EBF;&#x7F16;&#x8F91;&#x6E90;&#x7801;&#x5E76;&#x5B9E;&#x65F6;&#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
 <ul>
 <li><a href="http://runjs.cn/detail/vaxzvlrp" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/vaxzvlrp" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h4 id="&#x793A;&#x4F8B;5&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x7F13;&#x51B2;&#x533A;">&#x793A;&#x4F8B;5&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7F13;&#x51B2;&#x533A;</h4>
-<h5 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#xFF0C;&#x7ED8;&#x5236;&#x7528;&#x4E8E;&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x7684;&#x7EBF;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#xFF0C;&#x7ED8;&#x5236;&#x7528;&#x4E8E;&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x7684;&#x7EBF;</h5>
+<h3 id="&#x793A;&#x4F8B;5&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x7F13;&#x51B2;&#x533A;">&#x793A;&#x4F8B;5&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7F13;&#x51B2;&#x533A;</h3>
+<h4 id="step1-&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5E76;&#x7ED8;&#x5236;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x7684;&#x7EBF;">Step1 &#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x5E76;&#x7ED8;&#x5236;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x7684;&#x7EBF;</h4>
 <p>&#x5728;&#x8FDB;&#x884C;&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x51C6;&#x5907;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x7684;&#x7EBF;&#x3002;&#x672C;&#x4F8B;&#x4E3A;&#x4E86;&#x5C55;&#x793A;&#x7EBF;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5C06;&#x8BE5;&#x7EBF;&#x7EA0;&#x504F;&#x540E;&#x53E0;&#x52A0;&#x5728;&#x5730;&#x56FE;&#x4E0A;&#x3002;</p>
 <pre><code class="lang-JavaScript"><span class="hljs-keyword">var</span> map;
 <span class="hljs-keyword">var</span> points = [
@@ -495,7 +490,7 @@
     gLine.setMap(map);
 }
 </code></pre>
-<h5 id="step2-supermap&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;">Step2 SuperMap&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;</h5>
+<h4 id="step2-&#x8FDB;&#x884C;supermap&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x8FD4;&#x56DE;&#x7F13;&#x51B2;&#x533A;&#x9762;">Step2 &#x8FDB;&#x884C;SuperMap&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x8FD4;&#x56DE;&#x7F13;&#x51B2;&#x533A;&#x9762;</h4>
 <p>&#x901A;&#x8FC7;iClient for JavaScript API&#x8C03;&#x7528;SuperMap REST &#x7A7A;&#x95F4;&#x5206;&#x6790;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#xFF0C;&#x5E76;&#x5C06;&#x751F;&#x6210;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x8FD4;&#x56DE;&#x3002;</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> regions,url =<span class="hljs-string">&quot;http://support.supermap.com.cn:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst&quot;</span>;
     <span class="hljs-comment">//&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;</span>
@@ -536,7 +531,7 @@
             addGeometry(bufferResultGeometry,map);
         }
 </code></pre>
-<h5 id="step3-&#x7F13;&#x51B2;&#x533A;&#x9762;&#x5BF9;&#x8C61;&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step3 &#x7F13;&#x51B2;&#x533A;&#x9762;&#x5BF9;&#x8C61;&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h5>
+<h4 id="step3-&#x7F13;&#x51B2;&#x533A;&#x9762;&#x5BF9;&#x8C61;&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Step3 &#x7F13;&#x51B2;&#x533A;&#x9762;&#x5BF9;&#x8C61;&#x7EA0;&#x504F;&#x5E76;&#x53E0;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h4>
 <p>&#x901A;&#x8FC7;iConnectorAMap.js&#xFF0C;&#x5BF9;&#x7F13;&#x51B2;&#x533A;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x9762;&#x5BF9;&#x50CF;&#x8FDB;&#x884C;&#x7EA0;&#x504F;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x591A;&#x9762;&#xFF08;MultiPolygon&#xFF09;&#xFF0C;&#x5219;&#x8F6C;&#x4E3A;&#x666E;&#x901A;&#x7684;&#x9762;&#x5BF9;&#x8C61;&#x3002;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x7684;setMap&#x65B9;&#x6CD5;&#xFF0C;&#x628A;&#x7EA0;&#x504F;&#x540E;&#x7684;&#x9762;&#x53E0;&#x52A0;&#x5230;&#x5730;&#x56FE;&#x4E0A;&#x3002;</p>
 <pre><code class="lang-JavaScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addGeometry</span>(<span class="hljs-params">geometry,map</span>)</span>{
         <span class="hljs-keyword">if</span>(geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPolygon&apos;</span>){
@@ -549,7 +544,8 @@
         regions[<span class="hljs-number">0</span>].setMap(map); <span class="hljs-comment">//&#x751F;&#x6210;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x52A0;&#x8F7D;&#x5230;&#x5730;&#x56FE;</span>
 }
 </code></pre>
-<h5 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h5>
+<h4 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x7EBF;&#x8BBF;&#x95EE;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x3001;&#x4F53;&#x9A8C;&#x6F14;&#x793A;&#x6548;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x7EBF;&#x7F16;&#x8F91;&#x6E90;&#x7801;&#x5E76;&#x5B9E;&#x65F6;&#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
 <ul>
 <li><a href="http://runjs.cn/detail/hxgpdmz4" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/hxgpdmz4" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
@@ -557,7 +553,7 @@
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
 
 <footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-05-26 19:42:06
+2016-05-26 20:51:09
 </span></footer>
                     
                     </section>
