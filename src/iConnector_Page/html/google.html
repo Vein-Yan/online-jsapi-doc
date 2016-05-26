@@ -57,7 +57,7 @@
         data-chapter-title="对接 Google Maps"
         data-filepath="google.md"
         data-basepath="."
-        data-revision="Tue May 24 2016 21:11:11 GMT+0800 (中国标准时间)"
+        data-revision="Thu May 26 2016 19:44:30 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -230,7 +230,7 @@
 <li><a href="#%E5%87%86%E5%A4%87%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</a><ul>
 <li><a href="#1-%E5%9F%BA%E4%BA%8Egoogle%E5%9C%B0%E5%9B%BE-javascript-api%E7%9A%84%E5%9C%B0%E5%9B%BE%E5%BA%94%E7%94%A8">1. &#x57FA;&#x4E8E;Google&#x5730;&#x56FE; JavaScript API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</a></li>
 <li><a href="#2-%E5%87%86%E5%A4%87supermap-gis%E6%9C%8D%E5%8A%A1">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</a></li>
-<li><a href="#3-supermap%E7%9A%84javascript-api%E4%B8%8Eiconnectorgooglejs">3. SuperMap&#x7684;JavaScript API&#x4E0E;iConnectorGoogle.js</a></li>
+<li><a href="#3-supermap%E7%9A%84javascript-api">3. SuperMap&#x7684;JavaScript API</a></li>
 </ul>
 </li>
 <li><a href="#%E7%A4%BA%E8%8C%83%E7%A8%8B%E5%BA%8F">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</a><ul>
@@ -266,9 +266,10 @@
 <p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x5C31;&#x50CF;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;</a></p>
 <p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a></p>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x7EBF;GIS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;SuperMap Online&#x79DF;&#x7528;GIS&#x4E91;&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x60A8;&#x81EA;&#x5DF1;&#x7684;GIS&#x670D;&#x52A1;&#x3002;</p>
-<h4 id="3-supermap&#x7684;javascript-api&#x4E0E;iconnectorgooglejs">3. SuperMap&#x7684;JavaScript API&#x4E0E;iConnectorGoogle.js</h4>
+<h4 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h4>
+<p>iClient for JavaScript&#x4E0E;iConnectorAMap.js</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorGoogle.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
 <h3 id="&#x793A;&#x8303;&#x7A0B;&#x5E8F;">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</h3>
 <h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x628A;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5728;google&#x5730;&#x56FE;&#x4E0A;">&#x793A;&#x4F8B;1&#xFF1A;&#x628A;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;</h4>
@@ -418,7 +419,7 @@
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
 
 <footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-05-24 20:07:33
+2016-05-26 19:44:28
 </span></footer>
                     
                     </section>

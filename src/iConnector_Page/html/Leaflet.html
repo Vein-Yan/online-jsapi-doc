@@ -57,7 +57,7 @@
         data-chapter-title="对接 Leaflet"
         data-filepath="Leaflet.md"
         data-basepath="."
-        data-revision="Tue May 24 2016 21:11:11 GMT+0800 (中国标准时间)"
+        data-revision="Thu May 26 2016 19:44:30 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -230,7 +230,7 @@
 <li><a href="#%E5%87%86%E5%A4%87%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</a><ul>
 <li><a href="#1-%E5%9F%BA%E4%BA%8Eleaflet-api%E7%9A%84%E5%9C%B0%E5%9B%BE%E5%BA%94%E7%94%A8">1. &#x57FA;&#x4E8E;Leaflet API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</a></li>
 <li><a href="#2-%E5%87%86%E5%A4%87supermap-gis%E6%9C%8D%E5%8A%A1">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</a></li>
-<li><a href="#3-supermap%E7%9A%84javascript-api%E4%B8%8Eiconnectorleafletjs">3. SuperMap&#x7684;JavaScript API&#x4E0E;iConnectorLeaflet.js</a></li>
+<li><a href="#3-supermap%E7%9A%84javascript-api">3. SuperMap&#x7684;JavaScript API</a></li>
 </ul>
 </li>
 <li><a href="#%E7%A4%BA%E8%8C%83%E7%A8%8B%E5%BA%8F">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</a><ul>
@@ -247,8 +247,7 @@
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
-<li><a href="#%E7%A4%BA%E4%BE%8B3%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet%E7%9A%84api%EF%BC%8C%E5%9C%A8openstreetmap%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%9A%84%E7%9F%A9%E9%98%B5%E6%A0%87%E7%AD%BE%E4%B8%93%E9%A2%98%E5%9C%B0%E5%9B%BE%EF%BC%88%E6%9C%89bug%EF%BC%89">&#x793A;&#x4F8B;3&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7684;&#x77E9;&#x9635;&#x6807;&#x7B7E;&#x4E13;&#x9898;&#x5730;&#x56FE;&#xFF08;&#x6709;bug&#xFF09;</a></li>
-<li><a href="#%E7%A4%BA%E4%BE%8B4%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet%E7%9A%84api%EF%BC%8C%E5%9C%A8openstreetmap%E4%B8%8A%E7%BB%98%E5%88%B6%E6%9D%A5%E8%87%AAsupermap%E7%9A%84geometry%EF%BC%88%E7%82%B9%E7%BA%BF%E9%9D%A2%EF%BC%89">&#x793A;&#x4F8B;4&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5728;OpenStreetMap&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;SuperMap&#x7684;Geometry&#xFF08;&#x70B9;&#x7EBF;&#x9762;&#xFF09;</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B3%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet%E7%9A%84api%EF%BC%8C%E5%9C%A8openstreetmap%E4%B8%8A%E7%BB%98%E5%88%B6%E6%9D%A5%E8%87%AAsupermap%E7%9A%84geometry%EF%BC%88%E7%82%B9%E7%BA%BF%E9%9D%A2%EF%BC%89">&#x793A;&#x4F8B;3&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5728;OpenStreetMap&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;SuperMap&#x7684;Geometry&#xFF08;&#x70B9;&#x7EBF;&#x9762;&#xFF09;</a><ul>
 <li><a href="#step1-%E4%BD%BF%E7%94%A8leaflet-api%E5%88%9B%E5%BB%BA%E5%9C%B0%E5%9B%BE%E7%AA%97%E5%8F%A3">Step1 &#x4F7F;&#x7528;Leaflet API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;</a></li>
 <li><a href="#step2-%E4%BD%BF%E7%94%A8leaflet-api%E5%8A%A0%E8%BD%BDopenstreetmap%E5%81%9A%E5%BA%95%E5%9B%BE">Step2 &#x4F7F;&#x7528;Leaflet API&#x52A0;&#x8F7D;OpenStreetMap&#x505A;&#x5E95;&#x56FE;</a></li>
 <li><a href="#step3-%E6%8A%8Asupermap%E7%9A%84%E7%82%B9%EF%BC%88point%EF%BC%89%E5%8A%A0%E8%BD%BD%E5%88%B0leaflet%E5%88%9B%E5%BB%BA%E7%9A%84%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 &#x628A;SuperMap&#x7684;&#x70B9;&#xFF08;Point&#xFF09;&#x52A0;&#x8F7D;&#x5230;Leaflet&#x521B;&#x5EFA;&#x7684;&#x5730;&#x56FE;&#x4E0A;</a></li>
@@ -257,7 +256,7 @@
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
-<li><a href="#%E7%A4%BA%E4%BE%8B5%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet%E7%9A%84api%EF%BC%8C%E5%B0%86supermap%E8%B7%9D%E7%A6%BB%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E5%9C%A8openstreetmap%E4%B8%8A">&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B4%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet%E7%9A%84api%EF%BC%8C%E5%B0%86supermap%E8%B7%9D%E7%A6%BB%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E5%9C%A8openstreetmap%E4%B8%8A">&#x793A;&#x4F8B;4&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</a><ul>
 <li><a href="#step1-%E4%BD%BF%E7%94%A8leaflet-api%E5%88%9B%E5%BB%BA%E5%9C%B0%E5%9B%BE%E7%AA%97%E5%8F%A3">Step1 &#x4F7F;&#x7528;Leaflet API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;</a></li>
 <li><a href="#step2-%E4%BD%BF%E7%94%A8leaflet-api%E5%8A%A0%E8%BD%BDopenstreetmap%EF%BC%8C%E5%B9%B6%E6%98%BE%E7%A4%BA%E7%94%A8%E4%BA%8E%E8%B7%9D%E7%A6%BB%E6%9F%A5%E8%AF%A2%E7%9A%84%E4%B8%AD%E5%BF%83%E7%82%B9">Step2 &#x4F7F;&#x7528;Leaflet API&#x52A0;&#x8F7D;OpenStreetMap&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x7528;&#x4E8E;&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;</a></li>
 <li><a href="#step3-%E4%BD%BF%E7%94%A8supermap-javascript-api%E5%AF%B9%E5%9C%A8%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E6%89%A7%E8%A1%8C%E8%B7%9D%E7%A6%BB%E6%9F%A5%E8%AF%A2">Step3 &#x4F7F;&#x7528;SuperMap JavaScript API&#x5BF9;&#x5728;&#x7EBF;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x6267;&#x884C;&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;</a></li>
@@ -266,11 +265,13 @@
 <li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
-<li><a href="#%E7%A4%BA%E4%BE%8B6%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet%E7%9A%84api%EF%BC%8C%E5%B0%86supermap%E5%88%9B%E5%BB%BA%E7%9A%84%E7%BA%BF%E7%BC%93%E5%86%B2%E5%8C%BA%E6%98%BE%E7%A4%BA%E5%9C%A8openstreetmap%E4%B8%8A">&#x793A;&#x4F8B;6&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7F13;&#x51B2;&#x533A;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B5%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet%E7%9A%84api%EF%BC%8C%E5%B0%86supermap%E5%88%9B%E5%BB%BA%E7%9A%84%E7%BA%BF%E7%BC%93%E5%86%B2%E5%8C%BA%E6%98%BE%E7%A4%BA%E5%9C%A8openstreetmap%E4%B8%8A">&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7F13;&#x51B2;&#x533A;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</a><ul>
 <li><a href="#step1-%E7%BB%98%E5%88%B6%E4%B8%80%E6%9D%A1supermap%E7%BA%BFpolyline">Step1 &#x7ED8;&#x5236;&#x4E00;&#x6761;SuperMap&#x7EBF;polyLine</a></li>
 <li><a href="#step2-%E9%80%9A%E8%BF%87iconnectorleafletjs%E5%B0%86%E7%BA%BFpolyline%E8%BD%AC%E6%8D%A2%E6%88%90leaflet%E7%9A%84%E7%BA%BFgline">Step2 &#x901A;&#x8FC7;iConnectorLeaflet.js&#x5C06;&#x7EBF;polyLine&#x8F6C;&#x6362;&#x6210;Leaflet&#x7684;&#x7EBF;gLine</a></li>
 <li><a href="#step3-leafletjs%E5%88%9B%E5%BB%BA%E5%9C%B0%E5%9B%BE%EF%BC%8C%E5%B9%B6%E6%8A%8Agline%E7%BB%98%E5%88%B6%E5%9C%A8%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 Leaflet.js&#x521B;&#x5EFA;&#x5730;&#x56FE;&#xFF0C;&#x5E76;&#x628A;gLine&#x7ED8;&#x5236;&#x5728;&#x5730;&#x56FE;&#x4E0A;</a></li>
-<li><a href="#step1-%E9%80%9A%E8%BF%87iconnectorleafletjs%E5%B0%86%E7%BA%BFpolyline%E8%BD%AC%E6%8D%A2%E6%88%90leaflet%E7%9A%84%E7%BA%BFgline">Step1 &#x901A;&#x8FC7;iConnectorLeaflet.js&#x5C06;&#x7EBF;polyLine&#x8F6C;&#x6362;&#x6210;Leaflet&#x7684;&#x7EBF;gLine</a></li>
+<li><a href="#step4-%E4%BD%BF%E7%94%A8supermap-iclient-for-javascript-api%E8%B0%83%E7%94%A8%E5%9C%A8%E7%BA%BF%E7%9A%84%E7%A9%BA%E9%97%B4%E5%88%86%E6%9E%90%E6%9C%8D%E5%8A%A1%E4%BB%A5%E6%9E%84%E5%BB%BA%E7%BC%93%E5%86%B2%E5%8C%BA">Step4 &#x4F7F;&#x7528;SuperMap iClient for JavaScript API&#x8C03;&#x7528;&#x5728;&#x7EBF;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x670D;&#x52A1;&#x4EE5;&#x6784;&#x5EFA;&#x7F13;&#x51B2;&#x533A;</a></li>
+<li><a href="#step6-%E9%80%9A%E8%BF%87iconnectorleafletjs%E5%B0%86%E7%94%9F%E6%88%90%E7%9A%84%E7%BC%93%E5%86%B2%E5%8C%BA%E8%BD%AC%E6%8D%A2%E4%B8%BAleaflet%E6%A0%BC%E5%BC%8F%E7%9A%84%E9%9D%A2%E5%AF%B9%E8%B1%A1%EF%BC%8C%E7%84%B6%E5%90%8E%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step6 &#x901A;&#x8FC7;iConnectorLeaflet.js&#x5C06;&#x751F;&#x6210;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x8F6C;&#x6362;&#x4E3A;Leaflet&#x683C;&#x5F0F;&#x7684;&#x9762;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x6DFB;&#x52A0;&#x5230;&#x5730;&#x56FE;&#x4E0A;</a></li>
+<li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
 </li>
 </ul>
@@ -289,9 +290,10 @@
 <p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x5C31;&#x50CF;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;</a></p>
 <p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a></p>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x7EBF;GIS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;SuperMap Online&#x79DF;&#x7528;GIS&#x4E91;&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x60A8;&#x81EA;&#x5DF1;&#x7684;GIS&#x670D;&#x52A1;&#x3002;</p>
-<h4 id="3-supermap&#x7684;javascript-api&#x4E0E;iconnectorleafletjs">3. SuperMap&#x7684;JavaScript API&#x4E0E;iConnectorLeaflet.js</h4>
+<h4 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h4>
+<p>iClient for JavaScript&#x4E0E;iConnectorAMap.js</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorLeaflet.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
 <h3 id="&#x793A;&#x8303;&#x7A0B;&#x5E8F;">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</h3>
 <h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x52A0;&#x8F7D;&#x6765;&#x81EA;supermap&#x7684;&#x5730;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x52A0;&#x8F7D;&#x6765;&#x81EA;SuperMap&#x7684;&#x5730;&#x56FE;</h4>
@@ -333,12 +335,7 @@
 <li><a href="http://runjs.cn/detail/bniri8f6" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/bniri8f6" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h4 id="&#x793A;&#x4F8B;3&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x7684;&#x77E9;&#x9635;&#x6807;&#x7B7E;&#x4E13;&#x9898;&#x5730;&#x56FE;&#xFF08;&#x6709;bug&#xFF09;">&#x793A;&#x4F8B;3&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7684;&#x77E9;&#x9635;&#x6807;&#x7B7E;&#x4E13;&#x9898;&#x5730;&#x56FE;&#xFF08;&#x6709;bug&#xFF09;</h4>
-<p>todotodo
-todo
-todo
-todo</p>
-<h4 id="&#x793A;&#x4F8B;4&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x5728;openstreetmap&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;supermap&#x7684;geometry&#xFF08;&#x70B9;&#x7EBF;&#x9762;&#xFF09;">&#x793A;&#x4F8B;4&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5728;OpenStreetMap&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;SuperMap&#x7684;Geometry&#xFF08;&#x70B9;&#x7EBF;&#x9762;&#xFF09;</h4>
+<h4 id="&#x793A;&#x4F8B;3&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x5728;openstreetmap&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;supermap&#x7684;geometry&#xFF08;&#x70B9;&#x7EBF;&#x9762;&#xFF09;">&#x793A;&#x4F8B;3&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5728;OpenStreetMap&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;SuperMap&#x7684;Geometry&#xFF08;&#x70B9;&#x7EBF;&#x9762;&#xFF09;</h4>
 <h5 id="step1-&#x4F7F;&#x7528;leaflet-api&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;">Step1 &#x4F7F;&#x7528;Leaflet API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;</h5>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">7</span>);
 </code></pre>
@@ -411,7 +408,7 @@ todo</p>
 </li>
 <li><a href="http://runjs.cn/code/wix82fok" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h4 id="&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x5C06;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x663E;&#x793A;&#x5728;openstreetmap&#x4E0A;">&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</h4>
+<h4 id="&#x793A;&#x4F8B;4&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x5C06;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x663E;&#x793A;&#x5728;openstreetmap&#x4E0A;">&#x793A;&#x4F8B;4&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</h4>
 <h5 id="step1-&#x4F7F;&#x7528;leaflet-api&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;">Step1 &#x4F7F;&#x7528;Leaflet API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;</h5>
 <pre><code class="lang-JavaScript">    map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">51.505</span>, -<span class="hljs-number">0.09</span>], <span class="hljs-number">1</span>);
 </code></pre>
@@ -470,7 +467,7 @@ todo</p>
 <li><a href="http://runjs.cn/detail/bibjevac" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/bibjevac" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h4 id="&#x793A;&#x4F8B;6&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x5C06;supermap&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7F13;&#x51B2;&#x533A;&#x663E;&#x793A;&#x5728;openstreetmap&#x4E0A;">&#x793A;&#x4F8B;6&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7F13;&#x51B2;&#x533A;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</h4>
+<h4 id="&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;leaflet&#x7684;api&#xFF0C;&#x5C06;supermap&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7F13;&#x51B2;&#x533A;&#x663E;&#x793A;&#x5728;openstreetmap&#x4E0A;">&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;Leaflet&#x7684;API&#xFF0C;&#x5C06;SuperMap&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7F13;&#x51B2;&#x533A;&#x663E;&#x793A;&#x5728;OpenStreetMap&#x4E0A;</h4>
 <h5 id="step1-&#x7ED8;&#x5236;&#x4E00;&#x6761;supermap&#x7EBF;polyline">Step1 &#x7ED8;&#x5236;&#x4E00;&#x6761;SuperMap&#x7EBF;polyLine</h5>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> points = [ 
         <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.5</span>,<span class="hljs-number">41.5</span>),
@@ -482,8 +479,7 @@ todo</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> gLine = SuperMap.Web.iConnector.Leaflet.transferLine([polyLine])[<span class="hljs-number">0</span>];
 </code></pre>
 <h5 id="step3-leafletjs&#x521B;&#x5EFA;&#x5730;&#x56FE;&#xFF0C;&#x5E76;&#x628A;gline&#x7ED8;&#x5236;&#x5728;&#x5730;&#x56FE;&#x4E0A;">Step3 Leaflet.js&#x521B;&#x5EFA;&#x5730;&#x56FE;&#xFF0C;&#x5E76;&#x628A;gLine&#x7ED8;&#x5236;&#x5728;&#x5730;&#x56FE;&#x4E0A;</h5>
-<pre><code class="lang-JavaScript">    map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">8</span>);
-
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">8</span>);
     L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
     attribution: <span class="hljs-string">&apos;Map data &amp;copy; &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, Imagery &#xA9; &lt;a href=&quot;http://cloudmade.com&quot;&gt;CloudMade&lt;/a&gt;&apos;</span>,
     maxZoom: <span class="hljs-number">18</span>
@@ -491,65 +487,47 @@ todo</p>
 
     gLine.addTo(map);
 </code></pre>
-<h5 id="step1-&#x901A;&#x8FC7;iconnectorleafletjs&#x5C06;&#x7EBF;polyline&#x8F6C;&#x6362;&#x6210;leaflet&#x7684;&#x7EBF;gline">Step1 &#x901A;&#x8FC7;iConnectorLeaflet.js&#x5C06;&#x7EBF;polyLine&#x8F6C;&#x6362;&#x6210;Leaflet&#x7684;&#x7EBF;gLine</h5>
-<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> gLine = SuperMap.Web.iConnector.Leaflet.transferLine([polyLine])[<span class="hljs-number">0</span>];
+<h5 id="step4-&#x4F7F;&#x7528;supermap-iclient-for-javascript-api&#x8C03;&#x7528;&#x5728;&#x7EBF;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x670D;&#x52A1;&#x4EE5;&#x6784;&#x5EFA;&#x7F13;&#x51B2;&#x533A;">Step4 &#x4F7F;&#x7528;SuperMap iClient for JavaScript API&#x8C03;&#x7528;&#x5728;&#x7EBF;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x670D;&#x52A1;&#x4EE5;&#x6784;&#x5EFA;&#x7F13;&#x51B2;&#x533A;</h5>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> url =<span class="hljs-string">&quot;http://support.supermap.com.cn:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst&quot;</span>;
+
+    <span class="hljs-keyword">var</span> bufferServiceByGeometry = <span class="hljs-keyword">new</span> SuperMap.REST.BufferAnalystService(url),
+
+    bufferDistance = <span class="hljs-keyword">new</span> SuperMap.REST.BufferDistance({
+        value: <span class="hljs-number">0.1</span>
+    }),
+
+    bufferSetting = <span class="hljs-keyword">new</span> SuperMap.REST.BufferSetting({
+        endType: SuperMap.REST.BufferEndType.ROUND,
+        leftDistance: bufferDistance,
+        rightDistance: bufferDistance,
+        semicircleLineSegment: <span class="hljs-number">1</span>
+    }),
+
+    geoBufferAnalystParam = <span class="hljs-keyword">new</span> SuperMap.REST.GeometryBufferAnalystParameters({
+        sourceGeometry: polyLine,
+        bufferSetting: bufferSetting
+    });
+
+    bufferServiceByGeometry.events.on(
+    {
+        <span class="hljs-string">&quot;processCompleted&quot;</span>: bufferAnalystCompleted
+    });
+    bufferServiceByGeometry.processAsync(geoBufferAnalystParam);
 </code></pre>
-<pre><code class="lang-JavaScript">          <span class="hljs-keyword">var</span> map, url =<span class="hljs-string">&quot;http://support.supermap.com.cn:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst&quot;</span>;
-          <span class="hljs-keyword">var</span> points = [ 
-                <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.5</span>,<span class="hljs-number">41.5</span>),
-                <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">118</span>,<span class="hljs-number">40.5</span>)
-            ];
-            <span class="hljs-keyword">var</span> polyLine = <span class="hljs-keyword">new</span> SuperMap.Geometry.LineString(points);     <span class="hljs-comment">//&#x70B9;&#x6784;&#x6210;&#x7EBF;</span>
-        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>)
-        </span>{
-            map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">8</span>);
-
-            L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
-                attribution: <span class="hljs-string">&apos;Map data &amp;copy; &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, Imagery &#xA9; &lt;a href=&quot;http://cloudmade.com&quot;&gt;CloudMade&lt;/a&gt;&apos;</span>,
-                maxZoom: <span class="hljs-number">18</span>
-            }).addTo(map);
-            <span class="hljs-keyword">var</span> gLine = SuperMap.Web.iConnector.Leaflet.transferLine([polyLine])[<span class="hljs-number">0</span>];<span class="hljs-comment">//&#x5C06;&#x7EBF;&#x8F6C;&#x6362;&#x6210;Leaflet&#x7684;&#x7EBF;</span>
-           gLine.addTo(map);             
-        }
-        <span class="hljs-comment">//&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;</span>
-        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bufferAnalystProcess</span>(<span class="hljs-params"></span>) 
-        </span>{
-                   <span class="hljs-keyword">var</span> bufferServiceByGeometry = <span class="hljs-keyword">new</span> SuperMap.REST.BufferAnalystService(url),
-
-                    bufferDistance = <span class="hljs-keyword">new</span> SuperMap.REST.BufferDistance({
-                        value: <span class="hljs-number">0.1</span>
-                    }),
-
-                    bufferSetting = <span class="hljs-keyword">new</span> SuperMap.REST.BufferSetting({
-                        endType: SuperMap.REST.BufferEndType.ROUND,
-                        leftDistance: bufferDistance,
-                        rightDistance: bufferDistance,
-                        semicircleLineSegment: <span class="hljs-number">1</span>
-                    }),
-
-                    geoBufferAnalystParam = <span class="hljs-keyword">new</span> SuperMap.REST.GeometryBufferAnalystParameters({
-                        sourceGeometry: polyLine,
-                        bufferSetting: bufferSetting
-                    });
-
-            bufferServiceByGeometry.events.on(
-                    {
-                        <span class="hljs-string">&quot;processCompleted&quot;</span>: bufferAnalystCompleted
-                    });
-            bufferServiceByGeometry.processAsync(geoBufferAnalystParam);
-
-        }
-        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bufferAnalystCompleted</span>(<span class="hljs-params">BufferAnalystEventArgs</span>)
-        </span>{
-            <span class="hljs-keyword">var</span> bufferResultGeometry = BufferAnalystEventArgs.result.resultGeometry;
-            <span class="hljs-keyword">var</span> regions = SuperMap.Web.iConnector.Leaflet.transferPolygon([bufferResultGeometry])[<span class="hljs-number">0</span>];
-            regions.addTo(map);<span class="hljs-comment">//&#x751F;&#x6210;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x52A0;&#x8F7D;&#x5230;&#x5730;&#x56FE;</span>
-        }
+<h5 id="step6-&#x901A;&#x8FC7;iconnectorleafletjs&#x5C06;&#x751F;&#x6210;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x8F6C;&#x6362;&#x4E3A;leaflet&#x683C;&#x5F0F;&#x7684;&#x9762;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x6DFB;&#x52A0;&#x5230;&#x5730;&#x56FE;&#x4E0A;">Step6 &#x901A;&#x8FC7;iConnectorLeaflet.js&#x5C06;&#x751F;&#x6210;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x8F6C;&#x6362;&#x4E3A;Leaflet&#x683C;&#x5F0F;&#x7684;&#x9762;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x6DFB;&#x52A0;&#x5230;&#x5730;&#x56FE;&#x4E0A;</h5>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> bufferResultGeometry = BufferAnalystEventArgs.result.resultGeometry;
+    <span class="hljs-keyword">var</span> regions = SuperMap.Web.iConnector.Leaflet.transferPolygon([bufferResultGeometry])[<span class="hljs-number">0</span>];
+    regions.addTo(map);<span class="hljs-comment">//&#x751F;&#x6210;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x52A0;&#x8F7D;&#x5230;&#x5730;&#x56FE;</span>
 </code></pre>
+<h5 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h5>
+<ul>
+<li><a href="http://runjs.cn/detail/ptxnf641" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
+<li><a href="http://runjs.cn/code/ptxnf641" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
+</ul>
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
 
 <footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-05-24 21:11:11
+2016-05-26 19:44:28
 </span></footer>
                     
                     </section>
