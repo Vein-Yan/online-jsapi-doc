@@ -3,7 +3,8 @@ node_js:
   - "5"
 deploy:
   provider: releases
-  file: dist.zip
+  api_key: '102f95a96b886a6ac13b583b76c1d03164d1d498'
+  file: 'dist.zip'
   skip_cleanup: true
   on:
     tags: true
