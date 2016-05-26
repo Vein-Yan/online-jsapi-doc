@@ -4,6 +4,6 @@
  （3）在build目录右键，选择“在此处打开命令行窗口”,输入 build -buildfile build.xml
  （4）在apidoc目录下的files目录找到iConnector目录，就得到了这些html文件
 
-2.iConnector_Page目录为JS API的相关介绍文档，由在gitbook上使用markdown语言编写，一般由文档开发来完成，然后生成的文档在启动本地的服务后，在浏览器中预览并查看调试模式下获取 sector.normal里面的html得到
+2.iConnector_Page目录为JS API的相关介绍文档，由在gitbook上使用markdown语言编写，一般由文档开发来完成，最终导出成html格式的文件。
 
 3.iConnectpr_Page_md为markdown源文件

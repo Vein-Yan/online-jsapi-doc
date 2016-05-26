@@ -10,17 +10,17 @@ var ZipZipTop = require("zip-zip-top");
 
 //要处理的文件
 var files = [
-{name:'amap-ftl',type:'ftl',path:'./src/iConnector_Page/amap.ftl'},
-{name:'baidu-ftl',type:'ftl',path:'./src/iConnector_Page/baidu.ftl'},
-{name:'google-ftl',type:'ftl',path:'./src/iConnector_Page/google.ftl'},
-{name:'leaflet-ftl',type:'ftl',path:'./src/iConnector_Page/Leaflet.ftl'},
-{name:'readme-ftl',type:'ftl',path:'./src/iConnector_Page/readme.ftl'},
-{name:'javascript-api-ftl',type:'ftl',path:'./src/iConnector_Page/javascript-api.ftl'},
-{name:'iconector-ftl',type:'ftl',path:'./src/iConnector_Page/iconnector.ftl'},
-{name:'amap-api',type:'html',path:'./src/iConnector_API/iConnectorAMap-js.html'},
-{name:'baidu-api',type:'html',path:'./src/iConnector_API/iConnectorBaidu-js.html'},
-{name:'google-api',type:'html',path:'./src/iConnector_API/iConnectorGoogle-js.html'},
-{name:'leaflet-api',type:'html',path:'./src/iConnector_API/iConnectorLeaflet-js.html'}
+{name:'amap-md',type:'desc',path:'./src/iConnector_Page/html/amap.html'},
+{name:'baidu-md',type:'desc',path:'./src/iConnector_Page/html/baidu.html'},
+{name:'google-md',type:'desc',path:'./src/iConnector_Page/html/google.html'},
+{name:'leaflet-md',type:'desc',path:'./src/iConnector_Page/html/Leaflet.html'},
+{name:'readme-md',type:'desc',path:'./src/iConnector_Page/html/jsApi.html'},
+{name:'javascript-api-md',type:'desc',path:'./src/iConnector_Page/html/iclientforjs.html'},
+{name:'iconector-md',type:'desc',path:'./src/iConnector_Page/html/index.html'},
+{name:'amap-api',type:'api',path:'./src/iConnector_API/iConnectorAMap-js.html'},
+{name:'baidu-api',type:'api',path:'./src/iConnector_API/iConnectorBaidu-js.html'},
+{name:'google-api',type:'api',path:'./src/iConnector_API/iConnectorGoogle-js.html'},
+{name:'leaflet-api',type:'api',path:'./src/iConnector_API/iConnectorLeaflet-js.html'}
 ];
 //目标目录
 var dist_path = './dist/';
@@ -41,10 +41,23 @@ function handleData(name,data){
 	result += '];';
 	return result;
 }
-function hanldeHtml(name,html,selector){
+function handleHtml(name,html,type){
 	//加载html页面成dom对象
 	var $ = cheerio.load(html);
-	var content = $(selector);
+	var content;
+	switch(type){
+		case 'api':
+			content = $('#Content');
+			break;
+		case 'desc':
+			content = $('#section-');
+			content.find('script,footer').remove();
+			break;
+		default:
+			content = $;
+			break;
+	}
+	
 	//使用html接口将content对象转化为字符串，所以先将其附到一个div上，再执行html方法
 	var html = $('<div></div>').append(content).html();
 	console.log(html);
@@ -75,12 +88,11 @@ for(var i = 0,len = files.length;i<len;i++){
 			var n = name.replace(/-/gi,'_');
 			var new_data = '';
 			switch(type){
-				case 'html':
-				    new_data = hanldeHtml(n,data,'#Content');
+				case 'api':
+				    new_data = handleHtml(n,data,type);
 				    break;
-				case 'ftl':
-				    data = '<section class="normal" id="section-">' + data + '</section>';
-				    new_data = hanldeHtml(n,data,'#section-');
+				case 'desc':
+				    new_data = handleHtml(n,data,type);
 				    break;
 				default:
 				    new_data = handleData(n,data);

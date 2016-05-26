@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>对接百度地图 | SuperMap Online在线教程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./amap.html" />
+    
+    
+    <link rel="prev" href="./google.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3"
+        data-chapter-title="对接百度地图"
+        data-filepath="baidu.md"
+        data-basepath="."
+        data-revision="Tue May 24 2016 21:11:11 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://www.supermapol.com/" target="blank" class="custom-link">SuperMap Online</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="jsApi.html">
+            
+                
+                    <a href="./jsApi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        JavaScript API 简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="iclientforjs.html">
+            
+                
+                    <a href="./iclientforjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        iClient for JavaScript 简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        认识SuperMap iConnector
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Leaflet.html">
+            
+                
+                    <a href="./Leaflet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        对接 Leaflet
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="google.html">
+            
+                
+                    <a href="./google.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        对接 Google Maps
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="baidu.html">
+            
+                
+                    <a href="./baidu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        对接百度地图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="amap.html">
+            
+                
+                    <a href="./amap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        对接高德地图
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >SuperMap Online在线教程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x5E94;&#x7528;">&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x5E94;&#x7528;</h1>
+<hr>
+<!-- toc -->
+<ul>
+<li><a href="#iconnectorbaidujs%E7%AE%80%E4%BB%8B">iConnectorBaidu.js&#x7B80;&#x4ECB;</a></li>
+<li><a href="#%E5%87%86%E5%A4%87%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</a><ul>
+<li><a href="#1-%E5%9F%BA%E4%BA%8E%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE-javascript-api%E7%9A%84%E5%9C%B0%E5%9B%BE%E5%BA%94%E7%94%A8">1. &#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE; JavaScript API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</a></li>
+<li><a href="#2-%E5%87%86%E5%A4%87supermap-gis%E6%9C%8D%E5%8A%A1">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</a></li>
+<li><a href="#3-supermap%E7%9A%84javascript-api%E4%B8%8Eiconnectorbaidujs">3. SuperMap&#x7684;JavaScript API&#x4E0E;iConnectorBaidu.js</a></li>
+</ul>
+</li>
+<li><a href="#%E7%A4%BA%E8%8C%83%E7%A8%8B%E5%BA%8F">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E5%9C%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A%EF%BC%8C%E5%8F%A0%E5%8A%A0supermap%E7%9A%84%E7%AD%89%E7%BA%A7%E7%AC%A6%E5%8F%B7%E4%B8%93%E9%A2%98%E5%9B%BE">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x7684;&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;</a><ul>
+<li><a href="#step1-%E5%88%9B%E5%BB%BA%E5%9C%B0%E5%9B%BE%E7%AA%97%E5%8F%A3%E5%B9%B6%E5%8A%A0%E8%BD%BD%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE">Step1 &#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x5E76;&#x52A0;&#x8F7D;&#x767E;&#x5EA6;&#x5730;&#x56FE;</a></li>
+<li><a href="#step2-%E4%BD%BF%E7%94%A8supermapincludejs%EF%BC%8C%E5%9F%BA%E4%BA%8Esupermap-rest%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84chinaprovincer%E5%9B%BE%E5%B1%82%EF%BC%8C%E5%88%B6%E4%BD%9C%E7%AD%89%E7%BA%A7%E7%AC%A6%E5%8F%B7%E4%B8%93%E9%A2%98%E5%9B%BE">Step2 &#x4F7F;&#x7528;SuperMap.Include.js&#xFF0C;&#x57FA;&#x4E8E;SuperMap REST&#x670D;&#x52A1;&#x4E2D;&#x7684;&quot;China_Province_R&quot;&#x56FE;&#x5C42;&#xFF0C;&#x5236;&#x4F5C;&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;</a></li>
+<li><a href="#step3-%E4%BD%BF%E7%94%A8iconnectorbaidujs%E6%8A%8Astep2%E5%88%9B%E5%BB%BA%E7%9A%84supermap%E4%B8%93%E9%A2%98%E5%9B%BE%E5%8F%A0%E5%8A%A0%E5%88%B0step1%E5%88%9B%E5%BB%BA%E7%9A%84%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A">Step3 &#x4F7F;&#x7528;iConnectorBaidu.js&#x628A;Step2&#x521B;&#x5EFA;&#x7684;SuperMap&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5230;Step1&#x521B;&#x5EFA;&#x7684;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</a></li>
+<li><a href="#%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA%E4%B8%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%BE%91">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h3 id="iconnectorbaidujs&#x7B80;&#x4ECB;">iConnectorBaidu.js&#x7B80;&#x4ECB;</h3>
+<p>&#x5982;&#x679C;&#x60A8;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;JavaScript API&#x6784;&#x5EFA;&#x4E86;&#x5730;&#x56FE;&#x5E94;&#x7528;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;iConnectorBaidu.js&#x5BF9;&#x63A5;SuperMap&#x7684;GIS&#x670D;&#x52A1;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;&#x901A;&#x8FC7;SuperMap&#x53D1;&#x5E03;&#x7684;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x3002;</p>
+<p>iConnectorBaidu.js&#x4E3B;&#x8981;&#x63D0;&#x4F9B;&#x4E86;&#x5730;&#x56FE;&#x53E0;&#x52A0;&#x4EE5;&#x53CA;Geometry&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x5730;&#x56FE;&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x5730;&#x56FE;&#x3001;&#x4E13;&#x9898;&#x56FE;&#x3001;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x4EE5;&#x53CA;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x3002;</p>
+<h3 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h3>
+<h4 id="1-&#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE;-javascript-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. &#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE; JavaScript API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x5728;&#x7EBF;JavaScript API&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=&#x60A8;&#x7684;&#x5BC6;&#x94A5;&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h4 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x5C31;&#x50CF;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;</a></p>
+<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a></p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x7EBF;GIS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;SuperMap Online&#x79DF;&#x7528;GIS&#x4E91;&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x60A8;&#x81EA;&#x5DF1;&#x7684;GIS&#x670D;&#x52A1;&#x3002;</p>
+<h4 id="3-supermap&#x7684;javascript-api&#x4E0E;iconnectorbaidujs">3. SuperMap&#x7684;JavaScript API&#x4E0E;iConnectorBaidu.js</h4>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorBaidu.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h3 id="&#x793A;&#x8303;&#x7A0B;&#x5E8F;">&#x793A;&#x8303;&#x7A0B;&#x5E8F;</h3>
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;supermap&#x7684;&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x7684;&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;</h4>
+<h5 id="step1-&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x5E76;&#x52A0;&#x8F7D;&#x767E;&#x5EA6;&#x5730;&#x56FE;">Step1 &#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x5E76;&#x52A0;&#x8F7D;&#x767E;&#x5EA6;&#x5730;&#x56FE;</h5>
+<p>&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x201C;allmap&#x201D;&#xFF0C;&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x5730;&#x56FE;&#x63A7;&#x4EF6;&#x5982;&#x6BD4;&#x4F8B;&#x5C3A;&#x7F29;&#x653E;&#x63A7;&#x4EF6;&#x7B49;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x52A0;&#x8F7D;&#x5730;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x548C;&#x6BD4;&#x4F8B;&#x5C3A;&#x7EA7;&#x522B;&#xFF0C;
+&#x5982;&#xFF1A;map.centerAndZoom(new BMap.Point(116, 39), 4)&#x3002;</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> BMap.Map(<span class="hljs-string">&apos;allmap&apos;</span>);
+    map.addControl(<span class="hljs-keyword">new</span> BMap.ScaleControl());
+    map.addControl(<span class="hljs-keyword">new</span> BMap.NavigationControl());
+    map.enableScrollWheelZoom(<span class="hljs-literal">true</span>);
+    map.centerAndZoom(<span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116</span>, <span class="hljs-number">39</span>), <span class="hljs-number">4</span>);
+</code></pre>
+<h5 id="step2-&#x4F7F;&#x7528;supermapincludejs&#xFF0C;&#x57FA;&#x4E8E;supermap-rest&#x670D;&#x52A1;&#x4E2D;&#x7684;chinaprovincer&#x56FE;&#x5C42;&#xFF0C;&#x5236;&#x4F5C;&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;">Step2 &#x4F7F;&#x7528;SuperMap.Include.js&#xFF0C;&#x57FA;&#x4E8E;SuperMap REST&#x670D;&#x52A1;&#x4E2D;&#x7684;&quot;China_Province_R&quot;&#x56FE;&#x5C42;&#xFF0C;&#x5236;&#x4F5C;&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;</h5>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> themeService = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeService(url,
+                    {eventListeners:{<span class="hljs-string">&quot;processCompleted&quot;</span>: themeCompleted, <span class="hljs-string">&quot;processFailed&quot;</span>: themeFailed}}),
+        graStyle = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeGraduatedSymbolStyle({
+            positiveStyle: <span class="hljs-keyword">new</span> SuperMap.REST.ServerStyle({
+                markerSize: <span class="hljs-number">50</span>,
+                markerSymbolID: <span class="hljs-number">0</span>,
+                lineColor: <span class="hljs-keyword">new</span> SuperMap.REST.ServerColor(<span class="hljs-number">255</span>,<span class="hljs-number">165</span>,<span class="hljs-number">0</span>),
+                fillBackColor: <span class="hljs-keyword">new</span> SuperMap.REST.ServerColor(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)
+            })
+        }),
+        themeGraduatedSymbol = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeGraduatedSymbol({
+            expression: <span class="hljs-string">&quot;SMAREA&quot;</span>,
+            baseValue: <span class="hljs-number">3000000000000</span>,
+            graduatedMode: SuperMap.REST.GraduatedMode.CONSTANT,
+            flow: <span class="hljs-keyword">new</span> SuperMap.REST.ThemeFlow({
+                flowEnabled: <span class="hljs-literal">true</span>
+            }),
+            style: graStyle
+        }),
+        themeParameters = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeParameters({
+            themes: [themeGraduatedSymbol],
+            datasetNames: [<span class="hljs-string">&quot;China_Province_R&quot;</span>],
+            dataSourceNames: [<span class="hljs-string">&quot;China400&quot;</span>]
+        });
+    themeService.processAsync(themeParameters);
+</code></pre>
+<h5 id="step3-&#x4F7F;&#x7528;iconnectorbaidujs&#x628A;step2&#x521B;&#x5EFA;&#x7684;supermap&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5230;step1&#x521B;&#x5EFA;&#x7684;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;">Step3 &#x4F7F;&#x7528;iConnectorBaidu.js&#x628A;Step2&#x521B;&#x5EFA;&#x7684;SuperMap&#x4E13;&#x9898;&#x56FE;&#x53E0;&#x52A0;&#x5230;Step1&#x521B;&#x5EFA;&#x7684;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</h5>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">if</span>(themeEventArgs.result.resourceInfo.id) {
+        <span class="hljs-keyword">var</span> id =  themeEventArgs.result.resourceInfo.id;
+        <span class="hljs-keyword">var</span> tileLayer = SuperMap.Web.iConnector.Baidu.getLayer(url,{layersID:id});
+
+        map.addTileLayer(tileLayer);
+    }
+</code></pre>
+<h5 id="&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;">&#x5728;&#x7EBF;&#x6F14;&#x793A;&#x4E0E;&#x6E90;&#x7801;&#x7F16;&#x8F91;</h5>
+<p>&#x5728;&#x7EBF;&#x6F14;&#x793A;&#xFF1A;
+<a href="http://runjs.cn/detail/cac308zy" target="_blank">http://runjs.cn/detail/cac308zy</a></p>
+<p>&#x6E90;&#x7801;&#x7F16;&#x8F91;&#xFF1A;
+<a href="http://runjs.cn/code/cac308zy" target="_blank">http://runjs.cn/code/cac308zy</a></p>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
+
+<footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2016-05-14 10:36:56
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./google.html" class="navigation navigation-prev " aria-label="Previous page: 对接 Google Maps"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./amap.html" class="navigation navigation-next " aria-label="Next page: 对接高德地图"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["weibo","facebook","twitter","google","instapaper"]},"search-pro":{"cutWordLib":"nodejieba","defineWord":["地图","开发"]},"atoc":{"addClass":true,"className":"atoc"},"tbfed-pagefooter":{"copyright":"版权所有©1997-2016 北京超图软件股份有限公司","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
