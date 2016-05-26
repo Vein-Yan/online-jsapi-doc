@@ -1,0 +1,7 @@
+var javascript_api_md= [
+'<section class="normal" id="section-">' , 
+'<h2 id="supermap-iclient-for-javascript&#x7B80;&#x4ECB;">SuperMap iClient for JavaScript&#x7B80;&#x4ECB;</h2>' , 
+'<hr>' , 
+'<p>SuperMap iClient for JavaScript &#x9762;&#x5411; HTML5&#x7684;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#xFF0C;&#x662F;&#x4E00;&#x6B3E;&#x5728;&#x670D;&#x52A1;&#x5F0F;GIS&#x67B6;&#x6784;&#x4F53;&#x7CFB;&#x4E2D;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x7EC8;&#x7AEF;&#x3001;&#x8DE8;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x5F00;&#x53D1;&#x5E73;&#x53F0;&#x3002;</p>' , 
+'<p>SuperMap iClient for JavaScript&#x91C7;&#x7528; HTML + CSS + JavaScript &#x7684;&#x5F00;&#x53D1;&#x7EC4;&#x5408;&#xFF0C;&#x65E0;&#x9700;&#x5B89;&#x88C5;&#x4EFB;&#x4F55;&#x63D2;&#x4EF6;&#xFF0C; &#x4FBF;&#x53EF;&#x5728;&#x7EC8;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x5B9E;&#x73B0;&#x7F8E;&#x89C2;&#x7684;&#x5730;&#x56FE;&#x5448;&#x73B0;&#xFF0C;&#x5927;&#x6570;&#x636E;&#x91CF;&#x9AD8;&#x6548;&#x7684;&#x4EA4;&#x4E92;&#x6E32;&#x67D3;&#xFF0C; &#x52A8;&#x6001;&#x5B9E;&#x65F6;&#x7684;&#x8981;&#x7D20;&#x6807;&#x7ED8;&#xFF0C;&#x4EE5;&#x53CA;&#x4E0E;&#x591A;&#x6E90; GIS &#x670D;&#x52A1;&#x7684;&#x9AD8;&#x6548;&#x4EA4;&#x4E92;&#xFF0C;&#x5FEB;&#x901F;&#x6784;&#x5EFA;&#x5185;&#x5BB9;&#x4E30;&#x5BCC;&#x3001;&#x54CD;&#x5E94;&#x8FC5;&#x901F;&#x3001;&#x4F53;&#x9A8C;&#x6D41;&#x7545;&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;&#x3002;</p>' , 
+'</section>'];
