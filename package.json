@@ -5,8 +5,8 @@
   "main": "build.js",
   "scripts": {
     "preinstall": "npm config set npat false",
-    "build-doc": "node build.js",
-    "build": "npm run build-doc"
+    "start": "node build.js",
+    "poststart": "travis setup releases"
   },
   "repository": {
     "type": "git",
