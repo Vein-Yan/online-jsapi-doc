@@ -15,12 +15,12 @@ iConnectorAMap.js主要提供了地图叠加以及Geometry的转换，可以实�
 您使用高德地图的在线JavaScript API构建的应用，使用方式：
 
 ```JavaScript
-	<script src="http://webapi.amap.com/maps?v=1.2&key=14bf161ae4e52fe25a972f6b7c9c0980"></script>
+	<script src="http://webapi.amap.com/maps?v=1.3&key=14bf161ae4e52fe25a972f6b7c9c0980"></script>
 ```
 
 #### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，就像来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
 
 您也可以将您的业务数据托管在SuperMap Online，然后使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
 
@@ -36,7 +36,7 @@ iClient for JavaScript与iConnectorAMap.js
 ```
 ### 示例1：在高德地图上叠加SuperMap点密度专题图
 
-#### Step1 初始化高德地图
+**Step1 初始化高德地图**
 
 使用高德地图API创建地图窗口“map”，设置加载地图的中心点和比例尺、缩放级别、坐标系等。
 
@@ -50,7 +50,7 @@ iClient for JavaScript与iConnectorAMap.js
 	mapObj = new AMap.Map("map",opt);
 ```
 
-#### Step2 制作SuperMap点密度专题图
+**Step2 制作SuperMap点密度专题图**
 
 使用SuperMap.Include.js，基于SuperMap REST服务中的"China_Province_R"图层，制作点密度专题图。
 		
@@ -75,7 +75,7 @@ iClient for JavaScript与iConnectorAMap.js
 	themeService.processAsync(themeParameters);
 ```
 
-#### Step3 把SuperMap专题图转换后叠加到高德地图上
+**Step3 把SuperMap专题图转换后叠加到高德地图上**
 
 使用iConnectorAMap.js把Step2创建的SuperMap专题图叠加到Step1创建的高德地图上。
 		
@@ -86,7 +86,7 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -95,7 +95,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例2：在高德地图上叠加SuperMap分段专题图
 
-#### Step1 初始化高德地图
+**Step1 初始化高德地图**
 
 ```JavaScript
 	var map =new  AMap.Map("map",{
@@ -104,7 +104,7 @@ iClient for JavaScript与iConnectorAMap.js
 	})
 ```
 
-#### Step2 制作SuperMap分段专题图
+**Step2 制作SuperMap分段专题图**
 
 通过iClient for JavaScript API使用SuperMap REST 地图服务，基于China地图中的China_Province_R图层，根据SMAREA字段创建分段专题图。
 
@@ -139,7 +139,7 @@ iClient for JavaScript与iConnectorAMap.js
 	themeService.processAsync(themeParameters);
 ```
 
-#### Step3 把SuperMap专题图转换后叠加到高德地图上
+**Step3 把SuperMap专题图转换后叠加到高德地图上**
 
 ```JavaScript
 	function themeCompleted(themeEventArgs) {
@@ -151,7 +151,7 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -161,7 +161,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例3：在高德地图上叠加SuperMap点 
 
-#### Step1 初始化高德地图
+**Step1 初始化高德地图**
 
 ```JavaScript
 	var opt = {
@@ -171,14 +171,14 @@ iClient for JavaScript与iConnectorAMap.js
 	mapObj = new AMap.Map("map",opt);
 ```
 
-#### Step2 初始化一个点，并纠偏为高德地图坐标
+**Step2 初始化一个点，并纠偏为高德地图坐标**
 
 ```JavaScript
 	var poi = {x:116.39674135,y:39.91713004};
 	var myLatlng = SuperMap.Web.iConnector.AMap.transferPoint([poi],new SuperMap.Projection("EPSG:4326"))[0];
 ```
 
-#### Step3 将纠偏后的点作为Marker加载到高德地图上
+**Step3 将纠偏后的点作为Marker加载到高德地图上**
 
 ```JavaScript
 	var marker =new AMap.Marker({
@@ -190,7 +190,7 @@ iClient for JavaScript与iConnectorAMap.js
 	marker.setMap(mapObj);
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -199,7 +199,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例4：把SuperMap面几何对象添加到高德地图 
 
-#### Step1 初始化高德地图 
+**Step1 初始化高德地图 **
 
 ```JavaScript
 	var mapObj;
@@ -210,7 +210,7 @@ iClient for JavaScript与iConnectorAMap.js
 	mapObj = new AMap.Map("map",opt);
 ```
 
-#### Step2 SuperMap SQL查询返回面对象
+**Step2 SuperMap SQL查询返回面对象**
 
 通过iClient for JavaScript API调用SuperMap REST 地图服务进行SQL查询，本例将在Countries@World.1图层中查询人口和面积均满足条件（"Pop_1994>1000000000 and SmArea>900"）的要素。 完成查询后，返回查询结果几何对象。
 
@@ -247,7 +247,7 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-#### Step3 通过iConnectorBaidu.js纠偏并叠加到百度地图上
+**Step3 通过iConnectorBaidu.js纠偏并叠加到百度地图上**
 
 ```JavaScript
 	if(geometry.CLASS_NAME === 'SuperMap.Geometry.MultiPolygon' ||
@@ -262,7 +262,7 @@ iClient for JavaScript与iConnectorAMap.js
 	var regions = SuperMap.Web.iConnector.AMap.transferPolygon([geometry],new SuperMap.Projection("EPSG:4326"));
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -271,7 +271,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例5：在高德地图上叠加SuperMap缓冲区
 
-#### Step1 初始化高德地图并绘制用于分析的线
+**Step1 初始化高德地图并绘制用于分析的线**
 
 在进行缓冲区分析前，需要先准备用于分析的线。本例为了展示线的位置，将该线纠偏后叠加在地图上。
 
@@ -294,7 +294,7 @@ function init()
 }
 ```
 
-#### Step2 进行SuperMap缓冲区分析返回缓冲区面
+**Step2 进行SuperMap缓冲区分析返回缓冲区面**
 
 通过iClient for JavaScript API调用SuperMap REST 空间分析服务进行缓冲区分析，并将生成的缓冲区返回。
 
@@ -339,7 +339,7 @@ function init()
 		}
 ```
 
-#### Step3 缓冲区面对象纠偏并叠加到高德地图
+**Step3 缓冲区面对象纠偏并叠加到高德地图**
 
 通过iConnectorAMap.js，对缓冲区结果中的面对像进行纠偏，如果是多面（MultiPolygon），则转为普通的面对象。然后通过高德地图的setMap方法，把纠偏后的面叠加到地图上。
 
@@ -355,7 +355,7 @@ function addGeometry(geometry,map){
 		regions[0].setMap(map); //生成的缓冲区加载到地图
 }
 ```
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 

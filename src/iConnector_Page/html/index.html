@@ -41,7 +41,7 @@
         
     
     
-    <link rel="next" href="./Leaflet.html" />
+    <link rel="next" href="./leaflet.html" />
     
     
     <link rel="prev" href="./iclientforjs.html" />
@@ -57,7 +57,7 @@
         data-chapter-title="认识SuperMap iConnector"
         data-filepath="README.md"
         data-basepath="."
-        data-revision="Thu May 26 2016 21:05:33 GMT+0800 (中国标准时间)"
+        data-revision="Fri May 27 2016 16:45:08 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -80,10 +80,10 @@
 
             
     
-        <li class="chapter " data-level="0" data-path="jsApi.html">
+        <li class="chapter " data-level="0" data-path="jsapi.html">
             
                 
-                    <a href="./jsApi.html">
+                    <a href="./jsapi.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -124,10 +124,10 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="Leaflet.html">
+        <li class="chapter " data-level="2.1" data-path="leaflet.html">
             
                 
-                    <a href="./Leaflet.html">
+                    <a href="./leaflet.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -229,7 +229,7 @@
 <li><a href="#iconnector%E7%AE%80%E4%BB%8B">iConnector&#x7B80;&#x4ECB;</a></li>
 <li><a href="#iconnector%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD">iConnector&#x4E3B;&#x8981;&#x529F;&#x80FD;</a><ul>
 <li><a href="#%E5%8A%9F%E8%83%BD%E5%88%97%E8%A1%A8">&#x529F;&#x80FD;&#x5217;&#x8868;</a></li>
-<li><a href="#%E6%94%AF%E6%8C%81%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9javascript-api">&#x652F;&#x6301;&#x7684;&#x7B2C;&#x4E09;&#x65B9;JavaScript API</a></li>
+<li><a href="#%E6%94%AF%E6%8C%81%E5%AF%B9%E6%8E%A5%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9javascript-api">&#x652F;&#x6301;&#x5BF9;&#x63A5;&#x7684;&#x7B2C;&#x4E09;&#x65B9;JavaScript API</a></li>
 </ul>
 </li>
 <li><a href="#%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A">&#x4E86;&#x89E3;&#x66F4;&#x591A;</a></li>
@@ -240,21 +240,21 @@
 <ul>
 <li>&#x60A8;&#x5DF2;&#x7ECF;&#x5F00;&#x53D1;&#x4E86;&#x4E00;&#x4E2A;GIS&#x5E94;&#x7528;&#xFF08;&#x5982;&#x5730;&#x56FE;&#x5E94;&#x7528;&#xFF09;</li>
 <li>&#x56E0;&#x4E3A;&#x529F;&#x80FD;&#x5347;&#x7EA7;&#xFF0C;&#x5DF2;&#x6709;&#x7684;GIS&#x5E94;&#x7528;&#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x9700;&#x6C42;&#xFF0C;&#x800C;&#x9700;&#x8981;&#x4F7F;&#x7528;SuperMap GIS&#x670D;&#x52A1;&#xFF0C;&#x5982;&#x4E13;&#x4E1A;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x3001;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x670D;&#x52A1;</li>
-<li>&#x4F46;&#x662F;&#x60A8;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x5DF2;&#x6709;&#x5E94;&#x7528;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#xFF08;&#x5982;&#x57FA;&#x4E8E;Leaflet JavaScript API&#x5F00;&#x53D1;&#x7684;&#x5E94;&#x7528;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x91CD;&#x65B0;&#x5F00;&#x53D1;</li>
+<li>&#x4F46;&#x662F;&#x60A8;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x5DF2;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#xFF08;&#x5982;&#x57FA;&#x4E8E;Leaflet JavaScript API&#x5F00;&#x53D1;&#x7684;&#x5E94;&#x7528;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x91CD;&#x65B0;&#x5F00;&#x53D1;</li>
 </ul>
-<p>&#x9047;&#x5230;&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;SuperMap&#x63D0;&#x4F9B;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x5DE5;&#x5177;&#x2014;&#x2014;SuperMap iConnector&#xFF08;&#x4EE5;&#x4E0B;&#x7B80;&#x79F0;iConnector&#xFF09;&#x3002;</p>
-<p>iConnector&#x662F;&#x4E00;&#x6B3E;&#x57FA;&#x4E8E;SuperMap iClient for JavaScript&#x5B9E;&#x73B0;&#x7684;&#x8FDE;&#x63A5;SuperMap GIS&#x670D;&#x52A1;&#x4E0E;&#x7B2C;&#x4E09;&#x65B9;JS&#x5730;&#x56FE;&#x5E94;&#x7528;&#x7684;&#x5F00;&#x6E90;&#x5DE5;&#x5177;&#x3002;&#x901A;&#x8FC7;iConnector&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4FBF;&#x6377;&#x5730;&#x91CD;&#x7528;&#x5DF2;&#x6709;&#x7684;GIS&#x5E94;&#x7528;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x9700;&#x6C42;&#x5BF9;&#x63A5;SuperMap iServer&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x4E13;&#x4E1A;GIS&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x9047;&#x5230;&#x4E0A;&#x8FF0;&#x60C5;&#x51B5;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;SuperMap&#x63D0;&#x4F9B;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x5DE5;&#x5177;&#x2014;&#x2014;SuperMap iConnector&#xFF08;&#x4EE5;&#x4E0B;&#x7B80;&#x79F0;iConnector&#xFF09;&#x3002;</p>
+<p>iConnector&#x662F;&#x4E00;&#x6B3E;&#x57FA;&#x4E8E;JavaScript&#x5B9E;&#x73B0;&#x7684;&#x8FDE;&#x63A5;SuperMap GIS&#x670D;&#x52A1;&#x4E0E;&#x7B2C;&#x4E09;&#x65B9;&#x5730;&#x56FE;&#x5E94;&#x7528;&#x7684;&#x5F00;&#x6E90;&#x5DE5;&#x5177;&#x3002;&#x901A;&#x8FC7;iConnector&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4FBF;&#x6377;&#x5730;&#x91CD;&#x7528;&#x5DF2;&#x6709;&#x7684;GIS&#x5E94;&#x7528;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x9700;&#x6C42;&#x5BF9;&#x63A5;SuperMap iServer&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x4E13;&#x4E1A;GIS&#x670D;&#x52A1;&#x3002;</p>
 <p>iConnector&#x5728;GitHub&#x5F00;&#x6E90;&#xFF1A;<a href="https://github.com/SuperMap/iConnector" target="_blank">https://github.com/SuperMap/iConnector</a></p>
 <p>SuperMap&#x5728;&#x7EBF;JS&#x5E93;&#xFF1A;<a href="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js" target="_blank">http://www.supermapol.com/resources/api/libs/SuperMap.Include.js</a></p>
 <h3 id="iconnector&#x4E3B;&#x8981;&#x529F;&#x80FD;">iConnector&#x4E3B;&#x8981;&#x529F;&#x80FD;</h3>
 <h4 id="&#x529F;&#x80FD;&#x5217;&#x8868;">&#x529F;&#x80FD;&#x5217;&#x8868;</h4>
 <ol>
 <li>&#x5728;&#x57FA;&#x4E8E;&#x7B2C;&#x4E09;&#x65B9;JavaScript API&#x7684;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap iServer&#x63D0;&#x4F9B;&#x7684;&#x5730;&#x56FE;</li>
-<li>&#x5728;&#x57FA;&#x4E8E;&#x7B2C;&#x4E09;&#x65B9;JavaScript API&#x7684;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x6DFB;&#x52A0;SuperMap&#x4E13;&#x9898;&#x56FE;</li>
-<li>&#x5728;&#x57FA;&#x4E8E;&#x7B2C;&#x4E09;&#x65B9;JavaScript API&#x7684;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap iServer&#x5730;&#x56FE;&#x670D;&#x52A1;&#x7684;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;Geometry</li>
+<li>&#x5728;&#x57FA;&#x4E8E;&#x7B2C;&#x4E09;&#x65B9;JavaScript API&#x7684;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x4E13;&#x9898;&#x56FE;</li>
+<li>&#x5728;&#x57FA;&#x4E8E;&#x7B2C;&#x4E09;&#x65B9;JavaScript API&#x7684;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap &#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#xFF08;Geometry&#xFF09;&#xFF0C;&#x5982;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x70B9;&#x3001;&#x7EBF;&#x3001;&#x9762;</li>
 <li>&#x5728;&#x57FA;&#x4E8E;&#x7B2C;&#x4E09;&#x65B9;JavaScript API&#x7684;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap iServer&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x670D;&#x52A1;&#x7684;&#x5206;&#x6790;&#x7ED3;&#x679C;</li>
 </ol>
-<h4 id="&#x652F;&#x6301;&#x7684;&#x7B2C;&#x4E09;&#x65B9;javascript-api">&#x652F;&#x6301;&#x7684;&#x7B2C;&#x4E09;&#x65B9;JavaScript API</h4>
+<h4 id="&#x652F;&#x6301;&#x5BF9;&#x63A5;&#x7684;&#x7B2C;&#x4E09;&#x65B9;javascript-api">&#x652F;&#x6301;&#x5BF9;&#x63A5;&#x7684;&#x7B2C;&#x4E09;&#x65B9;JavaScript API</h4>
 <ul>
 <li>Leaflet<ul>
 <li><a href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js" target="_blank">&#x5728;&#x7EBF;JS&#x5E93;</a></li>
@@ -278,46 +278,46 @@
 </li>
 <li>&#x5929;&#x5730;&#x56FE;<ul>
 <li><a href="http://api.tianditu.com/js/maps.js" target="_blank">&#x5728;&#x7EBF;JS&#x5E93;</a></li>
-<li>iConnector&#x5BF9;&#x63A5;&#x5E93;&#xFF1A;</li>
+<li><a href="http://www.supermapol.com/resources/api/iconnector/iConnectorTianditu.js" target="_blank">iConnectorTianditu.js</a></li>
 </ul>
 </li>
 <li>ArcGIS<ul>
 <li><a href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/" target="_blank">&#x5728;&#x7EBF;JS&#x5E93;</a></li>
-<li>iConnector&#x5BF9;&#x63A5;&#x5E93;&#xFF1A;</li>
+<li><a href="http://www.supermapol.com/resources/api/iconnector/iConnectorArcGIS.js" target="_blank">iConnectorArcGIS.js</a></li>
 </ul>
 </li>
 <li>CartoDB<ul>
 <li><a href="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js" target="_blank">&#x5728;&#x7EBF;JS&#x5E93;</a></li>
-<li>iConnector&#x5BF9;&#x63A5;&#x5E93;&#xFF1A;</li>
+<li><a href="http://www.supermapol.com/resources/api/iconnector/iConnectorLeaflet.js" target="_blank">iConnectorLeaflet.js</a></li>
 </ul>
 </li>
 <li>Mapbox<ul>
 <li><a href="https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js" target="_blank">&#x5728;&#x7EBF;JS&#x5E93;</a></li>
-<li>iConnector&#x5BF9;&#x63A5;&#x5E93;&#xFF1A;</li>
+<li><a href="http://www.supermapol.com/resources/api/iconnector/iConnectorLeaflet.js" target="_blank">iConnectorLeaflet.js</a></li>
 </ul>
 </li>
 <li>OpenLayer3<ul>
 <li><a href="http://openlayers.org/en/v3.15.1/build/ol.js" target="_blank">&#x5728;&#x7EBF;JS&#x5E93;</a></li>
-<li>iConnector&#x5BF9;&#x63A5;&#x5E93;&#xFF1A;</li>
+<li><a href="http://www.supermapol.com/resources/api/iconnector/iConnectorOpenLayers3.js" target="_blank">iConnectorOpenLayers3.js</a></li>
 </ul>
 </li>
 <li>Polymaps<ul>
 <li><a href="http://polymaps.org/polymaps.min.js?2.5.1" target="_blank">&#x5728;&#x7EBF;JS&#x5E93;</a></li>
-<li>iConnector&#x5BF9;&#x63A5;&#x5E93;&#xFF1A;</li>
+<li><a href="http://www.supermapol.com/resources/api/iconnector/iConnectorPolymaps.js" target="_blank">iConnectorPolymaps.js</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="&#x4E86;&#x89E3;&#x66F4;&#x591A;">&#x4E86;&#x89E3;&#x66F4;&#x591A;</h3>
 <p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x4F7F;&#x7528;iConnector&#xFF1A;</p>
 <ul>
-<li>&#x60A8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE; API&#x53C2;&#x8003; &#x67E5;&#x770B;&#x8BE6;&#x7EC6;&#x7684;&#x63A5;&#x53E3;&#x8BF4;&#x660E;</li>
-<li>&#x60A8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;iConnector&#x5BF9;&#x63A5;Leaflet&#x3001;Google Maps&#x3001;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x3001;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x7684;&#x5728;&#x7EBF;&#x5F00;&#x53D1;&#x6307;&#x5357;&#x4E0E;&#x793A;&#x8303;&#x7A0B;&#x5E8F;</li>
-<li>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;iConnector&#x5728;GitHub&#x7684;&#x5F00;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;<a href="https://github.com/SuperMap/iConnector" target="_blank">https://github.com/SuperMap/iConnector</a></li>
+<li>&#x60A8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;<a href="http://www.supermapol.com/developer/jsapi.html#iconnector" target="_blank">API&#x53C2;&#x8003;</a>&#x67E5;&#x770B;&#x8BE6;&#x7EC6;&#x7684;&#x63A5;&#x53E3;&#x8BF4;&#x660E;</li>
+<li>&#x60A8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;iConnector&#x5BF9;&#x63A5;Leaflet&#x3001;Google Maps&#x3001;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x3001;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x7684;<a href="http://www.supermapol.com/developer/jsapi.html#tutorials" target="_blank">&#x5728;&#x7EBF;&#x5F00;&#x53D1;&#x6307;&#x5357;&#x4E0E;&#x793A;&#x8303;&#x7A0B;&#x5E8F;</a></li>
+<li>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;GitHub&#x4E0A;&#x7684;<a href="https://github.com/SuperMap/iConnector" target="_blank">iConnector&#x5F00;&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
 
 <footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-05-26 20:12:11
+2016-05-27 15:51:51
 </span></footer>
                     
                     </section>
@@ -331,7 +331,7 @@
         <a href="./iclientforjs.html" class="navigation navigation-prev " aria-label="Previous page: iClient for JavaScript 简介"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./Leaflet.html" class="navigation navigation-next " aria-label="Next page: 对接 Leaflet"><i class="fa fa-angle-right"></i></a>
+        <a href="./leaflet.html" class="navigation navigation-next " aria-label="Next page: 对接 Leaflet"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

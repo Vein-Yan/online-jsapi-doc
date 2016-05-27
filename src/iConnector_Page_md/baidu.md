@@ -20,7 +20,7 @@ iConnectorBaidu.js主要提供了地图叠加以及Geometry的转换，可以实
 
 #### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，就像来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
 
 您也可以将业务数据托管在SuperMap Online，然后使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
 
@@ -37,7 +37,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例1：在百度地图上叠加SuperMap等级符号专题图
 
-#### Step1 初始化百度地图
+**Step1 初始化百度地图**
 
 使用百度地图API创建地图窗口“allmap”，添加基础地图控件如比例尺缩放控件等，并设置加载地图的中心点和比例尺级别，
 如：map.centerAndZoom(new BMap.Point(116, 39), 4)。
@@ -50,7 +50,7 @@ iClient for JavaScript与iConnectorAMap.js
     map.centerAndZoom(new BMap.Point(116, 39), 4);
 ```
 
-#### Step2 制作SuperMap等级符号专题图
+**Step2 制作SuperMap等级符号专题图**
 
 使用SuperMap.Include.js，基于SuperMap REST服务中的"China_Province_R"图层，制作等级符号专题图。
 		
@@ -82,7 +82,7 @@ iClient for JavaScript与iConnectorAMap.js
 	themeService.processAsync(themeParameters);
 ```
 
-#### Step3 转换SuperMap专题图并叠加到百度地图
+**Step3 转换SuperMap专题图并叠加到百度地图**
 
 使用iConnectorBaidu.js把Step2创建的SuperMap专题图叠加到Step1创建的百度地图上。
 		
@@ -95,7 +95,7 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -108,7 +108,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 iConnectorBaidu.js封装了相关的纠偏算法，可以通过transferPoint来调用。
 
-#### Step1 初始化百度地图
+**Step1 初始化百度地图**
 
 设置中心点并添加控件。
 
@@ -118,7 +118,7 @@ iConnectorBaidu.js封装了相关的纠偏算法，可以通过transferPoint来�
 	map.enableScrollWheelZoom();
 ```
 
-#### Step2 初始化GCJ-02坐标的GPS点
+**Step2 初始化GCJ-02坐标的GPS点**
 
 ```JavaScript
 var points = [  new BMap.Point(116.3786889372559,39.90762965106183),
@@ -146,7 +146,7 @@ var points = [  new BMap.Point(116.3786889372559,39.90762965106183),
 			 ];
 ```
 
-#### Step2 对点进行坐标纠偏
+**Step3 对点进行坐标纠偏**
 
 通过iConnectorBaidu.js，把GPS点的坐标转为百度坐标系下的坐标值。
 
@@ -160,7 +160,7 @@ setTimeout(function(){
 * 2代表国家测绘局制订的GCJ-02，Google Maps、高德地图、腾讯地图使用
 * 0代表标准的WGS84坐标
 
-#### Step3 在百度地图上把转换后的点标注
+**Step4 在百度地图上把转换后的点标注**
 
 ```JavaScript
 	var points = []
@@ -172,7 +172,7 @@ setTimeout(function(){
 			}
 ```
 
-#### Step4 把转换后点连接成线并添加到百度地图
+**Step5 把转换后点连接成线并添加到百度地图**
 
 为添加的线设置颜色、宽度、透明度等样式。
 
@@ -182,7 +182,7 @@ setTimeout(function(){
 }
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -193,14 +193,14 @@ setTimeout(function(){
 
 与示例2在百度地图上添加GPS点和线类似，本例将在百度地图上添加纠偏后的GPS面。
 
-#### Step1 初始化百度地图
+**Step1 初始化百度地图**
 
 ```JavaScript
     var map = new BMap.Map("allmap");
     map.centerAndZoom(new BMap.Point(116.387, 39.907), 15);
 ```
 
-#### Step2 创建由创建GCJ-02坐标的GPS点组成的面
+**Step2 创建由创建GCJ-02坐标的GPS点组成的面**
 
 ```JavaScript
     var points = [new BMap.Point(116.3786889372559,39.90762965106183),
@@ -212,7 +212,7 @@ setTimeout(function(){
     var polygon = new BMap.Polygon(points);
 ```
 
-#### Step3 把GPS面纠偏为百度坐标系
+**Step3 把GPS面纠偏为百度坐标系**
 
 通过iConnectorBaidu.js，把GPS面的坐标转为百度坐标系下的坐标值。
 
@@ -222,7 +222,7 @@ setTimeout(function(){
     }, 1000);  //一秒之后开始执行
 ```
 
-#### Step4 把转换后的GPS面添加到百地图上
+**Step4 把转换后的GPS面添加到百地图上**
 
 ```JavaScript
     function acallback(polygons){
@@ -230,7 +230,7 @@ setTimeout(function(){
     }
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -242,7 +242,7 @@ setTimeout(function(){
 同样因为百度地图的坐标偏移，在百度地图上叠加SuperMap几何对象时，也需要进行纠偏处理。
 本例将把SuperMap距离查询结果（点），转换坐标后叠加在百度地图上
 
-#### Step1 初始化百度地图
+**Step1 初始化百度地图**
 
 ```JavaScript
 	//地图初始化
@@ -252,7 +252,7 @@ setTimeout(function(){
 	map.enableScrollWheelZoom();  //设置可以使用滚轮控制地图放大缩小
 ```
 
-#### Step2 初始化用于距离查询的点
+**Step2 初始化用于距离查询的点**
 
 ```JavaScript
 	var point = new BMap.Point(116.404, 39.915);    // 创建点坐标
@@ -264,7 +264,7 @@ setTimeout(function(){
 	map.addOverlay(marker); 
 ```
 
-#### Step3 执行SuperMap距离查询
+**Step3 执行SuperMap距离查询**
 
 通过iClient for JavaScript API调用SuperMap REST 地图服务进行距离查询。
 
@@ -285,7 +285,7 @@ setTimeout(function(){
 	queryByDistanceService.processAsync(queryByDistanceParams); //发送请求
 ```
 
-#### Step4 对查询结果点进行纠偏处理
+**Step4 对查询结果点进行纠偏处理**
 
 把查询结果放入数据，并通过iConnectorBaidu.js转为百度支持的点坐标。
 
@@ -305,7 +305,7 @@ setTimeout(function(){
 	SuperMap.Web.iConnector.Baidu.transferPoint(points,new SuperMap.Projection("EPSG:4326"),acallback,2);//将supermap的点转换为百度的点
 ```
 
-#### Step 在百度地图上标注纠偏后的查询结果
+**Step5 在百度地图上标注纠偏后的查询结果**
 
 ```JavaScript
 	function acallback(xyResults){//BMap.Point对象的数组（xyResults），接收转换的点
@@ -320,7 +320,7 @@ setTimeout(function(){
 	}
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -331,7 +331,7 @@ setTimeout(function(){
 
 本例将把SuperMap SQL查询的结果线对象，纠偏后叠加在百度地图上。
 
-#### Step1 初始化百度地图
+**Step1 初始化百度地图**
 
 ```JavaScript
 	//地图初始化
@@ -341,7 +341,7 @@ setTimeout(function(){
     map.enableScrollWheelZoom();                            //启用滚轮放大缩小
 ```
 
-#### Step2 执行SuperMap SQL查询
+**Step2 执行SuperMap SQL查询**
 
 通过iClient for JavaScript API调用SuperMap REST 地图服务进行SQL查询，本例将在Rivers@World图层中查询SMID为66的要素。
 完成查询后，返回查询结果几何对象。
@@ -379,7 +379,7 @@ setTimeout(function(){
     }
 ```
 
-#### Step3 通过iConnectorBaidu.js纠偏
+**Step3 通过iConnectorBaidu.js纠偏**
 
 通过transferLine可以把SuperMap线几何对象转为相应的百度坐标值。
 
@@ -395,13 +395,13 @@ setTimeout(function(){
         SuperMap.Web.iConnector.Baidu.transferLine([geometry],new SuperMap.Projection("EPSG:4326"),translateCallback);
 ```
 
-#### Step4 把纠偏后的SuperMap线加载到百度地图上
+**Step4 把纠偏后的SuperMap线加载到百度地图上**
 
 ```JavaScript
 	map.addOverlay(polyline[0]);
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 

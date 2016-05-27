@@ -20,7 +20,7 @@ iConnectorLeaflet.js主要提供了地图叠加以及Geometry的转换，可以�
 
 #### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，就像来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
 
 您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
 
@@ -37,7 +37,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例1：使用Leaflet API加载SuperMap地图服务
 
-#### Step1 初始化地图窗口
+**Step1 初始化地图窗口**
 
 使用Leaflet的map模块API创建地图窗口“map”，如：map = L.map('map').setView([38, 115], 5)。其中，.setView([38, 115], 5)指定了地图的中心点和比例尺级别。
 需要指出的是，虽然本例使用的地图本身的坐标系是EPSG Code为3857的WebMercator，但是Leaflet API设置中心点的参数格式为：[<Number> latitude, <Number> longitude,]，而不是地图本身的单位。
@@ -46,9 +46,9 @@ iClient for JavaScript与iConnectorAMap.js
 	map = L.map('map').setView([38, 115], 5);
 ```
 
-#### Step2 加载SuperMap地图服务中的地图
+**Step2 加载SuperMap地图服务中的地图**
 
-可以使用iConnectorLeaflet.js 中的 SuperMap.Web.iConnector.Leaflet.getLayer创建图层，然后加载来自SuperMap的地图。
+iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建图层，图层数据来源为SuperMap的REST地图服务。然后可以通过Leaflet的addTo接口叠加到地图上。
 		
 ```JavaScript
 	var map,url = "http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
@@ -59,7 +59,7 @@ iClient for JavaScript与iConnectorAMap.js
 		}
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -68,7 +68,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例2：在OpenStreetMap上叠加SuperMap的地图
 
-#### Step1 初始化地图窗口加载OpenStreetMap
+**Step1 初始化地图窗口加载OpenStreetMap**
 
 ```JavaScript
 	var map = L.map('map').setView([38, 115], 5);
@@ -78,14 +78,14 @@ iClient for JavaScript与iConnectorAMap.js
 	}).addTo(map);
 ```
 
-#### Step2 使用iConnectorLeaflet.js叠加SuperMap地图
+**Step2 使用iConnectorLeaflet.js转换SuperMap地图**
 
 ```JavaScript
 	var canvasTiles =  SuperMap.Web.iConnector.Leaflet.getLayer(url);
 	canvasTiles.addTo(map);
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -94,7 +94,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例3：在OpenStreetMap上绘制SuperMap几何对象
 
-#### Step1 使用Leaflet API初始化地图窗口
+**Step1 使用Leaflet API初始化地图窗口**
 
 ```JavaScript
 	var map = L.map('map').setView([40,116], 7);
@@ -104,7 +104,7 @@ iClient for JavaScript与iConnectorAMap.js
 	}).addTo(map);
 ```	
 
-#### Step2 加载SuperMap点对象
+**Step2 加载SuperMap点对象**
 
 * 通过SuperMap JS API创建point
 ```JavaScript
@@ -121,7 +121,7 @@ iClient for JavaScript与iConnectorAMap.js
                       .bindPopup("<b>Hello world!</b><br/>I am a popup.").openPopup();
 ```
 
-#### Step3 加载SuperMap线对象gLine
+**Step3 加载SuperMap线对象gLine**
 
 * 通过SuperMap JS API创建由点串组成的线line1
 ```JavaScript
@@ -143,7 +143,7 @@ iClient for JavaScript与iConnectorAMap.js
 	gLine.addTo(map);
 ```
 
-#### Step4 加载SuperMap面对象gPolygon
+**Step4 加载SuperMap面对象gPolygon**
 
 * 通过SuperMap JS API创建polygon，一个多边形由线的相交部门合围而成
 ```JavaScript
@@ -168,7 +168,7 @@ iClient for JavaScript与iConnectorAMap.js
 	gPolygon.addTo(map);
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -177,7 +177,7 @@ iClient for JavaScript与iConnectorAMap.js
 	
 ### 示例4：在OpenStreetMap上叠加SuperMap距离查询结果
 
-#### Step1 初始化地图窗口
+**Step1 初始化地图窗口**
 
 ```JavaScript
 	map = L.map('map').setView([51.505, -0.09], 1);
@@ -189,9 +189,9 @@ iClient for JavaScript与iConnectorAMap.js
 	 .openPopup();
 ```	
 
-#### Step2 SuperMap距离查询
+**Step2 SuperMap距离查询**
 
-查询距离指定点centerPoint距离为40（使用地图单位度）的所有首都（图层Capitals@World.1）。
+查询距离指定点centerPoint距离为40（使用地图单位度）的所有首都（图层Capitals@World.1），然后返回查询结果对象。
 
 ```JavaScript
 	var url = "http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World";
@@ -213,9 +213,9 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-#### Step3 把查询结果转换并叠加到地图上
+**Step3 把查询结果转换并叠加到地图上**
 
-将上述距离查询的结果点对象，依次标注在地图上，并使用自定义的Marker。
+获取上述距离查询的结果点对象的坐标，依次标注在地图上，并使用自定义的Marker。
 	
 ```JavaScript	
 	function processCompleted(queryEventArgs) {
@@ -237,16 +237,16 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
 * [在线演示](http://runjs.cn/detail/bibjevac)
 * [源码编辑](http://runjs.cn/code/bibjevac)
 
-### 示例4：在OpenStreetMap上叠加SuperMap缓冲区
+### 示例5：在OpenStreetMap上叠加SuperMap缓冲区
 
-#### Step1 初始化OpenStreetMap地图
+**Step1 初始化OpenStreetMap地图**
 
 ```JavaScript
 	var map = L.map('map').setView([40,116], 8);
@@ -256,9 +256,9 @@ iClient for JavaScript与iConnectorAMap.js
 	}).addTo(map);
 ```
 
-#### Step2 绘制一条线并加载到地图上
+**Step2 绘制一条线并加载到地图上**
 
-初始化两个点，构建为SuperMap线polyLine。通过iConnectorLeaflet.js将线polyLine转换成兼容OpenStreetMap坐标的线gLine，并加载到地图上。
+初始化两个点，构建为SuperMap线polyLine。通过iConnectorLeaflet.js将线polyLine转换（transferLine）为兼容OpenStreetMap坐标的线gLine，并加载到地图上。
 
 ```JavaScript
 	var points = [ 
@@ -270,7 +270,7 @@ iClient for JavaScript与iConnectorAMap.js
 	gLine.addTo(map); 
 ```
 
-#### Step3 构建SuperMap缓冲区
+**Step3 构建SuperMap缓冲区**
 
 使用SuperMap iClient for JavaScript API调用在线的空间分析服务，返回分析结果中的缓冲区面对象。
 
@@ -302,9 +302,9 @@ iClient for JavaScript与iConnectorAMap.js
 	bufferServiceByGeometry.processAsync(geoBufferAnalystParam);
 ```
 
-#### Step4 转换缓冲区并叠加到地图上
+**Step4 转换缓冲区并叠加到地图上**
 
-通过iConnectorLeaflet.js将生成的缓冲区转换为Leaflet支持的格式的面对象，然后添加到地图上。
+通过iConnectorLeaflet.js将生成的缓冲区转换（transferPolygon）为Leaflet支持的格式的面对象，然后添加到地图上。
 
 ```JavaScript
 	var bufferResultGeometry = BufferAnalystEventArgs.result.resultGeometry;
@@ -312,7 +312,7 @@ iClient for JavaScript与iConnectorAMap.js
 	regions.addTo(map);//生成的缓冲区加载到地图
 ```
 
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 

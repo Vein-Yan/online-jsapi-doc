@@ -20,7 +20,7 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 
 #### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，就像来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
 
 您也可以将业务数据托管在SuperMap Online，然后使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
 
@@ -37,7 +37,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例1：在Google地图上叠加SuperMap分段专题图
 
-#### Step1 初始化Google地图
+**Step1 初始化Google地图**
 
 使用Google地图API创建地图窗口“map-canvas”，并设置加载地图的中心点和比例尺级别，
 创建地图如：map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -54,7 +54,7 @@ iClient for JavaScript与iConnectorAMap.js
 			mapOptions);
 ```
 
-#### Step2 制作SuperMap分段专题图
+**Step2 制作SuperMap分段专题图**
 
 使用SuperMap.Include.js，基于SuperMap REST服务中的"China_Province_R"图层，制作分段专题图。
 
@@ -104,7 +104,7 @@ iClient for JavaScript与iConnectorAMap.js
 	themeService.processAsync(themeParameters);
 ```
 
-#### Step3 把SuperMap专题图转换后叠加到Google地图上
+**Step3 把SuperMap专题图转换后叠加到Google地图上**
 
 使用iConnectorGoogle.js把Step2创建的SuperMap专题图叠加到Step1创建的Google地图上。
 		
@@ -115,7 +115,7 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-##### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
@@ -124,7 +124,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ### 示例2：在Google地图上绘制来自SuperMap的Geometry
 
-#### Step1 初始化POI点
+**Step1 初始化POI点**
 
 创建一个poi点，并通过iConnectorGoogle.js转为Google地图能识别的点myLatlng。
 
@@ -133,7 +133,7 @@ iClient for JavaScript与iConnectorAMap.js
 	var myLatlng = SuperMap.Web.iConnector.Google.transferPoint([poi],new SuperMap.Projection("EPSG:4326"))[0];
 ```
 
-#### Step2 以转换后的POI为中心点初始化Google地图
+**Step2 以转换后的POI为中心点初始化Google地图**
 
 ```JavaScript
 	var mapOptions = {
@@ -144,7 +144,7 @@ iClient for JavaScript与iConnectorAMap.js
 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 ```
 
-#### Step3 在地图上标注换后的POI
+**Step3 在地图上标注换后的POI**
 
 ```JavaScript
 	var marker = new google.maps.Marker({
@@ -153,7 +153,7 @@ iClient for JavaScript与iConnectorAMap.js
 	});
 ```
 
-#### Step4 绘制并加载SuperMap线
+**Step4 绘制并加载SuperMap线**
 
 * 通过SuperMap iClient for JavaScript API创建一条线line1
 
@@ -180,7 +180,7 @@ iClient for JavaScript与iConnectorAMap.js
 	gLine.setMap(map);
 ```
 
-#### Step5 绘制并加载SuperMap面
+**Step5 绘制并加载SuperMap面**
 
 * 通过SuperMap iClient for JavaScript API创建一个由线围成的面polygon
 
@@ -210,7 +210,7 @@ iClient for JavaScript与iConnectorAMap.js
 	gPolygon.setOptions(options);
 	gPolygon.setMap(map);
 ```
-#### 在线演示与源码编辑
+**在线演示与源码编辑**
 
 您可以在线访问完整代码、体验演示效果，也可以直接在线编辑源码并实时查看效果。
 
