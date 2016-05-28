@@ -28,11 +28,11 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 
 #### 3. SuperMap的JavaScript API
 
-iClient for JavaScript与iConnectorAMap.js
+包括iClient for JavaScript与iConnectorGoogle.js两部分：
 
 ```JavaScript
 	<script src="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js"></script>
-	<script src="http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js"></script>
+	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorGoogle.js"></script>
 ```
 
 ### 示例1：在Google地图上叠加SuperMap分段专题图

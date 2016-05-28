@@ -28,11 +28,11 @@ iConnectorLeaflet.js主要提供了地图叠加以及Geometry的转换，可以�
 
 #### 3. SuperMap的JavaScript API
 
-iClient for JavaScript与iConnectorAMap.js
+iClient for JavaScript与iConnectorLeaflet.js
 
 ```JavaScript
 	<script src="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js"></script>
-	<script src="http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js"></script>
+	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorLeaflet.js"></script>
 ```
 
 ### 示例1：使用Leaflet API加载SuperMap地图服务

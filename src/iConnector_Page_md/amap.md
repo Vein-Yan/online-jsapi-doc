@@ -32,7 +32,7 @@ iClient for JavaScript与iConnectorAMap.js
 
 ```JavaScript
 	<script src="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js"></script>
-	<script src="http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js"></script>
+	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorAMap.js"></script>
 ```
 ### 示例1：在高德地图上叠加SuperMap点密度专题图
 

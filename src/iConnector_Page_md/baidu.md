@@ -28,11 +28,11 @@ iConnectorBaidu.js主要提供了地图叠加以及Geometry的转换，可以实
 
 #### 3. SuperMap的JavaScript API
 
-iClient for JavaScript与iConnectorAMap.js
+iClient for JavaScript与iConnectorBaidu.js
 
 ```JavaScript
 	<script src="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js"></script>
-	<script src="http://sandbox.runjs.cn/uploads/rs/3/dofmucai/iConnectorAMap.js"></script>
+	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorBaidu.js"></script>
 ```
 
 ### 示例1：在百度地图上叠加SuperMap等级符号专题图
