@@ -115,7 +115,7 @@ for(var i = 0,len = files.length;i<len;i++){
                         if (err) {
                             console.log(err);
                         }
-                        zip4.writeToFile(dist_path + "dist_"+new Date().getTime() + '.zip', function(err) {
+                        zip4.writeToFile(dist_path + 'dist.zip', function(err) {
                             if (err) {
                                 return console.log(err);
                             }
