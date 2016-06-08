@@ -57,7 +57,7 @@
         data-chapter-title="对接百度地图"
         data-filepath="baidu.md"
         data-basepath="."
-        data-revision="Sat May 28 2016 14:43:49 GMT+0800 (中国标准时间)"
+        data-revision="Wed Jun 08 2016 15:33:14 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -222,7 +222,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x5E94;&#x7528;">&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x5E94;&#x7528;</h1>
+                        <h4 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x5E94;&#x7528;">&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x5E94;&#x7528;</h4>
 <hr>
 <!-- toc -->
 <ul>
@@ -240,24 +240,25 @@
 <li><a href="#%E7%A4%BA%E4%BE%8B5-%E5%9C%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A%E6%B7%BB%E5%8A%A0supermap-sql%E6%9F%A5%E8%AF%A2%E7%9A%84%E7%BA%BF">&#x793A;&#x4F8B;5 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;SuperMap SQL&#x67E5;&#x8BE2;&#x7684;&#x7EBF;</a></li>
 </ul>
 <!-- tocstop -->
-<h3 id="iconnectorbaidujs&#x7B80;&#x4ECB;">iConnectorBaidu.js&#x7B80;&#x4ECB;</h3>
+<h4 id="iconnectorbaidujs&#x7B80;&#x4ECB;">iConnectorBaidu.js&#x7B80;&#x4ECB;</h4>
 <p>&#x5982;&#x679C;&#x60A8;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;JavaScript API&#x6784;&#x5EFA;&#x4E86;&#x5730;&#x56FE;&#x5E94;&#x7528;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;iConnectorBaidu.js&#x5BF9;&#x63A5;SuperMap&#x7684;GIS&#x670D;&#x52A1;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;&#x901A;&#x8FC7;SuperMap&#x53D1;&#x5E03;&#x7684;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x3002;</p>
 <p>iConnectorBaidu.js&#x4E3B;&#x8981;&#x63D0;&#x4F9B;&#x4E86;&#x5730;&#x56FE;&#x53E0;&#x52A0;&#x4EE5;&#x53CA;Geometry&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x5730;&#x56FE;&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x5730;&#x56FE;&#x3001;&#x4E13;&#x9898;&#x56FE;&#x3001;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x4EE5;&#x53CA;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x3002;</p>
-<h3 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h3>
-<h4 id="1-&#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE;-javascript-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. &#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE; JavaScript API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</h4>
+<h4 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h4>
+<h5 id="1-&#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE;-javascript-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. &#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE; JavaScript API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</h5>
 <p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x5728;&#x7EBF;JavaScript API&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF1A;</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=&#x60A8;&#x7684;&#x5BC6;&#x94A5;&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<h4 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</h4>
-<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;</a></p>
-<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a></p>
+<h5 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</h5>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China</a></p>
+<p>&#x672C;&#x6587;&#x5C06;&#x4EE5;&#x4E0A;&#x8FF0;REST&#x670D;&#x52A1;&#x4E3A;&#x4F8B;&#xFF0C;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;SuperMap REST&#x670D;&#x52A1;&#x4E0E;&#x7B2C;&#x4E09;&#x65B9;&#x5730;&#x56FE;&#x3002;</p>
+<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a> &#xFF0C;&#x5177;&#x4F53;&#x7684;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x4E0E;&#x53D1;&#x5E03;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="http://blog.supermapol.com/GettingStarted/PublishServices.html" target="_blank">&#x5728;&#x7EBF;&#x53D1;&#x5E03;GIS&#x670D;&#x52A1;&#x5E76;&#x4F7F;&#x7528;</a>&#x3002;</p>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x7EBF;GIS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;SuperMap Online&#x79DF;&#x7528;GIS&#x4E91;&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x60A8;&#x81EA;&#x5DF1;&#x7684;GIS&#x670D;&#x52A1;&#x3002;</p>
-<h4 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h4>
+<h5 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h5>
 <p>iClient for JavaScript&#x4E0E;iConnectorBaidu.js</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://www.supermapol.com/resources/api/iconnector/iConnectorBaidu.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<h3 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;</h3>
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;</h4>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x767E;&#x5EA6;&#x5730;&#x56FE;</strong></p>
 <p>&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x201C;allmap&#x201D;&#xFF0C;&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x5730;&#x56FE;&#x63A7;&#x4EF6;&#x5982;&#x6BD4;&#x4F8B;&#x5C3A;&#x7F29;&#x653E;&#x63A7;&#x4EF6;&#x7B49;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x52A0;&#x8F7D;&#x5730;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x548C;&#x6BD4;&#x4F8B;&#x5C3A;&#x7EA7;&#x522B;&#xFF0C;
 &#x5982;&#xFF1A;map.centerAndZoom(new BMap.Point(116, 39), 4)&#x3002;</p>
@@ -310,7 +311,7 @@
 <li><a href="http://runjs.cn/detail/cac308zy" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/cac308zy" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;gps&#x70B9;&#x3001;&#x7EBF;">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;GPS&#x70B9;&#x3001;&#x7EBF;</h3>
+<h4 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;gps&#x70B9;&#x3001;&#x7EBF;">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;GPS&#x70B9;&#x3001;&#x7EBF;</h4>
 <p>&#x7531;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x672C;&#x8EAB;&#x5BF9;&#x5750;&#x6807;&#x8FDB;&#x884C;&#x4E86;&#x504F;&#x79FB;&#x52A0;&#x5BC6;&#xFF0C;&#x4F7F;&#x7528;&#x6807;&#x51C6;WGS84&#x5750;&#x6807;&#x7CFB;&#x7684;GPS&#x70B9;&#xFF0C;&#x6216;&#x7531;&#x56FD;&#x5BB6;&#x6D4B;&#x7ED8;&#x5C40;&#x5236;&#x8BA2;&#x7684;GCJ-02&#x5750;&#x6807;&#x7CFB;&#x7684;GPS&#x70B9;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7EA0;&#x504F;&#x5904;&#x7406;&#x624D;&#x80FD;&#x53E0;&#x52A0;&#x5230;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x3002;</p>
 <p>iConnectorBaidu.js&#x5C01;&#x88C5;&#x4E86;&#x76F8;&#x5173;&#x7684;&#x7EA0;&#x504F;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;transferPoint&#x6765;&#x8C03;&#x7528;&#x3002;</p>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x767E;&#x5EA6;&#x5730;&#x56FE;</strong></p>
@@ -355,7 +356,7 @@
 <li>2&#x4EE3;&#x8868;&#x56FD;&#x5BB6;&#x6D4B;&#x7ED8;&#x5C40;&#x5236;&#x8BA2;&#x7684;GCJ-02&#xFF0C;Google Maps&#x3001;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x3001;&#x817E;&#x8BAF;&#x5730;&#x56FE;&#x4F7F;&#x7528;</li>
 <li>0&#x4EE3;&#x8868;&#x6807;&#x51C6;&#x7684;WGS84&#x5750;&#x6807;</li>
 </ul>
-<p><strong>Step4 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x628A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x70B9;&#x6807;&#x6CE8;</strong></p>
+<p><strong>Step4 &#x628A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x70B9;&#x6807;&#x6CE8;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</strong></p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> points = []
             <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> index <span class="hljs-keyword">in</span> xyResults){
                 <span class="hljs-keyword">var</span> point = xyResults[index];
@@ -376,7 +377,7 @@
 <li><a href="http://runjs.cn/detail/fluk7vgx" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/fluk7vgx" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;3-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;gps&#x9762;">&#x793A;&#x4F8B;3 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;GPS&#x9762;</h3>
+<h4 id="&#x793A;&#x4F8B;3-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;gps&#x9762;">&#x793A;&#x4F8B;3 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;GPS&#x9762;</h4>
 <p>&#x4E0E;&#x793A;&#x4F8B;2&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;GPS&#x70B9;&#x548C;&#x7EBF;&#x7C7B;&#x4F3C;&#xFF0C;&#x672C;&#x4F8B;&#x5C06;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;&#x7EA0;&#x504F;&#x540E;&#x7684;GPS&#x9762;&#x3002;</p>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x767E;&#x5EA6;&#x5730;&#x56FE;</strong></p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> BMap.Map(<span class="hljs-string">&quot;allmap&quot;</span>);
@@ -408,7 +409,7 @@
 <li><a href="http://runjs.cn/detail/73c8aqk1" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/73c8aqk1" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;4-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x70B9;">&#x793A;&#x4F8B;4 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x70B9;</h3>
+<h4 id="&#x793A;&#x4F8B;4-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x70B9;">&#x793A;&#x4F8B;4 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x70B9;</h4>
 <p>&#x540C;&#x6837;&#x56E0;&#x4E3A;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x5750;&#x6807;&#x504F;&#x79FB;&#xFF0C;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7EA0;&#x504F;&#x5904;&#x7406;&#x3002;
 &#x672C;&#x4F8B;&#x5C06;&#x628A;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF08;&#x70B9;&#xFF09;&#xFF0C;&#x8F6C;&#x6362;&#x5750;&#x6807;&#x540E;&#x53E0;&#x52A0;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;</p>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x767E;&#x5EA6;&#x5730;&#x56FE;</strong></p>
@@ -478,7 +479,7 @@
 <li><a href="http://runjs.cn/detail/tla28w74" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/tla28w74" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;5-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;supermap-sql&#x67E5;&#x8BE2;&#x7684;&#x7EBF;">&#x793A;&#x4F8B;5 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;SuperMap SQL&#x67E5;&#x8BE2;&#x7684;&#x7EBF;</h3>
+<h4 id="&#x793A;&#x4F8B;5-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;supermap-sql&#x67E5;&#x8BE2;&#x7684;&#x7EBF;">&#x793A;&#x4F8B;5 &#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;SuperMap SQL&#x67E5;&#x8BE2;&#x7684;&#x7EBF;</h4>
 <p>&#x672C;&#x4F8B;&#x5C06;&#x628A;SuperMap SQL&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x7EBF;&#x5BF9;&#x8C61;&#xFF0C;&#x7EA0;&#x504F;&#x540E;&#x53E0;&#x52A0;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x3002;</p>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x767E;&#x5EA6;&#x5730;&#x56FE;</strong></p>
 <pre><code class="lang-JavaScript">    <span class="hljs-comment">//&#x5730;&#x56FE;&#x521D;&#x59CB;&#x5316;</span>
@@ -550,7 +551,7 @@
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
 
 <footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-05-28 14:43:48
+2016-06-08 15:33:14
 </span></footer>
                     
                     </section>

@@ -57,7 +57,7 @@
         data-chapter-title="对接 Google Maps"
         data-filepath="google.md"
         data-basepath="."
-        data-revision="Sat May 28 2016 14:43:49 GMT+0800 (中国标准时间)"
+        data-revision="Wed Jun 08 2016 15:33:14 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -222,7 +222,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;google&#x5730;&#x56FE;&#x5E94;&#x7528;">&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;Google&#x5730;&#x56FE;&#x5E94;&#x7528;</h1>
+                        <h4 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;google&#x5730;&#x56FE;&#x5E94;&#x7528;">&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;Google&#x5730;&#x56FE;&#x5E94;&#x7528;</h4>
 <hr>
 <!-- toc -->
 <ul>
@@ -237,24 +237,25 @@
 <li><a href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E5%9C%A8google%E5%9C%B0%E5%9B%BE%E4%B8%8A%E7%BB%98%E5%88%B6%E6%9D%A5%E8%87%AAsupermap%E7%9A%84geometry">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;SuperMap&#x7684;Geometry</a></li>
 </ul>
 <!-- tocstop -->
-<h3 id="iconnectorgooglejs&#x7B80;&#x4ECB;">iConnectorGoogle.js&#x7B80;&#x4ECB;</h3>
+<h4 id="iconnectorgooglejs&#x7B80;&#x4ECB;">iConnectorGoogle.js&#x7B80;&#x4ECB;</h4>
 <p>&#x5982;&#x679C;&#x60A8;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;Google&#x5730;&#x56FE;&#x7684;JavaScript API&#x6784;&#x5EFA;&#x4E86;&#x5730;&#x56FE;&#x5E94;&#x7528;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;iConnectorGoogle.js&#x5BF9;&#x63A5;SuperMap&#x7684;GIS&#x670D;&#x52A1;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;&#x901A;&#x8FC7;SuperMap&#x53D1;&#x5E03;&#x7684;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x3002;</p>
 <p>iConnectorGoogle.js&#x4E3B;&#x8981;&#x63D0;&#x4F9B;&#x4E86;&#x5730;&#x56FE;&#x53E0;&#x52A0;&#x4EE5;&#x53CA;Geometry&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#xFF1A;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x5730;&#x56FE;&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x5730;&#x56FE;&#x3001;&#x4E13;&#x9898;&#x56FE;&#x3001;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x4EE5;&#x53CA;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x3002;</p>
-<h3 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h3>
-<h4 id="1-&#x57FA;&#x4E8E;google&#x5730;&#x56FE;-javascript-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. &#x57FA;&#x4E8E;Google&#x5730;&#x56FE; JavaScript API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</h4>
+<h4 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h4>
+<h5 id="1-&#x57FA;&#x4E8E;google&#x5730;&#x56FE;-javascript-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. &#x57FA;&#x4E8E;Google&#x5730;&#x56FE; JavaScript API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</h5>
 <p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Google&#x5730;&#x56FE;&#x7684;&#x5728;&#x7EBF;JavaScript API&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF1A;</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<h4 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</h4>
-<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;</a></p>
-<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a></p>
+<h5 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</h5>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China</a></p>
+<p>&#x672C;&#x6587;&#x5C06;&#x4EE5;&#x4E0A;&#x8FF0;REST&#x670D;&#x52A1;&#x4E3A;&#x4F8B;&#xFF0C;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;SuperMap REST&#x670D;&#x52A1;&#x4E0E;&#x7B2C;&#x4E09;&#x65B9;&#x5730;&#x56FE;&#x3002;</p>
+<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a> &#xFF0C;&#x5177;&#x4F53;&#x7684;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x4E0E;&#x53D1;&#x5E03;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="http://blog.supermapol.com/GettingStarted/PublishServices.html" target="_blank">&#x5728;&#x7EBF;&#x53D1;&#x5E03;GIS&#x670D;&#x52A1;&#x5E76;&#x4F7F;&#x7528;</a>&#x3002;</p>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x7EBF;GIS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;SuperMap Online&#x79DF;&#x7528;GIS&#x4E91;&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x60A8;&#x81EA;&#x5DF1;&#x7684;GIS&#x670D;&#x52A1;&#x3002;</p>
-<h4 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h4>
+<h5 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h5>
 <p>&#x5305;&#x62EC;iClient for JavaScript&#x4E0E;iConnectorGoogle.js&#x4E24;&#x90E8;&#x5206;&#xFF1A;</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://www.supermapol.com/resources/api/iconnector/iConnectorGoogle.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<h3 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;google&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</h3>
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;google&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;">&#x793A;&#x4F8B;1&#xFF1A;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;</h4>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;Google&#x5730;&#x56FE;</strong></p>
 <p>&#x4F7F;&#x7528;Google&#x5730;&#x56FE;API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x201C;map-canvas&#x201D;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x52A0;&#x8F7D;&#x5730;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x548C;&#x6BD4;&#x4F8B;&#x5C3A;&#x7EA7;&#x522B;&#xFF0C;
 &#x521B;&#x5EFA;&#x5730;&#x56FE;&#x5982;&#xFF1A;map = new google.maps.Map(document.getElementById(&apos;map-canvas&apos;), mapOptions);</p>
@@ -327,7 +328,7 @@
 <li><a href="http://runjs.cn/detail/nk6mvwfi" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/nk6mvwfi" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;google&#x5730;&#x56FE;&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;supermap&#x7684;geometry">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;SuperMap&#x7684;Geometry</h3>
+<h4 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;google&#x5730;&#x56FE;&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;supermap&#x7684;geometry">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;Google&#x5730;&#x56FE;&#x4E0A;&#x7ED8;&#x5236;&#x6765;&#x81EA;SuperMap&#x7684;Geometry</h4>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;POI&#x70B9;</strong></p>
 <p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;poi&#x70B9;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;iConnectorGoogle.js&#x8F6C;&#x4E3A;Google&#x5730;&#x56FE;&#x80FD;&#x8BC6;&#x522B;&#x7684;&#x70B9;myLatlng&#x3002;</p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> poi = {x:<span class="hljs-number">116.397</span>,y:<span class="hljs-number">39.913</span>};
@@ -406,7 +407,7 @@
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
 
 <footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-05-28 14:41:06
+2016-06-08 15:33:14
 </span></footer>
                     
                     </section>

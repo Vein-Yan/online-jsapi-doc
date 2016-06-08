@@ -1,16 +1,16 @@
-﻿# 使用iConnector对接Leaflet地图应用
+﻿#### 使用iConnector对接Leaflet地图应用
 ---
 <!-- toc -->
-### iConnectorLeaflet.js简介
+#### iConnectorLeaflet.js简介
 
 如果您已经使用Leaflet构建了地图应用，您可以通过iConnectorLeaflet.js对接SuperMap的GIS服务。例如：在Leaflet构建的在线地图上叠加SuperMap的缓冲区分析结果。
 
 iConnectorLeaflet.js主要提供了地图叠加以及Geometry的转换，可以实现：在使用Leaflet的API出的地图上，叠加SuperMap地图服务中的地图、专题图、查询结果，以及空间分析结果。
 
 
-### 准备开发环境
+#### 准备开发环境
 
-#### 1. 基于Leaflet API的地图应用
+##### 1. 基于Leaflet API的地图应用
 
 您可使用下载在本地的API，或在线API：
 
@@ -18,15 +18,17 @@ iConnectorLeaflet.js主要提供了地图叠加以及Geometry的转换，可以�
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 ```
 
-#### 2. 准备SuperMap GIS服务
+##### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
+本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
+
+您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World ，具体的数据托管与发布方式可以参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
 
 如果需要在线GIS服务器，您还可以在SuperMap Online租用GIS云主机，并发布您自己的GIS服务。
 
-#### 3. SuperMap的JavaScript API
+##### 3. SuperMap的JavaScript API
 
 iClient for JavaScript与iConnectorLeaflet.js
 
@@ -35,7 +37,7 @@ iClient for JavaScript与iConnectorLeaflet.js
 	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorLeaflet.js"></script>
 ```
 
-### 示例1：使用Leaflet API加载SuperMap地图服务
+#### 示例1：使用Leaflet API加载SuperMap地图服务
 
 **Step1 初始化地图窗口**
 
@@ -66,7 +68,7 @@ iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建
 * [在线演示](http://runjs.cn/detail/cy9rirrf)
 * [源码编辑](http://runjs.cn/code/cy9rirrf)
 
-### 示例2：在OpenStreetMap上叠加SuperMap的地图
+#### 示例2：在OpenStreetMap上叠加SuperMap的地图
 
 **Step1 初始化地图窗口加载OpenStreetMap**
 
@@ -92,7 +94,7 @@ iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建
 * [在线演示](http://runjs.cn/detail/bniri8f6)
 * [源码编辑](http://runjs.cn/code/bniri8f6)
 
-### 示例3：在OpenStreetMap上绘制SuperMap几何对象
+#### 示例3：在OpenStreetMap上绘制SuperMap几何对象
 
 **Step1 使用Leaflet API初始化地图窗口**
 
@@ -145,7 +147,7 @@ iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建
 
 **Step4 加载SuperMap面对象gPolygon**
 
-* 通过SuperMap JS API创建polygon，一个多边形由线的相交部门合围而成
+* 通过SuperMap JS API创建polygon（一个多边形由线的相交部分合围而成）
 ```JavaScript
 	var points2 = [
                 new SuperMap.Geometry.Point(116.5,41.5),
@@ -175,7 +177,7 @@ iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建
 * [在线演示](http://runjs.cn/detail/wix82fok)
 * [源码编辑](http://runjs.cn/code/wix82fok)
 	
-### 示例4：在OpenStreetMap上叠加SuperMap距离查询结果
+#### 示例4：在OpenStreetMap上叠加SuperMap距离查询结果
 
 **Step1 初始化地图窗口**
 
@@ -244,7 +246,7 @@ iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建
 * [在线演示](http://runjs.cn/detail/bibjevac)
 * [源码编辑](http://runjs.cn/code/bibjevac)
 
-### 示例5：在OpenStreetMap上叠加SuperMap缓冲区
+#### 示例5：在OpenStreetMap上叠加SuperMap缓冲区
 
 **Step1 初始化OpenStreetMap地图**
 

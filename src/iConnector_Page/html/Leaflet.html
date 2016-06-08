@@ -57,7 +57,7 @@
         data-chapter-title="对接 Leaflet"
         data-filepath="leaflet.md"
         data-basepath="."
-        data-revision="Sat May 28 2016 14:43:49 GMT+0800 (中国标准时间)"
+        data-revision="Wed Jun 08 2016 15:33:14 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -222,7 +222,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;leaflet&#x5730;&#x56FE;&#x5E94;&#x7528;">&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;Leaflet&#x5730;&#x56FE;&#x5E94;&#x7528;</h1>
+                        <h4 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;leaflet&#x5730;&#x56FE;&#x5E94;&#x7528;">&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;Leaflet&#x5730;&#x56FE;&#x5E94;&#x7528;</h4>
 <hr>
 <!-- toc -->
 <ul>
@@ -240,24 +240,25 @@
 <li><a href="#%E7%A4%BA%E4%BE%8B5%EF%BC%9A%E5%9C%A8openstreetmap%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%BC%93%E5%86%B2%E5%8C%BA">&#x793A;&#x4F8B;5&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7F13;&#x51B2;&#x533A;</a></li>
 </ul>
 <!-- tocstop -->
-<h3 id="iconnectorleafletjs&#x7B80;&#x4ECB;">iConnectorLeaflet.js&#x7B80;&#x4ECB;</h3>
+<h4 id="iconnectorleafletjs&#x7B80;&#x4ECB;">iConnectorLeaflet.js&#x7B80;&#x4ECB;</h4>
 <p>&#x5982;&#x679C;&#x60A8;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;Leaflet&#x6784;&#x5EFA;&#x4E86;&#x5730;&#x56FE;&#x5E94;&#x7528;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;iConnectorLeaflet.js&#x5BF9;&#x63A5;SuperMap&#x7684;GIS&#x670D;&#x52A1;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5728;Leaflet&#x6784;&#x5EFA;&#x7684;&#x5728;&#x7EBF;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7684;&#x7F13;&#x51B2;&#x533A;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x3002;</p>
 <p>iConnectorLeaflet.js&#x4E3B;&#x8981;&#x63D0;&#x4F9B;&#x4E86;&#x5730;&#x56FE;&#x53E0;&#x52A0;&#x4EE5;&#x53CA;Geometry&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#xFF1A;&#x5728;&#x4F7F;&#x7528;Leaflet&#x7684;API&#x51FA;&#x7684;&#x5730;&#x56FE;&#x4E0A;&#xFF0C;&#x53E0;&#x52A0;SuperMap&#x5730;&#x56FE;&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x5730;&#x56FE;&#x3001;&#x4E13;&#x9898;&#x56FE;&#x3001;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x4EE5;&#x53CA;&#x7A7A;&#x95F4;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x3002;</p>
-<h3 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h3>
-<h4 id="1-&#x57FA;&#x4E8E;leaflet-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. &#x57FA;&#x4E8E;Leaflet API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</h4>
+<h4 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h4>
+<h5 id="1-&#x57FA;&#x4E8E;leaflet-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. &#x57FA;&#x4E8E;Leaflet API&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;</h5>
 <p>&#x60A8;&#x53EF;&#x4F7F;&#x7528;&#x4E0B;&#x8F7D;&#x5728;&#x672C;&#x5730;&#x7684;API&#xFF0C;&#x6216;&#x5728;&#x7EBF;API&#xFF1A;</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<h4 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</h4>
-<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China&#x3002;</a></p>
-<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a></p>
+<h5 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. &#x51C6;&#x5907;SuperMap GIS&#x670D;&#x52A1;</h5>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x60A8;&#x7684;SuperMap iServer&#x670D;&#x52A1;&#x5668;&#x7684;REST GIS&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x6765;&#x81EA;SuperMap&#x6280;&#x672F;&#x8D44;&#x6E90;&#x4E2D;&#x5FC3;&#x7684;&#xFF1A;<a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China</a></p>
+<p>&#x672C;&#x6587;&#x5C06;&#x4EE5;&#x4E0A;&#x8FF0;REST&#x670D;&#x52A1;&#x4E3A;&#x4F8B;&#xFF0C;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x4F7F;&#x7528;iConnector&#x5BF9;&#x63A5;SuperMap REST&#x670D;&#x52A1;&#x4E0E;&#x7B2C;&#x4E09;&#x65B9;&#x5730;&#x56FE;&#x3002;</p>
+<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x5728;SuperMap Online&#xFF0C;&#x4F7F;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World" target="_blank">http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World</a> &#xFF0C;&#x5177;&#x4F53;&#x7684;&#x6570;&#x636E;&#x6258;&#x7BA1;&#x4E0E;&#x53D1;&#x5E03;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="http://blog.supermapol.com/GettingStarted/PublishServices.html" target="_blank">&#x5728;&#x7EBF;&#x53D1;&#x5E03;GIS&#x670D;&#x52A1;&#x5E76;&#x4F7F;&#x7528;</a>&#x3002;</p>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x7EBF;GIS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;SuperMap Online&#x79DF;&#x7528;GIS&#x4E91;&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x60A8;&#x81EA;&#x5DF1;&#x7684;GIS&#x670D;&#x52A1;&#x3002;</p>
-<h4 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h4>
+<h5 id="3-supermap&#x7684;javascript-api">3. SuperMap&#x7684;JavaScript API</h5>
 <p>iClient for JavaScript&#x4E0E;iConnectorLeaflet.js</p>
 <pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://www.supermapol.com/resources/api/iconnector/iConnectorLeaflet.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<h3 id="&#x793A;&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;leaflet-api&#x52A0;&#x8F7D;supermap&#x5730;&#x56FE;&#x670D;&#x52A1;">&#x793A;&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;Leaflet API&#x52A0;&#x8F7D;SuperMap&#x5730;&#x56FE;&#x670D;&#x52A1;</h3>
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;leaflet-api&#x52A0;&#x8F7D;supermap&#x5730;&#x56FE;&#x670D;&#x52A1;">&#x793A;&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;Leaflet API&#x52A0;&#x8F7D;SuperMap&#x5730;&#x56FE;&#x670D;&#x52A1;</h4>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x5730;&#x56FE;&#x7A97;&#x53E3;</strong></p>
 <p>&#x4F7F;&#x7528;Leaflet&#x7684;map&#x6A21;&#x5757;API&#x521B;&#x5EFA;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x201C;map&#x201D;&#xFF0C;&#x5982;&#xFF1A;map = L.map(&apos;map&apos;).setView([38, 115], 5)&#x3002;&#x5176;&#x4E2D;&#xFF0C;.setView([38, 115], 5)&#x6307;&#x5B9A;&#x4E86;&#x5730;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x548C;&#x6BD4;&#x4F8B;&#x5C3A;&#x7EA7;&#x522B;&#x3002;
 &#x9700;&#x8981;&#x6307;&#x51FA;&#x7684;&#x662F;&#xFF0C;&#x867D;&#x7136;&#x672C;&#x4F8B;&#x4F7F;&#x7528;&#x7684;&#x5730;&#x56FE;&#x672C;&#x8EAB;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x662F;EPSG Code&#x4E3A;3857&#x7684;WebMercator&#xFF0C;&#x4F46;&#x662F;Leaflet API&#x8BBE;&#x7F6E;&#x4E2D;&#x5FC3;&#x70B9;&#x7684;&#x53C2;&#x6570;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;[<Number> latitude, <Number> longitude,]&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5730;&#x56FE;&#x672C;&#x8EAB;&#x7684;&#x5355;&#x4F4D;&#x3002;</Number></Number></p>
@@ -278,7 +279,7 @@
 <li><a href="http://runjs.cn/detail/cy9rirrf" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/cy9rirrf" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x7684;&#x5730;&#x56FE;">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7684;&#x5730;&#x56FE;</h3>
+<h4 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x7684;&#x5730;&#x56FE;">&#x793A;&#x4F8B;2&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7684;&#x5730;&#x56FE;</h4>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x5730;&#x56FE;&#x7A97;&#x53E3;&#x52A0;&#x8F7D;OpenStreetMap</strong></p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">38</span>, <span class="hljs-number">115</span>], <span class="hljs-number">5</span>);
     L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
@@ -296,7 +297,7 @@
 <li><a href="http://runjs.cn/detail/bniri8f6" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/bniri8f6" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;3&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x7ED8;&#x5236;supermap&#x51E0;&#x4F55;&#x5BF9;&#x8C61;">&#x793A;&#x4F8B;3&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x7ED8;&#x5236;SuperMap&#x51E0;&#x4F55;&#x5BF9;&#x8C61;</h3>
+<h4 id="&#x793A;&#x4F8B;3&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x7ED8;&#x5236;supermap&#x51E0;&#x4F55;&#x5BF9;&#x8C61;">&#x793A;&#x4F8B;3&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x7ED8;&#x5236;SuperMap&#x51E0;&#x4F55;&#x5BF9;&#x8C61;</h4>
 <p><strong>Step1 &#x4F7F;&#x7528;Leaflet API&#x521D;&#x59CB;&#x5316;&#x5730;&#x56FE;&#x7A97;&#x53E3;</strong></p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">7</span>);
     L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
@@ -342,7 +343,7 @@
 </ul>
 <p><strong>Step4 &#x52A0;&#x8F7D;SuperMap&#x9762;&#x5BF9;&#x8C61;gPolygon</strong></p>
 <ul>
-<li>&#x901A;&#x8FC7;SuperMap JS API&#x521B;&#x5EFA;polygon&#xFF0C;&#x4E00;&#x4E2A;&#x591A;&#x8FB9;&#x5F62;&#x7531;&#x7EBF;&#x7684;&#x76F8;&#x4EA4;&#x90E8;&#x95E8;&#x5408;&#x56F4;&#x800C;&#x6210;<pre><code class="lang-JavaScript">  <span class="hljs-keyword">var</span> points2 = [
+<li>&#x901A;&#x8FC7;SuperMap JS API&#x521B;&#x5EFA;polygon&#xFF08;&#x4E00;&#x4E2A;&#x591A;&#x8FB9;&#x5F62;&#x7531;&#x7EBF;&#x7684;&#x76F8;&#x4EA4;&#x90E8;&#x5206;&#x5408;&#x56F4;&#x800C;&#x6210;&#xFF09;<pre><code class="lang-JavaScript">  <span class="hljs-keyword">var</span> points2 = [
               <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.5</span>,<span class="hljs-number">41.5</span>),
               <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">115.5</span>,<span class="hljs-number">38.5</span>),
               <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">118</span>,<span class="hljs-number">40.5</span>),
@@ -369,7 +370,7 @@
 <li><a href="http://runjs.cn/detail/wix82fok" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/wix82fok" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;4&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;">&#x793A;&#x4F8B;4&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;</h3>
+<h4 id="&#x793A;&#x4F8B;4&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;">&#x793A;&#x4F8B;4&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;</h4>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;&#x5730;&#x56FE;&#x7A97;&#x53E3;</strong></p>
 <pre><code class="lang-JavaScript">    map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">51.505</span>, -<span class="hljs-number">0.09</span>], <span class="hljs-number">1</span>);
     L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
@@ -425,7 +426,7 @@
 <li><a href="http://runjs.cn/detail/bibjevac" target="_blank">&#x5728;&#x7EBF;&#x6F14;&#x793A;</a></li>
 <li><a href="http://runjs.cn/code/bibjevac" target="_blank">&#x6E90;&#x7801;&#x7F16;&#x8F91;</a></li>
 </ul>
-<h3 id="&#x793A;&#x4F8B;5&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x7F13;&#x51B2;&#x533A;">&#x793A;&#x4F8B;5&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7F13;&#x51B2;&#x533A;</h3>
+<h4 id="&#x793A;&#x4F8B;5&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x7F13;&#x51B2;&#x533A;">&#x793A;&#x4F8B;5&#xFF1A;&#x5728;OpenStreetMap&#x4E0A;&#x53E0;&#x52A0;SuperMap&#x7F13;&#x51B2;&#x533A;</h4>
 <p><strong>Step1 &#x521D;&#x59CB;&#x5316;OpenStreetMap&#x5730;&#x56FE;</strong></p>
 <pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">8</span>);
     L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
@@ -486,7 +487,7 @@
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
 
 <footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709;&#xA9;1997-2016 &#x5317;&#x4EAC;&#x8D85;&#x56FE;&#x8F6F;&#x4EF6;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-05-28 14:40:36
+2016-06-08 15:33:14
 </span></footer>
                     
                     </section>

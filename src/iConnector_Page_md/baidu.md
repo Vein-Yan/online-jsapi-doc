@@ -1,16 +1,16 @@
-﻿# 使用iConnector对接百度地图应用
+﻿#### 使用iConnector对接百度地图应用
 ---
 <!-- toc -->
-### iConnectorBaidu.js简介
+#### iConnectorBaidu.js简介
 
 如果您已经使用百度地图的JavaScript API构建了地图应用，您可以通过iConnectorBaidu.js对接SuperMap的GIS服务。例如：在百度地图上叠加通过SuperMap发布的业务数据。
 
 iConnectorBaidu.js主要提供了地图叠加以及Geometry的转换，可以实现：在百度地图上，叠加SuperMap地图服务中的地图、专题图、查询结果，以及空间分析结果。
 
 
-### 准备开发环境
+#### 准备开发环境
 
-#### 1. 基于百度地图 JavaScript API的地图应用
+##### 1. 基于百度地图 JavaScript API的地图应用
 
 您可以使用百度地图的在线JavaScript API，使用方式：
 
@@ -18,15 +18,17 @@ iConnectorBaidu.js主要提供了地图叠加以及Geometry的转换，可以实
 	<script src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>
 ```
 
-#### 2. 准备SuperMap GIS服务
+##### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-您也可以将业务数据托管在SuperMap Online，然后使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
+本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
+
+您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World ，具体的数据托管与发布方式可以参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
 
 如果需要在线GIS服务器，您还可以在SuperMap Online租用GIS云主机，并发布您自己的GIS服务。
 
-#### 3. SuperMap的JavaScript API
+##### 3. SuperMap的JavaScript API
 
 iClient for JavaScript与iConnectorBaidu.js
 
@@ -35,7 +37,7 @@ iClient for JavaScript与iConnectorBaidu.js
 	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorBaidu.js"></script>
 ```
 
-### 示例1：在百度地图上叠加SuperMap等级符号专题图
+#### 示例1：在百度地图上叠加SuperMap等级符号专题图
 
 **Step1 初始化百度地图**
 
@@ -102,7 +104,7 @@ iClient for JavaScript与iConnectorBaidu.js
 * [在线演示](http://runjs.cn/detail/cac308zy)
 * [源码编辑](http://runjs.cn/code/cac308zy)
 
-### 示例2：在百度地图上添加GPS点、线
+#### 示例2：在百度地图上添加GPS点、线
 
 由于百度地图本身对坐标进行了偏移加密，使用标准WGS84坐标系的GPS点，或由国家测绘局制订的GCJ-02坐标系的GPS点时，需要进行纠偏处理才能叠加到百度地图上。
 
@@ -160,7 +162,7 @@ setTimeout(function(){
 * 2代表国家测绘局制订的GCJ-02，Google Maps、高德地图、腾讯地图使用
 * 0代表标准的WGS84坐标
 
-**Step4 在百度地图上把转换后的点标注**
+**Step4 把转换后的点标注在百度地图上**
 
 ```JavaScript
 	var points = []
@@ -189,7 +191,7 @@ setTimeout(function(){
 * [在线演示](http://runjs.cn/detail/fluk7vgx)
 * [源码编辑](http://runjs.cn/code/fluk7vgx)
 
-### 示例3 在百度地图上添加GPS面
+#### 示例3 在百度地图上添加GPS面
 
 与示例2在百度地图上添加GPS点和线类似，本例将在百度地图上添加纠偏后的GPS面。
 
@@ -237,7 +239,7 @@ setTimeout(function(){
 * [在线演示](http://runjs.cn/detail/73c8aqk1)
 * [源码编辑](http://runjs.cn/code/73c8aqk1)
 
-### 示例4 在百度地图上添加SuperMap距离查询结果点
+#### 示例4 在百度地图上添加SuperMap距离查询结果点
 
 同样因为百度地图的坐标偏移，在百度地图上叠加SuperMap几何对象时，也需要进行纠偏处理。
 本例将把SuperMap距离查询结果（点），转换坐标后叠加在百度地图上
@@ -327,7 +329,7 @@ setTimeout(function(){
 * [在线演示](http://runjs.cn/detail/tla28w74)
 * [源码编辑](http://runjs.cn/code/tla28w74)
 
-### 示例5 在百度地图上添加SuperMap SQL查询的线
+#### 示例5 在百度地图上添加SuperMap SQL查询的线
 
 本例将把SuperMap SQL查询的结果线对象，纠偏后叠加在百度地图上。
 

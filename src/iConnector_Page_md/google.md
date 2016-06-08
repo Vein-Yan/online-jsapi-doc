@@ -1,16 +1,16 @@
-# 使用iConnector对接Google地图应用
+#### 使用iConnector对接Google地图应用
 ---
 <!-- toc -->
-### iConnectorGoogle.js简介
+#### iConnectorGoogle.js简介
 
 如果您已经使用Google地图的JavaScript API构建了地图应用，您可以通过iConnectorGoogle.js对接SuperMap的GIS服务。例如：在Google地图上叠加通过SuperMap发布的业务数据。
 
 iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以实现：在Google地图上，叠加SuperMap地图服务中的地图、专题图、查询结果，以及空间分析结果。
 
 
-### 准备开发环境
+#### 准备开发环境
 
-#### 1. 基于Google地图 JavaScript API的地图应用
+##### 1. 基于Google地图 JavaScript API的地图应用
 
 您可以使用Google地图的在线JavaScript API，使用方式：
 
@@ -18,15 +18,17 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 ```
 
-#### 2. 准备SuperMap GIS服务
+##### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-您也可以将业务数据托管在SuperMap Online，然后使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
+本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
+
+您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World ，具体的数据托管与发布方式可以参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
 
 如果需要在线GIS服务器，您还可以在SuperMap Online租用GIS云主机，并发布您自己的GIS服务。
 
-#### 3. SuperMap的JavaScript API
+##### 3. SuperMap的JavaScript API
 
 包括iClient for JavaScript与iConnectorGoogle.js两部分：
 
@@ -35,7 +37,7 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorGoogle.js"></script>
 ```
 
-### 示例1：在Google地图上叠加SuperMap分段专题图
+#### 示例1：在Google地图上叠加SuperMap分段专题图
 
 **Step1 初始化Google地图**
 
@@ -122,7 +124,7 @@ iConnectorGoogle.js主要提供了地图叠加以及Geometry的转换，可以�
 * [在线演示](http://runjs.cn/detail/nk6mvwfi)
 * [源码编辑](http://runjs.cn/code/nk6mvwfi)
 
-### 示例2：在Google地图上绘制来自SuperMap的Geometry
+#### 示例2：在Google地图上绘制来自SuperMap的Geometry
 
 **Step1 初始化POI点**
 

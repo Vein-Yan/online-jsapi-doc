@@ -1,16 +1,16 @@
-# 使用iConnector对接高德地图
+#### 使用iConnector对接高德地图
 ---
 <!-- toc -->
-### iConnectorAMap.js简介
+#### iConnectorAMap.js简介
 
 如果您已经使用高德地图的JavaScript API构建了地图应用，您可以通过iConnectorAMap.js对接SuperMap的GIS服务。例如：在高德地图上叠加通过SuperMap发布的业务数据。
 
 iConnectorAMap.js主要提供了地图叠加以及Geometry的转换，可以实现：在高德地图上，叠加SuperMap地图服务中的地图、专题图、查询结果，以及空间分析结果。
 
 
-### 准备开发环境
+#### 准备开发环境
 
-#### 1. 基于高德地图 JavaScript API的地图应用
+##### 1. 基于高德地图 JavaScript API的地图应用
 
 您使用高德地图的在线JavaScript API构建的应用，使用方式：
 
@@ -18,15 +18,17 @@ iConnectorAMap.js主要提供了地图叠加以及Geometry的转换，可以实�
 	<script src="http://webapi.amap.com/maps?v=1.3&key=14bf161ae4e52fe25a972f6b7c9c0980"></script>
 ```
 
-#### 2. 准备SuperMap GIS服务
+##### 2. 准备SuperMap GIS服务
 
-您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China。
+您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-您也可以将您的业务数据托管在SuperMap Online，然后使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World
+本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
+
+您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World ，具体的数据托管与发布方式可以参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
 
 如果需要在线GIS服务器，您还可以在SuperMap Online租用GIS云主机，并发布您自己的GIS服务。
 
-#### 3. SuperMap的JavaScript API
+##### 3. SuperMap的JavaScript API
 
 iClient for JavaScript与iConnectorAMap.js
 
@@ -34,7 +36,7 @@ iClient for JavaScript与iConnectorAMap.js
 	<script src="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js"></script>
 	<script src="http://www.supermapol.com/resources/api/iconnector/iConnectorAMap.js"></script>
 ```
-### 示例1：在高德地图上叠加SuperMap点密度专题图
+#### 示例1：在高德地图上叠加SuperMap点密度专题图
 
 **Step1 初始化高德地图**
 
@@ -93,7 +95,7 @@ iClient for JavaScript与iConnectorAMap.js
 * [在线演示](http://runjs.cn/detail/pmkuutbr)
 * [源码编辑](http://runjs.cn/code/pmkuutbr)
 
-### 示例2：在高德地图上叠加SuperMap分段专题图
+#### 示例2：在高德地图上叠加SuperMap分段专题图
 
 **Step1 初始化高德地图**
 
@@ -158,8 +160,7 @@ iClient for JavaScript与iConnectorAMap.js
 * [在线演示](http://runjs.cn/detail/xihjgnun)
 * [源码编辑](http://runjs.cn/code/xihjgnun)
 
-
-### 示例3：在高德地图上叠加SuperMap点 
+#### 示例3：在高德地图上叠加SuperMap点 
 
 **Step1 初始化高德地图**
 
@@ -197,7 +198,7 @@ iClient for JavaScript与iConnectorAMap.js
 * [在线演示](http://runjs.cn/detail/eyeio9kq)
 * [源码编辑](http://runjs.cn/code/eyeio9kq)
 
-### 示例4：把SuperMap面几何对象添加到高德地图 
+#### 示例4：把SuperMap面几何对象添加到高德地图 
 
 **Step1 初始化高德地图 **
 
@@ -247,7 +248,7 @@ iClient for JavaScript与iConnectorAMap.js
 	}
 ```
 
-**Step3 通过iConnectorBaidu.js纠偏并叠加到百度地图上**
+**Step3 通过iConnectorBaidu.js纠偏并叠加到高德地图上**
 
 ```JavaScript
 	if(geometry.CLASS_NAME === 'SuperMap.Geometry.MultiPolygon' ||
@@ -269,7 +270,7 @@ iClient for JavaScript与iConnectorAMap.js
 * [在线演示](http://runjs.cn/detail/vaxzvlrp)
 * [源码编辑](http://runjs.cn/code/vaxzvlrp)
 
-### 示例5：在高德地图上叠加SuperMap缓冲区
+#### 示例5：在高德地图上叠加SuperMap缓冲区
 
 **Step1 初始化高德地图并绘制用于分析的线**
 
