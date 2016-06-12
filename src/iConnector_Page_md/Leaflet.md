@@ -22,9 +22,9 @@ iConnectorLeaflet.js主要提供了地图叠加以及Geometry的转换，可以�
 
 您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
-
 您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/map_China4003/rest/maps?ak=IbooSg6gIBmhIRaesVgjSED0 ，具体的数据托管与发布方式请参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
+
+本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
 
 如果需要在线GIS服务器，您还可以在SuperMap Online租用GIS云主机，并发布您自己的GIS服务。
 
