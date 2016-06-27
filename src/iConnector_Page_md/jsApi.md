@@ -18,12 +18,12 @@ SuperMap 在线 JavaScript API 包含 iClient for JavaScript 和 iConnector 两�
 
 开发授权可用于两类服务：
 
-* 基础GIS服务，每个key的使用限额：免费100次请求/天。
+* 基础GIS服务，每个key的使用限额：免费5000次请求/天。
 
 SuperMap Online提供了基础GIS服务，如路径导航、地理编码、公交换乘等，面向开发者免费使用。只要申请了key，您就可以直接访问使用这些GIS服务。
 
-* 用户上传数据后发布的REST地图服务，每个key的限额：免费2000次请求/天（请求一张瓦片即为一次请求）。
+* 用户上传数据后发布的REST地图服务，每个key的限额：免费5000次请求/天（请求一张瓦片即为一次请求）。
 
 也就是说，您上传的数据可以发布为REST地图服务，但开发时并不能直接使用服务。您需要在开发应用前，对您的服务生成key，然后通过key使用服务。因为没有key就不能使用您的地图服务，所以开发授权机制可在访问层面保证您的地图服务的安全性。
 
-更多详细内容请访问：[开发授权详解](http://blog.supermapol.com/GettingStarted/ak.html)。
+更多详细内容请访问：[开发授权详解](http://blog.supermapol.com/GettingStarted/key.html)。
