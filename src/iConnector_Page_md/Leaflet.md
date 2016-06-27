@@ -22,7 +22,7 @@ iConnectorLeaflet.js主要提供了地图叠加以及Geometry的转换，可以�
 
 您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/map_China4003/rest/maps?ak=IbooSg6gIBmhIRaesVgjSED0 ，具体的数据托管与发布方式请参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
+您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0 ，具体的数据托管与发布方式请参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
 
 本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
 
@@ -53,12 +53,14 @@ iClient for JavaScript与iConnectorLeaflet.js
 iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建图层，图层数据来源为SuperMap的REST地图服务。然后可以通过Leaflet的addTo接口叠加到地图上。
 		
 ```JavaScript
-	var map,url = "http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
-		function init()
-		{
-			var canvasTiles =  SuperMap.Web.iConnector.Leaflet.getLayer(url);
-			canvasTiles.addTo(map);
-		}
+	var map, url = "http://www.supermapol.com/iserver/services/map_China4003/rest/maps/China";
+	var value="IbooSg6gIBmhIRaesVgjSED0";
+	SuperMap.Credential.CREDENTIAL = new SuperMap.Credential(value, "key");
+	function init()
+	{
+		var canvasTiles =  SuperMap.Web.iConnector.Leaflet.getLayer(url);
+		canvasTiles.addTo(map);
+	}
 ```
 
 **在线演示与源码编辑**
@@ -196,7 +198,9 @@ iConnectorLeaflet.js 提供了 SuperMap.Web.iConnector.Leaflet.getLayer来创建
 查询距离指定点centerPoint距离为40（使用地图单位度）的所有首都（图层Capitals@World.1），然后返回查询结果对象。
 
 ```JavaScript
-	var url = "http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World";
+	var map, url = "http://www.supermapol.com/iserver/services/map_China4003/rest/maps/China";
+	var value="IbooSg6gIBmhIRaesVgjSED0";
+	SuperMap.Credential.CREDENTIAL = new SuperMap.Credential(value, "key");
 	function queryByDistance() {
 		var centerPoint = new SuperMap.Geometry.Point(116.404,39.915);
 		var queryByDistanceParams = new SuperMap.REST.QueryByDistanceParameters({

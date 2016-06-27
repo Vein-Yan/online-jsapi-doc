@@ -22,7 +22,7 @@ iConnectorAMap.js主要提供了地图叠加以及Geometry的转换，可以实�
 
 您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/map_China4003/rest/maps?ak=IbooSg6gIBmhIRaesVgjSED0 ，具体的数据托管与发布方式请参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
+您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0 ，具体的数据托管与发布方式请参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
 
 本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
 
@@ -111,8 +111,10 @@ iClient for JavaScript与iConnectorAMap.js
 通过iClient for JavaScript API使用SuperMap REST 地图服务，基于China地图中的China_Province_R图层，根据SMAREA字段创建分段专题图。
 
 ```JavaScript
-	var layer,
-	url = "http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
+	var map, layer, 
+			url = "http://www.supermapol.com/iserver/services/map_China4003/rest/maps/China";
+	var value="IbooSg6gIBmhIRaesVgjSED0";
+	SuperMap.Credential.CREDENTIAL = new SuperMap.Credential(value, "key");
 	var themeService = new SuperMap.REST.ThemeService(url,
 			{eventListeners:{"processCompleted": themeCompleted, "processFailed": themeFailed}}),
 			graStyle = new SuperMap.REST.ThemeGraduatedSymbolStyle({
@@ -216,7 +218,11 @@ iClient for JavaScript与iConnectorAMap.js
 通过iClient for JavaScript API调用SuperMap REST 地图服务进行SQL查询，本例将在Countries@World.1图层中查询人口和面积均满足条件（"Pop_1994>1000000000 and SmArea>900"）的要素。 完成查询后，返回查询结果几何对象。
 
 ```JavaScript
-	var url="http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World";
+	var mapObj, layer,
+		url = "http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World";
+	var value = "VZ88xbrMEMpGv4yiisTojgVq";
+	var name = "key";
+	SuperMap.Credential.CREDENTIAL = new SuperMap.Credential(value, "key");
 	function queryBySQL() {
 		
 		var queryParam, queryBySQLParams, queryBySQLService;

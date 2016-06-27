@@ -22,7 +22,7 @@ iConnectorBaidu.js主要提供了地图叠加以及Geometry的转换，可以实
 
 您可以使用来自您的SuperMap iServer服务器的REST GIS服务，例如来自SuperMap技术资源中心的：http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China
 
-您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/map_China4003/rest/maps?ak=IbooSg6gIBmhIRaesVgjSED0 ，具体的数据托管与发布方式请参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
+您也可以将数据托管在SuperMap Online，使用发布的地图服务，例如：http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0 ，具体的数据托管与发布方式请参考：[在线发布GIS服务并使用](http://blog.supermapol.com/GettingStarted/PublishServices.html)。
 
 本文将以上述REST服务为例，介绍如何使用iConnector对接SuperMap REST服务与第三方地图。
 
@@ -271,7 +271,10 @@ setTimeout(function(){
 通过iClient for JavaScript API调用SuperMap REST 地图服务进行距离查询。
 
 ```JavaScript
-	var url="http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World"; 
+	var	url = "http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World";
+	var value = "VZ88xbrMEMpGv4yiisTojgVq";
+	var name = "key";
+	SuperMap.Credential.CREDENTIAL = new SuperMap.Credential(value, "key"); 
 	var centerPoint = new SuperMap.Geometry.Point(116.404, 39.915);//构造一个点的几何图形
 	var queryByDistanceParams = new SuperMap.REST.QueryByDistanceParameters({
 		queryParams: new Array(new SuperMap.REST.FilterParameter({name: "Capitals@World.1"})),//设置数据源及参数
@@ -349,7 +352,11 @@ setTimeout(function(){
 完成查询后，返回查询结果几何对象。
 
 ```JavaScript
-	var url="http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World";
+	var	url = "http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World";
+	var value = "VZ88xbrMEMpGv4yiisTojgVq";
+	var name = "key";
+	SuperMap.Credential.CREDENTIAL = new SuperMap.Credential(value, "key");
+	
     function queryBySQL() {
 
         var queryParam, queryBySQLParams, queryBySQLService;
