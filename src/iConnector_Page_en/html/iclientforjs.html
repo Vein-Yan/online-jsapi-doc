@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Introduction to iClient for Javascript | SuperMap Online Tutorial</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./index.html" />
+    
+    
+    <link rel="prev" href="./jsapi.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="iClient for JavaScript 简介"
+        data-filepath="iclientforjs.md"
+        data-basepath="."
+        data-revision="Mon Jun 27 2016 10:25:53 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://www.supermapol.com/" target="blank" class="custom-link">SuperMap Online</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="jsapi.html">
+            
+                
+                    <a href="./jsapi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction to JavaScript API Overview</a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="iclientforjs.html">
+            
+                
+                    <a href="./iclientforjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction to iClient for JavaScript</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Introduction to SuperMap iConnector</a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="leaflet.html">
+            
+                
+                    <a href="./leaflet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Use Leaflet</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="google.html">
+            
+                
+                    <a href="./google.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Use Google Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="baidu.html">
+            
+                
+                    <a href="./baidu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Use Baidu Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="amap.html">
+            
+                
+                    <a href="./amap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Use Amap</a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">This book uses GitBook to mark down</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./" >SuperMap Online Tutorial</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="supermap-iclient-for-javascript&#x7B80;&#x4ECB;">1.
+                        
+                        Introduction to SuperMap iClient for JavaScript</h3>
+<hr>
+<h3 id="&#x4EA7;&#x54C1;&#x4ECB;&#x7ECD;">Product Introduction</h3>
+<p>SuperMap iClient for JavaScript is a Web GIS application development package for HTML5. It supports multiple sources of data, multiple terminals and browsers. It has the following features:
+</p>
+<ul>
+<li>It enables a flexible interactive design and rich representation of data. The HTML based Canvas allows for high efficient and stable displaying of map tiles.</li>
+<li>It supports data and maps from OGC-compliant services, SuperMap iServer services, SuperMap Cloud, and popular Web map providers including Baidu Maps, Google Maps, and Tianditu.</li>
+<li>Based on the PhoneGap open source development framework, SuperMap iClient for JavaScript supports offline map cache via plug-in, and packaging your map application to one that can run on Android devices directly.</li>
+<li>Support large data interaction, rendering and visualization. The UTFGrid layer provides the solutions for the large data interaction. 
+</li>
+<li>It provides rich visualization effects, including vector map tiles, thematic mapping on the client, and displaying spatial-temporal data.</li>
+</ul>
+<p>SuperMap online JavaScript library:<a href="http://www.supermapol.com/resources/api/libs/SuperMap.Include.js" target="_blank">http://www.supermapol.com/resources/api/libs/SuperMap.Include.js</a></p>
+<p>SuperMap iClient for JavaScript open source address:<a href="https://github.com/SuperMap/iClient-for-JavaScript" target="_blank">https://github.com/SuperMap/iClient-for-JavaScript</a></p>
+<h3 id="&#x4E3B;&#x8981;&#x529F;&#x80FD;">Main Functions</h3>
+<h4 id="&#x5730;&#x56FE;&#x670D;&#x52A1;">Map Service </h4>
+<p>SuperMap iClient for JavaScript supports multiple map services, including:</p>
+<ul>
+<li>SuperMap Cloud Maps</li>
+<li>SuperMap iServer tiled cache map</li>
+<li>SuperMap iServer tiled dynamic map</li>
+<li>Vector feature layers (VML, SVG, Canvas, and Canvas2）</li>
+<li>Maker layers (Marker)</li>
+<li>Elements layers (adding html elements to maps)</li>
+<li>Aggregation layer</li>
+<li>Heat grid layer</li>
+<li>Heat map layer</li>
+<li>Front end thematic map layer (including label map, unique value map, ranges map, and graph map)</li>
+<li>Front end vector feature rendering layer (CartoCSS can be used to change map styles)</li>
+<li>UTFGrid layer (used to quicly respond to interactions and providing attribution)</li>
+<li>OGC service layer (WMS, WMTS, etc)</li>
+<li>Spatial-temporal layer (to enable a dynamic effect on the map)</li>
+</ul>
+<h5 id="&#x5730;&#x56FE;&#x4EA4;&#x4E92;">Map Operations</h5>
+<p>Besides the basic map operations like pan, zoom, layer control, etc, more operations are supported:</p>
+<ul>
+<li>Overview map operation</li>
+<li>Display of Scale bar</li>
+<li>Drawing, editing, seleting and draging vector features</li>
+<li>Selecting points on GOIs layer</li>
+<li>Interacting with UTFGrid layer</li>
+<li>Rolling Blinds</li>
+<li>Positioning</li>
+<li>Selecting aggregation</li>
+<li>Display of mouse position</li>
+<li>Display of copyright info </li>
+</ul>
+<h5 id="&#x91CF;&#x7B97;&#x529F;&#x80FD;">Measurements</h5>
+<ul>
+<li>Distance measurement</li>
+<li>Area measurement</li>
+</ul>
+<h4 id="&#x6570;&#x636E;&#x670D;&#x52A1;">Data service</h4>
+<h5 id="&#x6570;&#x636E;&#x7F16;&#x8F91;">Editing Data</h5>
+<ul>
+<li>Adding, deleting, and modifying features</li>
+</ul>
+<h5 id="&#x6570;&#x636E;&#x67E5;&#x8BE2;">Queries</h5>
+<ul>
+<li>Query Distance</li>
+<li>Query Features</li>
+<li>The SQL query</li>
+<li>Extent query</li>
+<li>WFS query</li>
+</ul>
+<h4 id="gis&#x5206;&#x6790;&#x670D;&#x52A1;">GIS Analysis Service</h4>
+<p>SuperMap iClient for JavaScript provides a set of easy-to-use APIs for developers to use and overlay GIS analysis services published by SuperMap iServer. SuperMap iClient for JavaScript supports a complete set of GIS functions, including measurement, query, spatial analysis, network analysis, bus transfer analysis, etc.</p>
+<h5 id="&#x7A7A;&#x95F4;&#x5206;&#x6790;">Spatial analysis</h5>
+<ul>
+<li>Buffer Analysis</li>
+<li>Overlay Analysis</li>
+<li>Surface Analysis</li>
+<li>Dynamic Analysis</li>
+<li>Spatial Relationship Analysis</li>
+<li>Point Density Interpolation Analysis</li>
+<li>Kringing Interpolation Analysis</li>
+<li>Discrete Point Interpolation Analysis</li>
+<li>IDW Interpolation Analysis</li>
+<li>Route by Point</li>
+<li>Point by Route</li>
+<li>Line by Route</li>
+<li>Terrain Curvature Analysis</li>
+<li>Raster Algebra</li>
+<li>Kernel density analysis</li>
+</ul>
+<h5 id="&#x7F51;&#x7EDC;&#x5206;&#x6790;">Network Analysis</h5>
+<ul>
+<li>Closest facility analysis</li>
+<li>Optimal Path Analysis</li>
+<li>Service area analysis.</li>
+<li>Location-Allocation analysis</li>
+<li>Traveling Salesman Problem</li>
+<li>Multi-Traveling Salesman Problem analysis</li>
+<li>Cost matrix analysis</li>
+</ul>
+<h5 id="&#x4EA4;&#x901A;&#x6362;&#x4E58;&#x5206;&#x6790;">Traffic transfer analysis</h5>
+<ul>
+<li>Bus transfer analysis</li>
+</ul>
+<p>For more info, please see <a href="http://www.supermapol.com/developer/jsapi.html#jsapi" target="_blank">SuperMap iClient for JavaScript class reference</a> and <a href="http://www.supermapol.com/developer/jsapi.html#examples" target="_blank">SuperMap iClient for JavaScript Samples</a></p>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('<ul>')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
+
+<footer class="page-footer"><span class="copyright">Copyright ©1997-2016 SuperMap Software Co., Ltd. all right reserved，powered by Gitbook</span><span class="footer-modification">Updated: 6/8/2016 2:30:33 PM</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./jsapi.html" class="navigation navigation-prev " aria-label="Previous page: JavaScript API 简介"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./index.html" class="navigation navigation-next " aria-label="Next page: 认识SuperMap iConnector"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["weibo","facebook","twitter","google","instapaper"]},"search-pro":{"cutWordLib":"nodejieba","defineWord":["The map.","Development"]},"atoc":{"addClass":true,"className":"atoc"},"tbfed-pagefooter":{"copyright":"Copyright&copy; 1997-2016 SuperMap Software Co., Ltd.","modify_label":"Updated:","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

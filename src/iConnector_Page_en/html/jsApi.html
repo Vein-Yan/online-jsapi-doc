@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Introduction to JavaScript API | SuperMap Online Tutorial</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="本教程将介绍如何基于SuperMap Online快速构建云GIS服务，包括进行在线制图、发布数据以及在线Web开发等。">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./iclientforjs.html" />
+    
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="0"
+        data-chapter-title="JavaScript API 简介"
+        data-filepath="jsapi.md"
+        data-basepath="."
+        data-revision="Mon Jun 27 2016 13:33:42 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://www.supermapol.com/" target="blank" class="custom-link">SuperMap Online</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter active" data-level="0" data-path="jsapi.html">
+            
+                
+                    <a href="./jsapi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction to JavaScript API Overview</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="iclientforjs.html">
+            
+                
+                    <a href="./iclientforjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction to iClient for JavaScript</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Introduction to SuperMap iConnector</a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="leaflet.html">
+            
+                
+                    <a href="./leaflet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Use Leaflet</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="google.html">
+            
+                
+                    <a href="./google.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Use Google Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="baidu.html">
+            
+                
+                    <a href="./baidu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Use Baidu Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="amap.html">
+            
+                
+                    <a href="./amap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Use Amap</a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">This book uses GitBook to mark down</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./" >SuperMap Online Tutorial</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h4 id="javascript-api-&#x7B80;&#x4ECB;">Introduction to JavaScript API Overview</h4>
+<hr>
+<p>SuperMap Online JavaScript APIs support multiple data and map sources, multiple terminals and browsers. You can use them to create a map applications with rich functions and high interactiveness.</p>
+<p>SuperMap Online JavaScript APIs has two parts: iClient for JavaScript  and iConnector.</p>
+<h4 id="supermap-iclient-for-javascript">SuperMap iClient for JavaScript</h4>
+<p>It is a package for developing a GIS client app using JavaScript. It supports multiple data and map sources, multiple terminals and browsers for developing a map applications with rich functions and high interactiveness.</p>
+<h4 id="supermap-iconnector">SuperMap iConnector</h4>
+<p>It is an open source tool to connect SuperMap GIS services with third party JavaScript map applications. Using iConnector, you can reuse your existing GIS code and integrate professional SuperMap REST GIS services.</p>
+<h4 id="&#x5F00;&#x53D1;&#x6388;&#x6743;&#xFF08;&#x7533;&#x8BF7;key&#xFF09;">Development Authorization (Apply for a Key)</h4>
+<p>To use SuperMap Online services and APIs to develop your own Web application, you need to apply a key first. A key is a token with a combination of random letters and numbers.</p>
+<p>A key can authorize you to use the following two types of services:</p>
+<ul>
+<li>Basic GIS service. Each key allows: 5000 free requests per day.</li>
+</ul>
+<p>SuperMap Online supports GIS services including routing, geocoding, traffic transfer, etc. It is free for use. You can apply for a key and use these services.</p>
+<ul>
+<li>After you upload your data and publish your REST map service, you have up to 5000 free requests per day for each key (one map tile is assumed as a request).</li>
+</ul>
+<p>A key is required whenever you use your REST map service that you published using your own data. You need to generate a key before you develop your application.</p>
+<p>For details, please see: <a href="http://blog.supermapol.com/GettingStarted/key.html" target="_blank">Development Authorization</a>.</p>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('<ul>')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
+
+<footer class="page-footer"><span class="copyright">Copyright ©1997-2016 SuperMap Software Co., Ltd. all right reserved，powered by Gitbook</span><span class="footer-modification">Updated: 2016-06-27 13:25:54</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <a href="./iclientforjs.html" class="navigation navigation-next navigation-unique" aria-label="Next page: iClient for JavaScript 简介"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["weibo","facebook","twitter","google","instapaper"]},"search-pro":{"cutWordLib":"nodejieba","defineWord":["The map.","Development"]},"atoc":{"addClass":true,"className":"atoc"},"tbfed-pagefooter":{"copyright":"Copyright&copy; 1997-2016 SuperMap Software Co., Ltd.","modify_label":"Updated:","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

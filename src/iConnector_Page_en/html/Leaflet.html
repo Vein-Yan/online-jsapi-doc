@@ -1,0 +1,529 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Using Leaflet | SuperMap Online Tutorial</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./google.html" />
+    
+    
+    <link rel="prev" href="./index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.1"
+        data-chapter-title="对接 Leaflet"
+        data-filepath="leaflet.md"
+        data-basepath="."
+        data-revision="Mon Jun 27 2016 10:25:53 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://www.supermapol.com/" target="blank" class="custom-link">SuperMap Online</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="jsapi.html">
+            
+                
+                    <a href="./jsapi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction to JavaScript API Overview</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="iclientforjs.html">
+            
+                
+                    <a href="./iclientforjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction to iClient for JavaScript</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Introduction to SuperMap iConnector</a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="leaflet.html">
+            
+                
+                    <a href="./leaflet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Use Leaflet</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="google.html">
+            
+                
+                    <a href="./google.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Use Google Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="baidu.html">
+            
+                
+                    <a href="./baidu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Use Baidu Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="amap.html">
+            
+                
+                    <a href="./amap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Use Amap</a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">This book uses GitBook to mark down</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./" >SuperMap Online Tutorial</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h4 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;leaflet&#x5730;&#x56FE;&#x5E94;&#x7528;">Use iConnector to Access Leaflet</h4>
+<hr>
+<!-- toc -->
+<ul>
+<li><a href="#iconnectorleafletjs%E7%AE%80%E4%BB%8B">Introduction to iConnectorLeaflet.js</a></li>
+<li><a href="#%E5%87%86%E5%A4%87%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">Prepare Development Environment</a><ul>
+<li><a href="#1-%E5%9F%BA%E4%BA%8Eleaflet-api%E7%9A%84%E5%9C%B0%E5%9B%BE%E5%BA%94%E7%94%A8">1. Map Applications based on Leaflet API</a></li>
+<li><a href="#2-%E5%87%86%E5%A4%87supermap-gis%E6%9C%8D%E5%8A%A1">2. Prepare SuperMap GIS Service</a></li>
+<li><a href="#3-supermap%E7%9A%84javascript-api">3. SuperMap JavaScript API</a></li>
+</ul>
+</li>
+<li><a href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E4%BD%BF%E7%94%A8leaflet-api%E5%8A%A0%E8%BD%BDsupermap%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1">Sample 1: Use Leaflet API to load SuperMap Map Service</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E5%9C%A8openstreetmap%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%9A%84%E5%9C%B0%E5%9B%BE">Sample 2: Overlay SuperMap Maps on OpenStreetMap</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B3%EF%BC%9A%E5%9C%A8openstreetmap%E4%B8%8A%E7%BB%98%E5%88%B6supermap%E5%87%A0%E4%BD%95%E5%AF%B9%E8%B1%A1">Sample 3: Draw SuperMap Geometries on OpenStreetMap</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B4%EF%BC%9A%E5%9C%A8openstreetmap%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E8%B7%9D%E7%A6%BB%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C">Sample 4: Add SuperMap Query Result to OpenStreetMap</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B5%EF%BC%9A%E5%9C%A8openstreetmap%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%BC%93%E5%86%B2%E5%8C%BA">Sample 5: Overlay OpenStreetMap with SuperMap Buffer Zones</a></li>
+</ul>
+<!-- tocstop -->
+<h4 id="iconnectorleafletjs&#x7B80;&#x4ECB;">Introduction to iConnectorLeaflet.js</h4>
+<p>If you have already developed your map application using Leaflet, you can integrate SuperMap GIS services through iConnectorLeaflet.js. For instance, you can overlay the online map created by Leaflet with SuperMap buffers.</p>
+<p>iConnectorLeaflet.js is mainly used to overlay online maps created by Leaflet with generic maps, thematic maps, query results, and spatial analysis results from SuperMap GIS services.</p>
+<h4 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">Prepare Development Environment</h4>
+<h5 id="1-&#x57FA;&#x4E8E;leaflet-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. Map Applications based on Leaflet API</h5>
+<p></p>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h5 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. Prepare SuperMap GIS Service</h5>
+<p>You can use REST GIS services from SuperMap iServer. For example: <a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China</a></p>
+<p>You can also host your data with SuperMap Online, and publish it as map service, e.g.:<a href="http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0" target="_blank">http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0</a>. For how to host and publish your data, please see: <a href="http://blog.supermapol.com/GettingStarted/PublishServices.html" target="_blank">Publish and Use GIS Service</a>.</p>
+<p>Here we use the above REST service to demonstrate how to use iConnector and integrate SuperMap REST services with third-part map services.</p>
+<p>To have an online GIS server, you can subscribe it from SuperMap Online, and publish your own GIS service.</p>
+<h5 id="3-supermap&#x7684;javascript-api">3. SuperMap JavaScript API</h5>
+<p>iClient for JavaScript and iConnectorLeaflet.js</p>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://www.supermapol.com/resources/api/iconnector/iConnectorLeaflet.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x4F7F;&#x7528;leaflet-api&#x52A0;&#x8F7D;supermap&#x5730;&#x56FE;&#x670D;&#x52A1;">Sample 1: Use Leaflet API to load SuperMap Map Service</h4>
+<p><strong>Step 1 Initialize a Map Window</strong></p>
+<p>Use Leaflet map API to create a map window named &ldquo;map&rdquo;, like: map = L.map(&apos;map&apos;).setView([38, 115], 5). While, .setView([38, 115], 5) specifies the map center and zoom level. Note that, although in this sample, the map coordinate system is WebMercator (EPSG Code=3857), the format to set the center point of map using Leaflet API is: [<Number> latitude, <Number> longitude,].</Number></Number></p>
+<pre><code class="lang-JavaScript">    map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">38</span>, <span class="hljs-number">115</span>], <span class="hljs-number">5</span>);
+</code></pre>
+<p><strong>Step 2 Load Maps from SuperMap Map Service</strong></p>
+<p>iConnectorLeaflet.js provides SuperMap.Web.iConnector.Leaflet.getLayer to create a map layer. The layer uses data from SuperMap REST services. Use the addTo interface of Leaflet to add data to the map.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map, url = <span class="hljs-string">&quot;http://www.supermapol.com/iserver/services/map_China4003/rest/maps/China&quot;</span>;
+    <span class="hljs-keyword">var</span> value=<span class="hljs-string">&quot;IbooSg6gIBmhIRaesVgjSED0&quot;</span>;
+    SuperMap.Credential.CREDENTIAL = <span class="hljs-keyword">new</span> SuperMap.Credential(value, <span class="hljs-string">&quot;key&quot;</span>);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">var</span> canvasTiles =  SuperMap.Web.iConnector.Leaflet.getLayer(url);
+        canvasTiles.addTo(map);
+    }
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/cy9rirrf" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/cy9rirrf" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x7684;&#x5730;&#x56FE;">Sample 2: Overlay SuperMap Maps on OpenStreetMap</h4>
+<p><strong>Step 1 Initialize a Map Window and Load OpenStreetMap</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">38</span>, <span class="hljs-number">115</span>], <span class="hljs-number">5</span>);
+    L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
+        attribution: <span class="hljs-string">&apos;Map data &copy; &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, Imagery © &lt;a href=&quot;http://cloudmade.com&quot;&gt;CloudMade&lt;/a&gt;&apos;</span>,
+        maxZoom: <span class="hljs-number">18</span>
+    }).addTo(map);
+</code></pre>
+<p><strong>Step 2 Use iConnectorLeaflet.js to Convert SuperMap Maps</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> canvasTiles =  SuperMap.Web.iConnector.Leaflet.getLayer(url);
+    canvasTiles.addTo(map);
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/bniri8f6" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/bniri8f6" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;3&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x7ED8;&#x5236;supermap&#x51E0;&#x4F55;&#x5BF9;&#x8C61;">Sample 3: Draw SuperMap Geometries on OpenStreetMap</h4>
+<p><strong>Step 1 Initialize a Map Window</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">7</span>);
+    L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
+        attribution: <span class="hljs-string">&apos;Map data © &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, Imagery © &lt;a href=&quot;http://cloudmade.com&quot;&gt;CloudMade&lt;/a&gt;&apos;</span>,
+        maxZoom: <span class="hljs-number">18</span>
+    }).addTo(map);
+</code></pre>
+<p><strong>Step 2 Add SuperMap Points</strong></p>
+<ul>
+<li>Use SuperMap JS API to create a point<pre><code class="lang-JavaScript">  <span class="hljs-keyword">var</span> point = <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.397</span>,<span class="hljs-number">39.913</span>);
+</code></pre>
+</li>
+<li>Use iConnectorLeaflet.js to convert the point to myLatlng of Leaflet format</li>
+</ul>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> myLatlng = SuperMap.Web.iConnector.Leaflet.transferPoint([point])[<span class="hljs-number">0</span>];
+</code></pre>
+<ul>
+<li>Use Leaflet API to add the myLatlng point to the base map<pre><code class="lang-JavaScript">  L.marker(myLatlng).addTo(map)
+                    .bindPopup(<span class="hljs-string">&quot;&lt;b&gt;Hello world!&lt;/b&gt;&lt;br/&gt;I am a popup.&quot;</span>).openPopup();
+</code></pre>
+</li>
+</ul>
+<p><strong>Step 3 Add SuperMap Line Geometry gLine</strong></p>
+<ul>
+<li><p>Use SuperMap JS API to create line1 from points</p>
+<pre><code class="lang-JavaScript">  <span class="hljs-keyword">var</span> points1 = [
+      <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">115</span>,<span class="hljs-number">40.5</span>),
+      <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.5</span>,<span class="hljs-number">41.5</span>),
+      <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">118</span>,<span class="hljs-number">40.5</span>)
+
+  ];
+  <span class="hljs-keyword">var</span> line1 = <span class="hljs-keyword">new</span> SuperMap.Geometry.LineString(points1);
+</code></pre>
+</li>
+<li>Use iConnectorLeaflet.js to convert the line1 to gLine of Leaflet format</li>
+</ul>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> gLine = SuperMap.Web.iConnector.Leaflet.transferLine([line1])[<span class="hljs-number">0</span>];
+</code></pre>
+<ul>
+<li>Use Leaflet API to add gLine to the base map<pre><code class="lang-JavaScript">  gLine.addTo(map);
+</code></pre>
+</li>
+</ul>
+<p><strong>Step 4 Add SuperMap Region Geometry gPolygon</strong></p>
+<ul>
+<li>Use SuperMap JS API to create a polygon<pre><code class="lang-JavaScript">  <span class="hljs-keyword">var</span> points2 = [
+              <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.5</span>,<span class="hljs-number">41.5</span>),
+              <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">115.5</span>,<span class="hljs-number">38.5</span>),
+              <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">118</span>,<span class="hljs-number">40.5</span>),
+              <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">115</span>,<span class="hljs-number">40.5</span>),
+              <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">118</span>,<span class="hljs-number">38.5</span>),
+              <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.5</span>,<span class="hljs-number">41.5</span>)
+          ];
+  <span class="hljs-keyword">var</span> line2 = <span class="hljs-keyword">new</span> SuperMap.Geometry.LinearRing(points2);
+  <span class="hljs-keyword">var</span> polygon = <span class="hljs-keyword">new</span> SuperMap.Geometry.Polygon([line2]);
+</code></pre>
+</li>
+<li><p>Use iConnectorLeaflet.js to convert polygon to gPolygon of Leaflet format</p>
+<pre><code class="lang-JavaScript">  <span class="hljs-keyword">var</span> gPolygon = SuperMap.Web.iConnector.Leaflet.transferPolygon([polygon])[<span class="hljs-number">0</span>];
+</code></pre>
+</li>
+<li><p>Use Leaflet API to add gPolygon to the base map</p>
+<pre><code class="lang-JavaScript">  gPolygon.addTo(map);
+</code></pre>
+</li>
+</ul>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/wix82fok" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/wix82fok" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;4&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;">Sample 4: Add SuperMap Query Result to OpenStreetMap</h4>
+<p><strong>Step 1 Initialize a Map Window</strong></p>
+<pre><code class="lang-JavaScript">    map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">51.505</span>, -<span class="hljs-number">0.09</span>], <span class="hljs-number">1</span>);
+    L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
+        attribution: <span class="hljs-string">&apos;Map data © &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, Imagery © &lt;a href=&quot;http://cloudmade.com&quot;&gt;CloudMade&lt;/a&gt;&apos;</span>,
+        maxZoom: <span class="hljs-number">18</span>
+    }).addTo(map);
+    L.marker([ <span class="hljs-number">39.915</span>,<span class="hljs-number">116.404</span>]).addTo(map)<span class="hljs-comment">//Set to add points to the map</span>
+     .openPopup();
+</code></pre>
+<p><strong>Step 2 Execute SuperMap Distance Query</strong></p>
+<p>Query all the capitals from the layer Capitals@World.1 with a distance of 40 map units to centerPoint and return the result.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map, url = <span class="hljs-string">&quot;http://www.supermapol.com/iserver/services/map_China4003/rest/maps/China&quot;</span>;
+    <span class="hljs-keyword">var</span> value=<span class="hljs-string">&quot;IbooSg6gIBmhIRaesVgjSED0&quot;</span>;
+    SuperMap.Credential.CREDENTIAL = <span class="hljs-keyword">new</span> SuperMap.Credential(value, <span class="hljs-string">&quot;key&quot;</span>);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">queryByDistance</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> centerPoint = <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.404</span>,<span class="hljs-number">39.915</span>);
+        <span class="hljs-keyword">var</span> queryByDistanceParams = <span class="hljs-keyword">new</span> SuperMap.REST.QueryByDistanceParameters({
+            queryParams: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-keyword">new</span> SuperMap.REST.FilterParameter({name: <span class="hljs-string">&quot;Capitals@World.1&quot;</span>})),
+            returnContent: <span class="hljs-literal">true</span>,
+            distance: <span class="hljs-number">40</span>,
+            geometry: centerPoint
+        });
+
+        <span class="hljs-keyword">var</span> queryByDistanceService = <span class="hljs-keyword">new</span> SuperMap.REST.QueryByDistanceService(url);
+        queryByDistanceService.events.on({
+            <span class="hljs-string">&quot;processCompleted&quot;</span>: processCompleted,
+            <span class="hljs-string">&quot;processFailed&quot;</span>: processFailed
+                        });
+        queryByDistanceService.processAsync(queryByDistanceParams);
+    }
+</code></pre>
+<p><strong>Step 3 Convert Query Result and Add to Map</strong></p>
+<p>Add the result points to the map as customized markers.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processCompleted</span>(<span class="hljs-params">queryEventArgs</span>) </span>{
+        <span class="hljs-keyword">var</span> i, j, result = queryEventArgs.result;
+        <span class="hljs-keyword">var</span> points = [];
+        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>;i &lt; result.recordsets.length; i++) {
+            <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; result.recordsets[i].features.length; j++) {
+                <span class="hljs-keyword">var</span> point = result.recordsets[i].features[j].geometry,
+                    size = <span class="hljs-keyword">new</span> SuperMap.Size(<span class="hljs-number">44</span>, <span class="hljs-number">33</span>),
+                    offset = <span class="hljs-keyword">new</span> SuperMap.Pixel(-(size.w/<span class="hljs-number">2</span>), -size.h);
+                points.push(point);
+                <span class="hljs-keyword">var</span> resultIcon = L.icon({
+                    iconUrl: <span class="hljs-string">&apos;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/markerbig.png&apos;</span>
+                });
+                L.marker([point.y,point.x],{icon: resultIcon}).addTo(map);
+            }
+
+        }
+    }
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/bibjevac" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/bibjevac" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;5&#xFF1A;&#x5728;openstreetmap&#x4E0A;&#x53E0;&#x52A0;supermap&#x7F13;&#x51B2;&#x533A;">Sample 5: Overlay OpenStreetMap with SuperMap Buffer Zones</h4>
+<p><strong>Step 1 Initialize OpenStreetMap</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = L.map(<span class="hljs-string">&apos;map&apos;</span>).setView([<span class="hljs-number">40</span>,<span class="hljs-number">116</span>], <span class="hljs-number">8</span>);
+    L.tileLayer(<span class="hljs-string">&apos;http://{s}.tile.osm.org/{z}/{x}/{y}.png&apos;</span>, {
+    attribution: <span class="hljs-string">&apos;Map data &copy; &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, Imagery © &lt;a href=&quot;http://cloudmade.com&quot;&gt;CloudMade&lt;/a&gt;&apos;</span>,
+    maxZoom: <span class="hljs-number">18</span>
+    }).addTo(map);
+</code></pre>
+<p><strong>Step 2 Draw and Add a Line to Map</strong></p>
+<p>Initialize two points and create a SuperMappolyLine from them. Use iConnectorLeaflet.js to convert polyLine (transferLine) to gLine and add it to OpenStreetMap.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> points = [ 
+        <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.5</span>,<span class="hljs-number">41.5</span>),
+        <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">118</span>,<span class="hljs-number">40.5</span>)
+    ];
+    <span class="hljs-keyword">var</span> polyLine = <span class="hljs-keyword">new</span> SuperMap.Geometry.LineString(points);
+    <span class="hljs-keyword">var</span> gLine = SuperMap.Web.iConnector.Leaflet.transferLine([polyLine])[<span class="hljs-number">0</span>];
+    gLine.addTo(map);
+</code></pre>
+<p><strong>Step 3 Create SuperMap Buffer</strong></p>
+<p>Use SuperMap iClient for JavaScript API to invoke online spatial anaysis service and return the buffer zone.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> url =<span class="hljs-string">&quot;http://support.supermap.com.cn:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst&quot;</span>;
+
+    <span class="hljs-keyword">var</span> bufferServiceByGeometry = <span class="hljs-keyword">new</span> SuperMap.REST.BufferAnalystService(url),
+
+    bufferDistance = <span class="hljs-keyword">new</span> SuperMap.REST.BufferDistance({
+        value: <span class="hljs-number">0.1</span>
+    }),
+
+    bufferSetting = <span class="hljs-keyword">new</span> SuperMap.REST.BufferSetting({
+        endType: SuperMap.REST.BufferEndType.ROUND,
+        leftDistance: bufferDistance,
+        rightDistance: bufferDistance,
+        semicircleLineSegment: <span class="hljs-number">1</span>
+    }),
+
+    geoBufferAnalystParam = <span class="hljs-keyword">new</span> SuperMap.REST.GeometryBufferAnalystParameters({
+        sourceGeometry: polyLine,
+        bufferSetting: bufferSetting
+    });
+
+    bufferServiceByGeometry.events.on(
+    {
+        <span class="hljs-string">&quot;processCompleted&quot;</span>: bufferAnalystCompleted
+    });
+    bufferServiceByGeometry.processAsync(geoBufferAnalystParam);
+</code></pre>
+<p><strong>Step 4 Convert Buffer Zone and Add to Map</strong></p>
+<p>Use iConnectorLeaflet.js to convert the buffer zone to a Leaflet region object (transferPolygon) and add to the map.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> bufferResultGeometry = BufferAnalystEventArgs.result.resultGeometry;
+    <span class="hljs-keyword">var</span> regions = SuperMap.Web.iConnector.Leaflet.transferPolygon([bufferResultGeometry])[<span class="hljs-number">0</span>];
+    regions.addTo(map);<span class="hljs-comment">//add buffer zone to the map</span>
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/ptxnf641" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/ptxnf641" target="_blank">Source Code Editing</a></li>
+</ul>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('<ul>')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
+
+<footer class="page-footer"><span class="copyright">Copyright ©1997-2016 SuperMap Software Co., Ltd.  all right reserved，powered by Gitbook</span><span class="footer-modification">Updated: 2016-06-27 10:25:53</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: 认识SuperMap iConnector"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./google.html" class="navigation navigation-next " aria-label="Next page: 对接 Google Maps"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["weibo","facebook","twitter","google","instapaper"]},"search-pro":{"cutWordLib":"nodejieba","defineWord":["The map.","Development"]},"atoc":{"addClass":true,"className":"atoc"},"tbfed-pagefooter":{"copyright":"Copyright&copy; 1997-2016 SuperMap Software Co., Ltd.","modify_label":"Updated:","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

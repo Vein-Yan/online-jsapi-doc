@@ -10,6 +10,7 @@ var ZipZipTop = require("zip-zip-top");
 
 //要处理的文件
 var files = [
+//中文文档
 {name:'amap-md',type:'desc',path:'./src/iConnector_Page/html/amap.html'},
 {name:'baidu-md',type:'desc',path:'./src/iConnector_Page/html/baidu.html'},
 {name:'google-md',type:'desc',path:'./src/iConnector_Page/html/google.html'},
@@ -20,10 +21,25 @@ var files = [
 {name:'amap-api',type:'api',path:'./src/iConnector_API/iConnectorAMap-js.html'},
 {name:'baidu-api',type:'api',path:'./src/iConnector_API/iConnectorBaidu-js.html'},
 {name:'google-api',type:'api',path:'./src/iConnector_API/iConnectorGoogle-js.html'},
-{name:'leaflet-api',type:'api',path:'./src/iConnector_API/iConnectorLeaflet-js.html'}
+{name:'leaflet-api',type:'api',path:'./src/iConnector_API/iConnectorLeaflet-js.html'},
+];
+var files_en=[
+//english
+{name:'amap-md',type:'desc',path:'./src/iConnector_Page_en/html/amap.html'},
+{name:'baidu-md',type:'desc',path:'./src/iConnector_Page_en/html/baidu.html'},
+{name:'google-md',type:'desc',path:'./src/iConnector_Page_en/html/google.html'},
+{name:'leaflet-md',type:'desc',path:'./src/iConnector_Page_en/html/Leaflet.html'},
+{name:'readme-md',type:'desc',path:'./src/iConnector_Page_en/html/jsApi.html'},
+{name:'javascript-api-md',type:'desc',path:'./src/iConnector_Page_en/html/iclientforjs.html'},
+{name:'iconector-md',type:'desc',path:'./src/iConnector_Page_en/html/index.html'},
+{name:'amap-api',type:'api',path:'./src/iConnector_API_en/iConnectorAMap-js.html'},
+{name:'baidu-api',type:'api',path:'./src/iConnector_API_en/iConnectorBaidu-js.html'},
+{name:'google-api',type:'api',path:'./src/iConnector_API_en/iConnectorGoogle-js.html'},
+{name:'leaflet-api',type:'api',path:'./src/iConnector_API_en/iConnectorLeaflet-js.html'}
 ];
 //目标目录
 var dist_path = './dist/';
+var dist_path_en = './dist_en/';
 
 function handleData(name,data){
 	var lines = data.split('\n');
@@ -77,10 +93,13 @@ function trim(str){
 function changeQuote(str){
 	return str.replace(/'/g,'\\"');
 }
-var counter = files.length;
+
+function buildDoc(files){
+	var counter = files.length;
 for(var i = 0,len = files.length;i<len;i++){
 	var file = files[i];
 	var name = file.name, type = file.type, path = file.path;
+	var isEn = path.match(/_en/gi);
 	console.log(path);
 	fs.readFile(path,'utf8',function(name,type){
 		return function(err,data){
@@ -98,9 +117,10 @@ for(var i = 0,len = files.length;i<len;i++){
 				    new_data = handleData(n,data);
 				    break;
 			}
-		    var n_path = dist_path + type + '/';
-		    if(!fs.existsSync(dist_path)){
-		    	fs.mkdirSync(dist_path);
+			var rootPath = isEn ? dist_path_en :dist_path;
+		    var n_path = rootPath + type + '/';
+		    if(!fs.existsSync(rootPath)){
+		    	fs.mkdirSync(rootPath);
 		    }
 		    if(!fs.existsSync(n_path)){
 		    	fs.mkdirSync(n_path);
@@ -111,11 +131,11 @@ for(var i = 0,len = files.length;i<len;i++){
                 if (counter === 0) {
                     //完成后对文件进行压缩
                     var zip4 = new ZipZipTop();
-                    zip4.zipFolder(dist_path, function(err) {
+                    zip4.zipFolder(rootPath, function(err) {
                         if (err) {
                             console.log(err);
                         }
-                        zip4.writeToFile(dist_path + 'dist.zip', function(err) {
+                        zip4.writeToFile(isEn?'dist_en.zip':'dist.zip', function(err) {
                             if (err) {
                                 return console.log(err);
                             }
@@ -128,4 +148,8 @@ for(var i = 0,len = files.length;i<len;i++){
 		};
 	}(name,type));
 }
+}
+
+buildDoc(files);
+buildDoc(files_en);
 

@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Using Amap | SuperMap Online Tutorial</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="./baidu.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.4"
+        data-chapter-title="对接高德地图"
+        data-filepath="amap.md"
+        data-basepath="."
+        data-revision="Mon Jun 27 2016 10:25:53 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://www.supermapol.com/" target="blank" class="custom-link">SuperMap Online</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="jsapi.html">
+            
+                
+                    <a href="./jsapi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction to JavaScript API Overview</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="iclientforjs.html">
+            
+                
+                    <a href="./iclientforjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction to iClient for JavaScript</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Introduction to SuperMap iConnector</a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="leaflet.html">
+            
+                
+                    <a href="./leaflet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Use Leaflet</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="google.html">
+            
+                
+                    <a href="./google.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Use Google Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="baidu.html">
+            
+                
+                    <a href="./baidu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Use Baidu Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="amap.html">
+            
+                
+                    <a href="./amap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Use Amap</a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">This book uses GitBook to mark down</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./" >SuperMap Online Tutorial</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h4 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Use iConnector to Access Amap</h4>
+<hr>
+<!-- toc -->
+<ul>
+<li><a href="#iconnectoramapjs%E7%AE%80%E4%BB%8B">Introduction to iConnectorAMap.js</a></li>
+<li><a href="#%E5%87%86%E5%A4%87%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">Prepare Development Environment</a><ul>
+<li><a href="#1-%E5%9F%BA%E4%BA%8E%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-javascript-api%E7%9A%84%E5%9C%B0%E5%9B%BE%E5%BA%94%E7%94%A8">1. Map Applications base on Amap JavaScript API</a></li>
+<li><a href="#2-%E5%87%86%E5%A4%87supermap-gis%E6%9C%8D%E5%8A%A1">2. Prepare SuperMap GIS Service</a></li>
+<li><a href="#3-supermap%E7%9A%84javascript-api">3. SuperMap JavaScript API</a></li>
+</ul>
+</li>
+<li><a href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%82%B9%E5%AF%86%E5%BA%A6%E4%B8%93%E9%A2%98%E5%9B%BE">Sample 1: Overlay Amap with SuperMap Dot Density Thematic Map</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E5%88%86%E6%AE%B5%E4%B8%93%E9%A2%98%E5%9B%BE">Sample 2: Overlay Amap with SuperMap Ranges Thematic Map</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B3%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%82%B9">Sample 3: Overlay Amap with SuperMap Points</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B4%EF%BC%9A%E6%8A%8Asupermap%E9%9D%A2%E5%87%A0%E4%BD%95%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE">Sample 4: Overlay Amap with SuperMap Polygons</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B5%EF%BC%9A%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%BC%93%E5%86%B2%E5%8C%BA">Sample 5: Overlay Amap with SuperMap Buffer Zones</a></li>
+</ul>
+<!-- tocstop -->
+<h4 id="iconnectoramapjs&#x7B80;&#x4ECB;">Introduction to iConnectorAMap.js</h4>
+<p>If you have already developed your map application using Amap Javascript API, you can integrate SuperMap GIS services through iConnectorAMap.js. For instance, you can overlay Amap with data published by SuperMap.</p>
+<p>iConnectorAMap.js is mainly used to overlay Google Maps with generic maps, thematic maps, query results, and spatial analysis results from SuperMap GIS services.</p>
+<h4 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">Prepare Development Environment</h4>
+<h5 id="1-&#x57FA;&#x4E8E;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;-javascript-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. Map Applications base on Amap JavaScript API</h5>
+<p>To use Amap online JavaScript API:</p>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://webapi.amap.com/maps?v=1.3&amp;key=14bf161ae4e52fe25a972f6b7c9c0980&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h5 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. Prepare SuperMap GIS Service</h5>
+<p>You can use REST GIS services from SuperMap iServer. For example: <a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China</a></p>
+<p>You can also host your data with SuperMap Online, and publish it as map service, e.g.:<a href="http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0" target="_blank">http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0</a>. For how to host and publish your data, please see: <a href="http://blog.supermapol.com/GettingStarted/PublishServices.html" target="_blank">Publish and Use GIS Service</a>.</p>
+<p>Here we use the above REST service to demonstrate how to use iConnector and integrate SuperMap REST services with third-part map services.</p>
+<p>To have an online GIS server, you can subscribe it from SuperMap Online, and publish your own GIS service.</p>
+<h5 id="3-supermap&#x7684;javascript-api">3. SuperMap JavaScript API</h5>
+<p>iClient for JavaScript and iConnectorAMap.js</p>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://www.supermapol.com/resources/api/iconnector/iConnectorAMap.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x70B9;&#x5BC6;&#x5EA6;&#x4E13;&#x9898;&#x56FE;">Sample 1: Overlay Amap with SuperMap Dot Density Thematic Map</h4>
+<p><strong>Step 1 Initialize Amap</strong></p>
+<p>Create a &quot;map&quot; window with Amap APIs, and set the initial map center and scale, zoom levels, coordinates, etc.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> opt = {
+        center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">115</span>, <span class="hljs-number">35</span>),<span class="hljs-comment">//set the map center </span>
+        level: <span class="hljs-number">3</span>,<span class="hljs-comment">//set the initial scale</span>
+        zooms:[<span class="hljs-number">3</span>,<span class="hljs-number">6</span>],<span class="hljs-comment">//zoom levels</span>
+        crs:<span class="hljs-string">&quot;&apos;EPSG4326&quot;</span>
+    };
+    mapObj = <span class="hljs-keyword">new</span> AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,opt);
+</code></pre>
+<p><strong>Step 2 Create a SuperMap Dot Density Thematic Map</strong></p>
+<p>Create a SuperMap Dot Density thematic map by using SuperMap.Include.js and based on the &quot;China_Province_R&quot; layer published by SuperMap REST.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-comment">//The class for making point density map</span>
+    <span class="hljs-keyword">var</span> themeService = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeService(url, {eventListeners:{<span class="hljs-string">&quot;processCompleted&quot;</span>: themeCompleted, <span class="hljs-string">&quot;processFailed&quot;</span>: themeFailed}}),
+            dotStyle = <span class="hljs-keyword">new</span> SuperMap.REST.ServerStyle({
+                markerSize: <span class="hljs-number">3</span>,
+                markerSymbolID: <span class="hljs-number">12</span>
+            }),
+            themeDotDensity = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeDotDensity({
+                dotExpression: <span class="hljs-string">&quot;Pop_1994&quot;</span>,
+                value: <span class="hljs-number">5000000</span>,
+                style: dotStyle
+            }),
+            themeParameters = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeParameters({
+                themes: [themeDotDensity],
+                datasetNames: [<span class="hljs-string">&quot;Countries&quot;</span>],
+                dataSourceNames: [<span class="hljs-string">&quot;World&quot;</span>]
+            });
+    <span class="hljs-comment">//Send request to iserver</span>
+    themeService.processAsync(themeParameters);
+</code></pre>
+<p><strong>Step 3 Convert SuperMap Thematic Map and Overlay It with Amap</strong></p>
+<p>Use iConnectorAMap.js to overlay the thematic map created in Step 2 with the Amap created in Step 1.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">if</span>(themeEventArgs.result.resourceInfo.id) {
+        <span class="hljs-keyword">var</span> canvasTiles =  SuperMap.Web.iConnector.AMap.getLayer(url,{layersID:themeEventArgs.result.resourceInfo.id});
+        mapObj.addLayer(canvasTiles);
+    }
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/pmkuutbr" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/pmkuutbr" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x5206;&#x6BB5;&#x4E13;&#x9898;&#x56FE;">Sample 2: Overlay Amap with SuperMap Ranges Thematic Map</h4>
+<p><strong>Step 1 Initialize Amap</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map =<span class="hljs-keyword">new</span>  AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,{
+        center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">112</span>, <span class="hljs-number">39.90923</span>),<span class="hljs-comment">//Set the map center</span>
+        level: <span class="hljs-number">4</span>,<span class="hljs-comment">//Set the initial map scale</span>
+    })
+</code></pre>
+<p><strong>Step 2 Create a SuperMap Ranges Thematic Map</strong></p>
+<p>Create a SuperMap Ranges thematic map by using iClient for Javascript API and based on the &quot;China_Province_R&quot; layer published by SuperMap REST.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map, layer, 
+            url = <span class="hljs-string">&quot;http://www.supermapol.com/iserver/services/map_China4003/rest/maps/China&quot;</span>;
+    <span class="hljs-keyword">var</span> value=<span class="hljs-string">&quot;IbooSg6gIBmhIRaesVgjSED0&quot;</span>;
+    SuperMap.Credential.CREDENTIAL = <span class="hljs-keyword">new</span> SuperMap.Credential(value, <span class="hljs-string">&quot;key&quot;</span>);
+    <span class="hljs-keyword">var</span> themeService = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeService(url,
+            {eventListeners:{<span class="hljs-string">&quot;processCompleted&quot;</span>: themeCompleted, <span class="hljs-string">&quot;processFailed&quot;</span>: themeFailed}}),
+            graStyle = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeGraduatedSymbolStyle({
+                positiveStyle: <span class="hljs-keyword">new</span> SuperMap.REST.ServerStyle({
+                    markerSize: <span class="hljs-number">50</span>,
+                    markerSymbolID: <span class="hljs-number">0</span>,
+                    lineColor: <span class="hljs-keyword">new</span> SuperMap.REST.ServerColor(<span class="hljs-number">255</span>,<span class="hljs-number">165</span>,<span class="hljs-number">0</span>),
+                    fillBackColor: <span class="hljs-keyword">new</span> SuperMap.REST.ServerColor(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)
+                })
+            }),
+            themeGraduatedSymbol = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeGraduatedSymbol({
+                expression: <span class="hljs-string">&quot;SMAREA&quot;</span>,
+                baseValue: <span class="hljs-number">3000000000000</span>,
+                graduatedMode: SuperMap.REST.GraduatedMode.CONSTANT,
+                flow: <span class="hljs-keyword">new</span> SuperMap.REST.ThemeFlow({
+                    flowEnabled: <span class="hljs-literal">true</span>
+                }),
+                style: graStyle
+            }),
+            themeParameters = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeParameters({
+                themes: [themeGraduatedSymbol],
+                datasetNames: [<span class="hljs-string">&quot;China_Province_R&quot;</span>],
+                dataSourceNames: [<span class="hljs-string">&quot;China400&quot;</span>]
+            });
+
+    themeService.processAsync(themeParameters);
+</code></pre>
+<p><strong>Step 3 Convert SuperMap Thematic Map and Overlay It with Amap</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">themeCompleted</span>(<span class="hljs-params">themeEventArgs</span>) </span>{
+        <span class="hljs-keyword">if</span>(themeEventArgs.result.resourceInfo.id) {
+            <span class="hljs-keyword">var</span> id =  themeEventArgs.result.resourceInfo.id;
+            <span class="hljs-keyword">var</span> tileLayer = SuperMap.Web.iConnector.AMap.getLayer(url,{layersID:id});    
+        }
+        tileLayer.setMap(map);
+    }
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/xihjgnun" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/xihjgnun" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;3&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x70B9;">Sample 3: Overlay Amap with SuperMap Points</h4>
+<p><strong>Step 1 Initialize Amap</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> opt = {
+        center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">116.39674135</span>,<span class="hljs-number">39.91713004</span>),<span class="hljs-comment">//Set the map center</span>
+        level: <span class="hljs-number">4</span><span class="hljs-comment">//Set the initial map scale</span>
+    }
+    mapObj = <span class="hljs-keyword">new</span> AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,opt);
+</code></pre>
+<p><strong>Step 1 Initialize a point, and translate it to Amap coordinates</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> poi = {x:<span class="hljs-number">116.39674135</span>,y:<span class="hljs-number">39.91713004</span>};
+    <span class="hljs-keyword">var</span> myLatlng = SuperMap.Web.iConnector.AMap.transferPoint([poi],<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>))[<span class="hljs-number">0</span>];
+</code></pre>
+<p><strong>Step 3 Add the translated point to Amap as a marker point</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> marker =<span class="hljs-keyword">new</span> AMap.Marker({
+        id:<span class="hljs-string">&quot;marker&quot;</span>,
+        position:myLatlng,
+        offset:<span class="hljs-keyword">new</span> AMap.Pixel(-<span class="hljs-number">10.5</span>,-<span class="hljs-number">32</span>), <span class="hljs-comment">//The origin is the top left of the image. Set the offsets. The left and down direction are the negative directions. </span>
+        draggable:<span class="hljs-literal">false</span>   <span class="hljs-comment">//Cannot be dragged</span>
+    });
+    marker.setMap(mapObj);
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/eyeio9kq" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/eyeio9kq" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;4&#xFF1A;&#x628A;supermap&#x9762;&#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">Sample 4: Overlay Amap with SuperMap Polygons</h4>
+<p><strong>Step 1 Initialize Amap </strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> mapObj;
+    <span class="hljs-keyword">var</span> opt = {
+        center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">116.39674135</span>,<span class="hljs-number">39.91713004</span>),<span class="hljs-comment">//Set the map center</span>
+        level: <span class="hljs-number">3</span><span class="hljs-comment">//Set the initial map scale</span>
+    }
+    mapObj = <span class="hljs-keyword">new</span> AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,opt);
+</code></pre>
+<p><strong>Step 2 Query by SQL and Return Region Features</strong></p>
+<p>Use iClient for JavaScript API to do a SQL query on SuperMap REST map service. Here, we demonstrate it by using Countries@World.1 and the conditions &quot;Pop_1994&gt;1000000000 and SmArea&gt;900&quot;. Return the features by query.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> mapObj, layer,
+        url = <span class="hljs-string">&quot;http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World&quot;</span>;
+    <span class="hljs-keyword">var</span> value = <span class="hljs-string">&quot;VZ88xbrMEMpGv4yiisTojgVq&quot;</span>;
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;key&quot;</span>;
+    SuperMap.Credential.CREDENTIAL = <span class="hljs-keyword">new</span> SuperMap.Credential(value, <span class="hljs-string">&quot;key&quot;</span>);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">queryBySQL</span>(<span class="hljs-params"></span>) </span>{
+
+        <span class="hljs-keyword">var</span> queryParam, queryBySQLParams, queryBySQLService;
+        queryParam = <span class="hljs-keyword">new</span> SuperMap.REST.FilterParameter({
+            name: <span class="hljs-string">&quot;Countries@World.1&quot;</span>,
+            attributeFilter: <span class="hljs-string">&quot;Pop_1994&gt;1000000000 and SmArea&gt;900&quot;</span>
+        });
+        queryBySQLParams = <span class="hljs-keyword">new</span> SuperMap.REST.QueryBySQLParameters({
+            queryParams: [queryParam]
+        });
+        queryBySQLService = <span class="hljs-keyword">new</span> SuperMap.REST.QueryBySQLService(url, {
+            eventListeners: {<span class="hljs-string">&quot;processCompleted&quot;</span>: processCompleted, <span class="hljs-string">&quot;processFailed&quot;</span>: processFailed}});
+        queryBySQLService.processAsync(queryBySQLParams);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processCompleted</span>(<span class="hljs-params">queryEventArgs</span>) </span>{
+        <span class="hljs-keyword">var</span> i, j, feature,
+                result = queryEventArgs.result;
+        <span class="hljs-keyword">if</span> (result &amp;&amp; result.recordsets) {
+            <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>; i&lt;result.recordsets.length; i++) {
+                <span class="hljs-keyword">if</span> (result.recordsets[i].features) {
+                    <span class="hljs-keyword">for</span> (j=<span class="hljs-number">0</span>; j&lt;result.recordsets[i].features.length; j++) {
+                        feature = result.recordsets[i].features[j];
+                        <span class="hljs-keyword">var</span> polygon = feature.geometry;
+                        getPoints(polygon);
+                    }
+                }
+            }
+        }
+    }
+</code></pre>
+<p><strong>Step3 Use iConnectorBaidu.js to Translate Coordinates and Overlay Amap.</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">if</span>(geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPolygon&apos;</span> ||
+         geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiLineString&apos;</span> ||
+         geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPoint&apos;</span>){
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>,len = geometry.components.length;i&lt;len;i++){
+            getPoints(geometry.components[i]);
+        }
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">var</span> regions = SuperMap.Web.iConnector.AMap.transferPolygon([geometry],<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>));
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/vaxzvlrp" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/vaxzvlrp" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;5&#xFF1A;&#x5728;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x7F13;&#x51B2;&#x533A;">Sample 5: Overlay Amap with SuperMap Buffer Zones</h4>
+<p><strong>Step 1 Initialize Amap and Draw Line</strong></p>
+<p>Before doing buffer analysis, you need to draw a line first. In this sample, we create a line and translate its coordinates before overlaying it to the map.</p>
+<pre><code class="lang-JavaScript"><span class="hljs-keyword">var</span> map;
+<span class="hljs-keyword">var</span> points = [
+    <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.39674135</span>,<span class="hljs-number">39.91713004</span>),
+    <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">104.02682248</span>,<span class="hljs-number">30.69939851</span>)
+];
+<span class="hljs-keyword">var</span> polyLine = <span class="hljs-keyword">new</span> SuperMap.Geometry.LineString(points);     <span class="hljs-comment">//Create a line from points</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>)
+</span>{
+    <span class="hljs-keyword">var</span> opt = {
+        center: <span class="hljs-keyword">new</span> AMap.LngLat(<span class="hljs-number">116.4</span>, <span class="hljs-number">36</span>),<span class="hljs-comment">//Set the map center</span>
+        level: <span class="hljs-number">5</span><span class="hljs-comment">//Set the initial map scale</span>
+    }
+            map = <span class="hljs-keyword">new</span> AMap.Map(<span class="hljs-string">&quot;map&quot;</span>,opt);
+    <span class="hljs-keyword">var</span> gLine = SuperMap.Web.iConnector.AMap.transferLine([polyLine])[<span class="hljs-number">0</span>];
+    gLine.setMap(map);
+}
+</code></pre>
+<p><strong>Step 2 Perform Buffer Analysis and Return Buffer Zone</strong></p>
+<p>Use iClient for JavaScript API and the SuperMap REST spatial analysis sevice to perform the buffer analysis, and return the buffer zone.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> regions,url =<span class="hljs-string">&quot;http://support.supermap.com.cn:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst&quot;</span>;
+    <span class="hljs-comment">//Buffer analysis</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bufferAnalystProcess</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">if</span>(regions)
+        {
+            map.removeLayer(regions);
+        }
+        <span class="hljs-keyword">var</span> bufferServiceByGeometry = <span class="hljs-keyword">new</span> SuperMap.REST.BufferAnalystService(url),
+
+                bufferDistance = <span class="hljs-keyword">new</span> SuperMap.REST.BufferDistance({
+                    value: <span class="hljs-number">1</span>
+                }),
+
+                bufferSetting = <span class="hljs-keyword">new</span> SuperMap.REST.BufferSetting({
+                    endType: SuperMap.REST.BufferEndType.ROUND,
+                    leftDistance: bufferDistance,
+                    rightDistance: bufferDistance,
+                    semicircleLineSegment: <span class="hljs-number">10</span>
+                }),
+
+                geoBufferAnalystParam = <span class="hljs-keyword">new</span> SuperMap.REST.GeometryBufferAnalystParameters({
+                    sourceGeometry: polyLine,
+                    bufferSetting: bufferSetting
+                });
+
+        bufferServiceByGeometry.events.on(
+            {
+                <span class="hljs-string">&quot;processCompleted&quot;</span>: bufferAnalystCompleted
+            });
+        bufferServiceByGeometry.processAsync(geoBufferAnalystParam);
+
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bufferAnalystCompleted</span>(<span class="hljs-params">BufferAnalystEventArgs</span>)
+        </span>{
+            <span class="hljs-keyword">var</span> bufferResultGeometry = BufferAnalystEventArgs.result.resultGeometry;
+            addGeometry(bufferResultGeometry,map);
+        }
+</code></pre>
+<p><strong>Step 3 Translate the Buffer Zone and Add to Amap</strong></p>
+<p>Use iConnectorAMap.js to translate the coordinates of the buffer zone. If the buffer zone is a MultiPolygon, it will be converted to a general region object. Use the setMap method provided by Amap and add the region to the map.</p>
+<pre><code class="lang-JavaScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addGeometry</span>(<span class="hljs-params">geometry,map</span>)</span>{
+        <span class="hljs-keyword">if</span>(geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPolygon&apos;</span>){
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>,len = geometry.components.length;i&lt;len;i++){
+                addGeometry(geometry.components[i],map);
+            }
+            <span class="hljs-keyword">return</span>;
+        }
+        regions = SuperMap.Web.iConnector.AMap.transferPolygon([geometry]);
+        regions[<span class="hljs-number">0</span>].setMap(map); <span class="hljs-comment">//Add buffers to map</span>
+}
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/hxgpdmz4" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/hxgpdmz4" target="_blank">Source Code Editing</a></li>
+</ul>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('<ul>')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
+
+<footer class="page-footer"><span class="copyright">Copyright ©1997-2016 SuperMap Software Co., Ltd. all right reserved，powered by Gitbook</span><span class="footer-modification">Updated: 2016-06-27 10:25:31</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./baidu.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 对接百度地图"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["weibo","facebook","twitter","google","instapaper"]},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Map ","Development"]},"atoc":{"addClass":true,"className":"atoc"},"tbfed-pagefooter":{"copyright":"Copyright&copy; 1997-2016 SuperMap Software Co., Ltd.","modify_label":"Updated: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

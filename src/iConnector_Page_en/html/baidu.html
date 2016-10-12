@@ -1,0 +1,594 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Using Baidu Maps | SuperMap Online Tutorial</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./amap.html" />
+    
+    
+    <link rel="prev" href="./google.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3"
+        data-chapter-title="对接百度地图"
+        data-filepath="baidu.md"
+        data-basepath="."
+        data-revision="Mon Jun 27 2016 10:25:53 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://www.supermapol.com/" target="blank" class="custom-link">SuperMap Online</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="jsapi.html">
+            
+                
+                    <a href="./jsapi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction to JavaScript API Overview</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="iclientforjs.html">
+            
+                
+                    <a href="./iclientforjs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction to iClient for JavaScript</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Introduction to SuperMap iConnector</a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="leaflet.html">
+            
+                
+                    <a href="./leaflet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Use Leaflet</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="google.html">
+            
+                
+                    <a href="./google.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Use Google Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="baidu.html">
+            
+                
+                    <a href="./baidu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Use Baidu Maps</a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="amap.html">
+            
+                
+                    <a href="./amap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Use Amap</a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">This book uses GitBook to mark down</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./" >SuperMap Online Tutorial</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h4 id="&#x4F7F;&#x7528;iconnector&#x5BF9;&#x63A5;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x5E94;&#x7528;">Use iConnector to Access Baidu Maps</h4>
+<hr>
+<!-- toc -->
+<ul>
+<li><a href="#iconnectorbaidujs%E7%AE%80%E4%BB%8B">Introduction to iConnectorBaidu.js</a></li>
+<li><a href="#%E5%87%86%E5%A4%87%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">Prepare Development Environment</a><ul>
+<li><a href="#1-%E5%9F%BA%E4%BA%8E%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE-javascript-api%E7%9A%84%E5%9C%B0%E5%9B%BE%E5%BA%94%E7%94%A8">1. Map Applications base on Baidu Maps JavaScript API</a></li>
+<li><a href="#2-%E5%87%86%E5%A4%87supermap-gis%E6%9C%8D%E5%8A%A1">2. Prepare SuperMap GIS Service</a></li>
+<li><a href="#3-supermap%E7%9A%84javascript-api">3. SuperMap JavaScript API</a></li>
+</ul>
+</li>
+<li><a href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E5%9C%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A%E5%8F%A0%E5%8A%A0supermap%E7%AD%89%E7%BA%A7%E7%AC%A6%E5%8F%B7%E4%B8%93%E9%A2%98%E5%9B%BE">Sample 1: Overlay Baidu Maps with SuperMap Ranges Thematic Map</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E5%9C%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A%E6%B7%BB%E5%8A%A0gps%E7%82%B9%E3%80%81%E7%BA%BF">Sample 2: Add GPS Points and Lines to Baidu Maps</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B3-%E5%9C%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A%E6%B7%BB%E5%8A%A0gps%E9%9D%A2">Sample 3: Add GPS Polygons to Baidu Maps</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B4-%E5%9C%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A%E6%B7%BB%E5%8A%A0supermap%E8%B7%9D%E7%A6%BB%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E7%82%B9">Sample 4: Add GPS Polygons to Baidu Maps</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B5-%E5%9C%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E4%B8%8A%E6%B7%BB%E5%8A%A0supermap-sql%E6%9F%A5%E8%AF%A2%E7%9A%84%E7%BA%BF">Sample 5: Overlay Baidu Maps with SuperMap Lines from SQL Query</a></li>
+</ul>
+<!-- tocstop -->
+<h4 id="iconnectorbaidujs&#x7B80;&#x4ECB;">Introduction to iConnectorBaidu.js</h4>
+<p>If you have already developed your map application using Baidu Maps Javascript API, you can integrate SuperMap GIS services through iConnectorBaidu.js. For instance, you can overlay Baidu Maps with data published by SuperMap.</p>
+<p>iConnectorBaidu.js is mainly used to overlay Google Maps with generic maps, thematic maps, query results, and spatial analysis results from SuperMap GIS services.</p>
+<h4 id="&#x51C6;&#x5907;&#x5F00;&#x53D1;&#x73AF;&#x5883;">Prepare Development Environment</h4>
+<h5 id="1-&#x57FA;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE;-javascript-api&#x7684;&#x5730;&#x56FE;&#x5E94;&#x7528;">1. Map Applications base on Baidu Maps JavaScript API</h5>
+<p>To use Baidu Maps online JavaScript API:</p>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=Your Subscription Key&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h5 id="2-&#x51C6;&#x5907;supermap-gis&#x670D;&#x52A1;">2. Prepare SuperMap GIS Service</h5>
+<p>You can use REST GIS services from SuperMap iServer. For example: <a href="http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China" target="_blank">http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China</a></p>
+<p>You can also host your data with SuperMap Online, and publish it as map service, e.g.:<a href="http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0" target="_blank">http://www.supermapol.com/iserver/services/map_China4003/rest/maps?key=IbooSg6gIBmhIRaesVgjSED0</a>. For how to host and publish your data, please see: <a href="http://blog.supermapol.com/GettingStarted/PublishServices.html" target="_blank">Publish and Use GIS Service</a>.</p>
+<p>Here we use the above REST service to demonstrate how to use iConnector and integrate SuperMap REST services with third-part map services.</p>
+<p>To have an online GIS server, you can subscribe it from SuperMap Online, and publish your own GIS service.</p>
+<h5 id="3-supermap&#x7684;javascript-api">3. SuperMap JavaScript API</h5>
+<p>iClient for JavaScript and iConnectorBaidu.js</p>
+<pre><code class="lang-JavaScript">    &lt;script src=<span class="hljs-string">&quot;http://www.supermapol.com/resources/api/libs/SuperMap.Include.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://www.supermapol.com/resources/api/iconnector/iConnectorBaidu.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span></code></pre>
+<h4 id="&#x793A;&#x4F8B;1&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x53E0;&#x52A0;supermap&#x7B49;&#x7EA7;&#x7B26;&#x53F7;&#x4E13;&#x9898;&#x56FE;">Sample 1: Overlay Baidu Maps with SuperMap Ranges Thematic Map</h4>
+<p><strong>Step 1 Initialize Baidu Maps</strong></p>
+<p>Create a map window &ldquo;allmap&rdquo; and add map controls, e.g. scale control. Set the initial map center and zoom level, like: map.centerAndZoom(new BMap.Point(116, 39), 4).</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> BMap.Map(<span class="hljs-string">&apos;allmap&apos;</span>);
+    map.addControl(<span class="hljs-keyword">new</span> BMap.ScaleControl());
+    map.addControl(<span class="hljs-keyword">new</span> BMap.NavigationControl());
+    map.enableScrollWheelZoom(<span class="hljs-literal">true</span>);
+    map.centerAndZoom(<span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116</span>, <span class="hljs-number">39</span>), <span class="hljs-number">4</span>);
+</code></pre>
+<p><strong>Step 2 Create a SuperMap Graduated Symbol Thematic Map</strong></p>
+<p>Create a SuperMap Graduated Symbol thematic map by using SuperMap.Include.js and based on the &quot;China_Province_R&quot; layer published by SuperMap REST.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> themeService = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeService(url,
+                    {eventListeners:{<span class="hljs-string">&quot;processCompleted&quot;</span>: themeCompleted, <span class="hljs-string">&quot;processFailed&quot;</span>: themeFailed}}),
+        graStyle = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeGraduatedSymbolStyle({
+            positiveStyle: <span class="hljs-keyword">new</span> SuperMap.REST.ServerStyle({
+                markerSize: <span class="hljs-number">50</span>,
+                markerSymbolID: <span class="hljs-number">0</span>,
+                lineColor: <span class="hljs-keyword">new</span> SuperMap.REST.ServerColor(<span class="hljs-number">255</span>,<span class="hljs-number">165</span>,<span class="hljs-number">0</span>),
+                fillBackColor: <span class="hljs-keyword">new</span> SuperMap.REST.ServerColor(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)
+            })
+        }),
+        themeGraduatedSymbol = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeGraduatedSymbol({
+            expression: <span class="hljs-string">&quot;SMAREA&quot;</span>,
+            baseValue: <span class="hljs-number">3000000000000</span>,
+            graduatedMode: SuperMap.REST.GraduatedMode.CONSTANT,
+            flow: <span class="hljs-keyword">new</span> SuperMap.REST.ThemeFlow({
+                flowEnabled: <span class="hljs-literal">true</span>
+            }),
+            style: graStyle
+        }),
+        themeParameters = <span class="hljs-keyword">new</span> SuperMap.REST.ThemeParameters({
+            themes: [themeGraduatedSymbol],
+            datasetNames: [<span class="hljs-string">&quot;China_Province_R&quot;</span>],
+            dataSourceNames: [<span class="hljs-string">&quot;China400&quot;</span>]
+        });
+    themeService.processAsync(themeParameters);
+</code></pre>
+<p><strong>Step 3 Translate SuperMap Thematic Map and Add to Baidu Map</strong></p>
+<p>Use iConnectorBaidu.js to overlay the thematic map created in Step 2 with the Amap created in Step 1.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">if</span>(themeEventArgs.result.resourceInfo.id) {
+        <span class="hljs-keyword">var</span> id =  themeEventArgs.result.resourceInfo.id;
+        <span class="hljs-keyword">var</span> tileLayer = SuperMap.Web.iConnector.Baidu.getLayer(url,{layersID:id});
+
+        map.addTileLayer(tileLayer);
+    }
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/cac308zy" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/cac308zy" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;2&#xFF1A;&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;gps&#x70B9;&#x3001;&#x7EBF;">Sample 2: Add GPS Points and Lines to Baidu Maps</h4>
+<p>In Baidu Maps, all coordinates have been reset with offsets for the sake of data encryption. When you add GPS points from WGS84 or China GCJ-02 coordinates, the points have to be translated and processed in order to overlay them to Baidu Maps correctly.</p>
+<p>iConnectorBaidu.js has included the algorithms to translate and process the points with its transferPoint api.</p>
+<p><strong>Step 1 Initialize Baidu Maps</strong></p>
+<p>Set the center of map and add controls.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> BMap.Map(<span class="hljs-string">&quot;allmap&quot;</span>);
+    map.centerAndZoom(<span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.404</span>, <span class="hljs-number">39.915</span>), <span class="hljs-number">15</span>);
+    map.enableScrollWheelZoom();
+</code></pre>
+<p><strong>Step 2 Initialize China GCJ-02 GPS Points</strong></p>
+<pre><code class="lang-JavaScript"><span class="hljs-keyword">var</span> points = [  <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.3786889372559</span>,<span class="hljs-number">39.90762965106183</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.38632786853032</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.39534009082035</span>,<span class="hljs-number">39.907432133833574</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.40624058825688</span>,<span class="hljs-number">39.90789300648029</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.41413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.42413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.43413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.44413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.45413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.46413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.47413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.48413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.49413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.50413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.51413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.52413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.53413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.54413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.55413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.56413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.57413701159672</span>,<span class="hljs-number">39.90795884517671</span>),
+                <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.58413701159672</span>,<span class="hljs-number">39.90795884517671</span>)
+             ];
+</code></pre>
+<p><strong>Step 3 Translate the Points</strong></p>
+<p>Use iConnectorBaidu.js to translate the points to their Baidu coordinates.</p>
+<pre><code class="lang-JavaScript">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    SuperMap.Web.iConnector.Baidu.transferPoint(points,<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>),acallback,<span class="hljs-number">2</span>); <span class="hljs-comment">//Translate. Parameter 2 means the translation from GCJ-02 to Baidu.</span>
+}, <span class="hljs-number">1000</span>);  <span class="hljs-comment">//Execute in one second</span>
+</code></pre>
+<p>Here, new SuperMap.Projection(&quot;EPSG:4326&quot;) is to translate the points to WGS84 coordinates. Parameter 2 indicates the original coordinates. The transferPoint method supports the following two types of coordinates being translated to Baidu:</p>
+<ul>
+<li>&quot;2&quot; indicates GCJ-02, Google Maps, Amap, and Tencent Maps.</li>
+<li>&quot;0&quot; indicates WGS84.</li>
+</ul>
+<p><strong>Step 4 Add the Points Translated to Baidu Maps</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> points = []
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> index <span class="hljs-keyword">in</span> xyResults){
+                <span class="hljs-keyword">var</span> point = xyResults[index];
+                points.push(point);
+                <span class="hljs-keyword">var</span> marker = <span class="hljs-keyword">new</span> BMap.Marker(point);
+                map.addOverlay(marker);
+            }
+</code></pre>
+<p><strong>Step 5 Link the Points to a Line and Add to Baidu Maps</strong></p>
+<p>Set the line with styles.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> line =<span class="hljs-keyword">new</span> BMap.Polyline(points, {strokeColor:<span class="hljs-string">&quot;blue&quot;</span>, strokeWeight:<span class="hljs-number">6</span>, strokeOpacity:<span class="hljs-number">0.5</span>});
+    map.addOverlay(line);
+}
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/fluk7vgx" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/fluk7vgx" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;3-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;gps&#x9762;">Sample 3: Add GPS Polygons to Baidu Maps</h4>
+<p>Similar to Sample 2, this sample demonstrates how to add a GPS polygon to Baidu Maps.</p>
+<p><strong>Step 1 Initialize Baidu Maps</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> BMap.Map(<span class="hljs-string">&quot;allmap&quot;</span>);
+    map.centerAndZoom(<span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.387</span>, <span class="hljs-number">39.907</span>), <span class="hljs-number">15</span>);
+</code></pre>
+<p><strong>Step 2  Create a Polygon Region from GCJ-02 GPS Points</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> points = [<span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.3786889372559</span>,<span class="hljs-number">39.90762965106183</span>),
+        <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.38632786853032</span>,<span class="hljs-number">39.90795884517671</span>),
+        <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.38534009082035</span>,<span class="hljs-number">39.897432133833574</span>),
+        <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.37624058825688</span>,<span class="hljs-number">39.89789300648029</span>)
+
+    ];
+    <span class="hljs-keyword">var</span> polygon = <span class="hljs-keyword">new</span> BMap.Polygon(points);
+</code></pre>
+<p><strong>Step 3 Translate the Region to Baidu Coordinate System</strong></p>
+<p>Use iConnectorBaidu.js to translate the region to their Baidu coordinates.</p>
+<pre><code class="lang-JavaScript">    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        SuperMap.Web.iConnector.Baidu.transferPolygon([polygon],<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>),acallback,<span class="hljs-number">2</span>);  <span class="hljs-comment">//Translate. Parameter 2 means the translation from GCJ-02 to Baidu.</span>
+    }, <span class="hljs-number">1000</span>);  <span class="hljs-comment">//Execute in one second</span>
+</code></pre>
+<p><strong>Step 4 Add the Region Translated to Baidu Maps</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">acallback</span>(<span class="hljs-params">polygons</span>)</span>{
+        map.addOverlay(polygons[<span class="hljs-number">0</span>]);
+    }
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/73c8aqk1" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/73c8aqk1" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;4-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;supermap&#x8DDD;&#x79BB;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x70B9;">Sample 4: Add SuperMap Query Result to Baidu Maps</h4>
+<p>This sample demonstrates adding the points from a SuperMap distance query to Baidu Maps. Also, coordinates translation is required before overlaying the points.</p>
+<p><strong>Step 1 Initialize Baidu Maps</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-comment">// Initialize Baidu Maps</span>
+    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> BMap.Map(<span class="hljs-string">&quot;allmap&quot;</span>);  <span class="hljs-comment">// Create a Baidu Maps window</span>
+    <span class="hljs-keyword">var</span> center = <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.404</span>, <span class="hljs-number">32</span>);
+    map.centerAndZoom(center,<span class="hljs-number">4</span>);                     <span class="hljs-comment">//  Initialize the map, set the map center and default scale</span>
+    map.enableScrollWheelZoom();  <span class="hljs-comment">//Enable zooming the map by mouse wheel</span>
+</code></pre>
+<p><strong>Step 2  Initialize Points for Distance Query</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> point = <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.404</span>, <span class="hljs-number">39.915</span>);    <span class="hljs-comment">// Create point coordinates</span>
+    <span class="hljs-keyword">var</span> iconself = <span class="hljs-keyword">new</span> BMap.Icon(<span class="hljs-string">&apos;http://sandbox.runjs.cn/uploads/rs/3/dofmucai/marker.png&apos;</span>,<span class="hljs-keyword">new</span> BMap.Size(<span class="hljs-number">35</span>,<span class="hljs-number">30</span>));
+    <span class="hljs-keyword">var</span> marker = <span class="hljs-keyword">new</span> BMap.Marker(point,{
+       icon:iconself
+    });
+    marker.disableMassClear();
+    map.addOverlay(marker);
+</code></pre>
+<p><strong>Step 3 Execute SuperMap Distance Query</strong></p>
+<p>Use iClient for JavaScript API to invoke the SuperMap REST map service and perform a distance query.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span>    url = <span class="hljs-string">&quot;http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World&quot;</span>;
+    <span class="hljs-keyword">var</span> value = <span class="hljs-string">&quot;VZ88xbrMEMpGv4yiisTojgVq&quot;</span>;
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;key&quot;</span>;
+    SuperMap.Credential.CREDENTIAL = <span class="hljs-keyword">new</span> SuperMap.Credential(value, <span class="hljs-string">&quot;key&quot;</span>); 
+    <span class="hljs-keyword">var</span> centerPoint = <span class="hljs-keyword">new</span> SuperMap.Geometry.Point(<span class="hljs-number">116.404</span>, <span class="hljs-number">39.915</span>);<span class="hljs-comment">//Create a point feature</span>
+    <span class="hljs-keyword">var</span> queryByDistanceParams = <span class="hljs-keyword">new</span> SuperMap.REST.QueryByDistanceParameters({
+        queryParams: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-keyword">new</span> SuperMap.REST.FilterParameter({name: <span class="hljs-string">&quot;Capitals@World.1&quot;</span>})),<span class="hljs-comment">//Set the datasource and parameters</span>
+        returnContent: <span class="hljs-literal">true</span>,
+        distance: <span class="hljs-number">30</span>,
+        geometry:centerPoint
+    });
+    <span class="hljs-keyword">var</span> queryByDistanceService = <span class="hljs-keyword">new</span> SuperMap.REST.QueryByDistanceService(url);<span class="hljs-comment">//Distance Query service</span>
+      queryByDistanceService.events.on({
+        <span class="hljs-string">&quot;processCompleted&quot;</span>: bufferCompleted,
+        <span class="hljs-string">&quot;processFailed&quot;</span>:bufferFailed
+     });
+    queryByDistanceService.processAsync(queryByDistanceParams); <span class="hljs-comment">//Send request</span>
+</code></pre>
+<p><strong>Step 4 Translate the Result Points</strong></p>
+<p>Add the query result to data and translate their coordinates using iConnectorBaidu.js.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span> i, j, result = queryEventArgs.result;
+    <span class="hljs-keyword">var</span> points = [];  <span class="hljs-comment">//Create a new array</span>
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>;i &lt; result.recordsets.length; i++) {
+        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; result.recordsets[i].features.length; j++)
+        {
+             <span class="hljs-keyword">var</span> point = result.recordsets[i].features[j].geometry,
+             size = <span class="hljs-keyword">new</span> SuperMap.Size(<span class="hljs-number">44</span>, <span class="hljs-number">33</span>),
+             offset = <span class="hljs-keyword">new</span> SuperMap.Pixel(-(size.w/<span class="hljs-number">2</span>), -size.h),
+             icon = <span class="hljs-keyword">new</span> SuperMap.Icon(<span class="hljs-string">&quot;marker.png&quot;</span>, size, offset);
+             points.push(point);  <span class="hljs-comment">//Add qeury result ponts to the array</span>
+        }
+    }
+    SuperMap.Web.iConnector.Baidu.transferPoint(points,<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>),acallback,<span class="hljs-number">2</span>);<span class="hljs-comment">//Translate supermap points to Baidu coordinates</span>
+</code></pre>
+<p><strong>Step 5 Add Query Result to Baidu Maps</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">acallback</span>(<span class="hljs-params">xyResults</span>)</span>{<span class="hljs-comment">//The array of the BMap.Point geometry (xyResults) to receive the points translated</span>
+        <span class="hljs-keyword">var</span> points = []
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> index <span class="hljs-keyword">in</span> xyResults){
+            <span class="hljs-keyword">var</span> point = xyResults[index];
+            points.push(point);
+            <span class="hljs-keyword">var</span> marker1 = <span class="hljs-keyword">new</span> BMap.Marker(point);
+            map.addOverlay(marker1);
+
+        }
+    }
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/tla28w74" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/tla28w74" target="_blank">Source Code Editing</a></li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;5-&#x5728;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x4E0A;&#x6DFB;&#x52A0;supermap-sql&#x67E5;&#x8BE2;&#x7684;&#x7EBF;">Sample 5: Overlay Baidu Maps with SuperMap Lines from SQL Query</h4>
+<p>This sample demonstrates how to translate and add the line features from a SuperMap SQL query to Baidu Maps.</p>
+<p><strong>Step 1 Initialize Baidu Maps</strong></p>
+<pre><code class="lang-JavaScript">    <span class="hljs-comment">// Initialize Baidu Maps</span>
+    <span class="hljs-keyword">var</span> map = <span class="hljs-keyword">new</span> BMap.Map(<span class="hljs-string">&quot;allmap&quot;</span>);  <span class="hljs-comment">// Create a Baidu Maps instance</span>
+    <span class="hljs-keyword">var</span> point = <span class="hljs-keyword">new</span> BMap.Point(<span class="hljs-number">116.404</span>, <span class="hljs-number">32</span>);<span class="hljs-comment">// create a point </span>
+    map.centerAndZoom(center,<span class="hljs-comment">5</span>);                     <span class="hljs-comment">//  Initialize the map, set the map center and default scale</span>
+    map.enableScrollWheelZoom();  <span class="hljs-comment">//Enable zooming the map by mouse wheel</span>
+</code></pre>
+<p><strong>Step 3 Execute SuperMap SQL Query</strong></p>
+<p>Use iClient for JavaScript API to do a SQL query on SuperMap REST map service. Here, we demonstrate it by using Rivers@World and the condition &quot;SMID=66&quot;. Return the features by query.</p>
+<pre><code class="lang-JavaScript">    <span class="hljs-keyword">var</span>    url = <span class="hljs-string">&quot;http://www.supermapol.com/iserver/services/vm3sbiax/rest/maps/World&quot;</span>;
+    <span class="hljs-keyword">var</span> value = <span class="hljs-string">&quot;VZ88xbrMEMpGv4yiisTojgVq&quot;</span>;
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;key&quot;</span>;
+    SuperMap.Credential.CREDENTIAL = <span class="hljs-keyword">new</span> SuperMap.Credential(value, <span class="hljs-string">&quot;key&quot;</span>);
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">queryBySQL</span>(<span class="hljs-params"></span>) </span>{
+
+        <span class="hljs-keyword">var</span> queryParam, queryBySQLParams, queryBySQLService;
+        queryParam = <span class="hljs-keyword">new</span> SuperMap.REST.FilterParameter({
+            name: <span class="hljs-string">&quot;Rivers@World&quot;</span>,
+            attributeFilter: <span class="hljs-string">&quot;SMID=66&quot;</span>
+        });
+        queryBySQLParams = <span class="hljs-keyword">new</span> SuperMap.REST.QueryBySQLParameters({
+            queryParams: [queryParam]
+        });
+        queryBySQLService = <span class="hljs-keyword">new</span> SuperMap.REST.QueryBySQLService(url, {
+            eventListeners: {<span class="hljs-string">&quot;processCompleted&quot;</span>: processCompleted, <span class="hljs-string">&quot;processFailed&quot;</span>: processFailed}});
+        queryBySQLService.processAsync(queryBySQLParams);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processCompleted</span>(<span class="hljs-params">queryEventArgs</span>) </span>{
+        <span class="hljs-keyword">var</span> i, j, feature,
+                result = queryEventArgs.result;
+        <span class="hljs-keyword">if</span> (result &amp;&amp; result.recordsets) {
+            <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>; i&lt;result.recordsets.length; i++) {
+                <span class="hljs-keyword">if</span> (result.recordsets[i].features) {
+                    <span class="hljs-keyword">for</span> (j=<span class="hljs-number">0</span>; j&lt;result.recordsets[i].features.length; j++) {
+                        feature = result.recordsets[i].features[j];
+                        <span class="hljs-keyword">var</span> line = feature.geometry;
+                        getPoints(line);
+                    }
+                }
+            }
+        }
+    }
+</code></pre>
+<p><strong>Step3 Use iConnectorBaidu.js to Translate Coordinates</strong></p>
+<p>transferLine is used to translate a SuperMap line feature to Baidu coordinates.</p>
+<pre><code class="lang-JavaScript">        <span class="hljs-keyword">if</span>(geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPolygon&apos;</span> ||
+            geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiLineString&apos;</span> ||
+            geometry.CLASS_NAME === <span class="hljs-string">&apos;SuperMap.Geometry.MultiPoint&apos;</span>){
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>,len = geometry.components.length;i&lt;len;i++){
+                getPoints(geometry.components[i]);
+            }
+            <span class="hljs-keyword">return</span>;
+        }
+        SuperMap.Web.iConnector.Baidu.transferLine([geometry],<span class="hljs-keyword">new</span> SuperMap.Projection(<span class="hljs-string">&quot;EPSG:4326&quot;</span>),translateCallback);
+</code></pre>
+<p><strong>Step 4 Add the SuperMap Line to Baidu Maps</strong></p>
+<pre><code class="lang-JavaScript">    map.addOverlay(polyline[<span class="hljs-number">0</span>]);
+</code></pre>
+<p><strong>Online Demo and Source Code Editing</strong></p>
+<p>Here, you can access the source code and see the demo, also you can edit the source code to change the demo.</p>
+<ul>
+<li><a href="http://runjs.cn/detail/irwxvxzm" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/irwxvxzm" target="_blank">Source Code Editing</a></li>
+</ul>
+<p>Translating and adding regions to Baidu Maps is quite similar to the above samples, so no detailed explanation is provided any more. You can refer to:</p>
+<ul>
+<li><a href="http://runjs.cn/detail/6jpdxgxk" target="_blank">Online Demo</a></li>
+<li><a href="http://runjs.cn/code/6jpdxgxk" target="_blank">Source Code Editing</a></li>
+</ul>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('<ul>')[0];if(targetUl&&targetUl.getElementsByTagName('a').length>0){targetUl.className='atoc';}</script> 
+
+<footer class="page-footer"><span class="copyright">Copyright ©1997-2016 SuperMap Software Co., Ltd. all right reserved，powered by Gitbook</span><span class="footer-modification">Updated: 2016-06-27 10:25:28 AM</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./google.html" class="navigation navigation-prev " aria-label="Previous page: 对接 Google Maps"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./amap.html" class="navigation navigation-next " aria-label="Next page: 对接高德地图"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["weibo","facebook","twitter","google","instapaper"]},"search-pro":{"cutWordLib":"nodejieba","defineWord":["The map.","Development"]},"atoc":{"addClass":true,"className":"atoc"},"tbfed-pagefooter":{"copyright":"Copyright&copy; 1997-2016 SuperMap Software Co., Ltd.","modify_label":"Updated:","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
